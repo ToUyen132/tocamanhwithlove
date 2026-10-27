@@ -1,156 +1,375 @@
 <!doctype html>
-<html lang="vi"><head><style>body {transition: opacity ease-in 0.2s; } 
-body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
-</style><meta charset="UTF-8">
-<!-- This site is hosted on Netlify. Anyone can build and deploy a site
-     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=17308103-3312-4662-8412-94393839dba7
-     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
-<meta property="og:image" content="https://to-cam-anh-with-love.netlify.app/.netlify/og-image/c4f66dca8df8bd556b705ea551fec499.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#2458a1"><title>Gửi anh Cẩm Anh — Những điều tụi em muốn nói</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=DM+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<style>
-:root{--navy:#0b2857;--deep:#17437b;--blue:#4889ef;--ice:#e0f1ff;--white:#f8fbff;--muted:#bed3f1;--line:rgba(192,217,255,.16);--ease:cubic-bezier(.16,1,.3,1)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--white);font-family:'Be Vietnam Pro',sans-serif;overflow-x:hidden}body::before{content:"";pointer-events:none;position:fixed;inset:0;z-index:30;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.21'/%3E%3C/svg%3E");opacity:.07}::selection{background:#87bbff;color:#071633}button,input,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}img{max-width:100%} .shell{width:min(1180px,calc(100% - 56px));margin:auto}.eyebrow{font:700 11px 'Space Grotesk',sans-serif;letter-spacing:.23em;text-transform:uppercase;color:#a7cbff}.reveal{opacity:0;transform:translateY(34px);transition:opacity .95s var(--ease),transform .95s var(--ease)}.reveal.visible{opacity:1;transform:none}
-.progress{position:fixed;z-index:100;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#8dbbff,#fff);box-shadow:0 0 20px #8dbbff}
-.topbar{position:fixed;z-index:50;top:0;left:0;right:0;border-bottom:1px solid var(--line);background:rgba(9,38,82,.83);backdrop-filter:blur(22px)}.topbar-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;font:700 14px 'Space Grotesk',sans-serif;letter-spacing:.07em}.brandmark{width:36px;height:36px;display:grid;place-items:center;border:1px solid #7ba7eb;border-radius:11px;background:rgba(59,121,230,.14)}.brandmark svg{width:24px;height:24px}.top-actions{display:flex;gap:9px;align-items:center}.pill{border:1px solid rgba(186,211,252,.35);background:rgba(255,255,255,.05);color:white;border-radius:999px;padding:10px 15px;font-size:12px;font-weight:700;transition:background .25s,transform .25s,border-color .25s}.pill:hover{background:rgba(148,190,255,.17);transform:translateY(-2px);border-color:#b2d5ff}.pill.primary{background:#eaf3ff;color:#0b2651}.pill.primary:hover{background:white}.mobilehide{display:inline}
-.hero{position:relative;min-height:min(850px,100svh);display:flex;align-items:center;padding:150px 0 110px;isolation:isolate;overflow:hidden}.hero-glow{position:absolute;inset:0;z-index:-3;background:radial-gradient(ellipse at 81% 40%,rgba(94,167,255,.46),transparent 42%),radial-gradient(ellipse at 8% 92%,rgba(63,130,225,.34),transparent 44%),linear-gradient(140deg,#0b2a60 4%,#1a4f97 100%)}.court-lines{position:absolute;inset:-20% -5%;z-index:-2;opacity:.25;background:linear-gradient(115deg,transparent 45%,rgba(154,199,255,.35) 45.1%,transparent 45.24%),linear-gradient(115deg,transparent 69%,rgba(154,199,255,.2) 69.1%,transparent 69.24%);transform:rotate(-9deg)}.orb{position:absolute;width:440px;height:440px;border-radius:50%;border:1px solid rgba(192,222,255,.12);right:3%;top:18%;box-shadow:0 0 0 80px rgba(192,222,255,.025),0 0 0 160px rgba(192,222,255,.02);animation:float 9s ease-in-out infinite;z-index:-1}.hero-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}.hero-kicker{display:flex;align-items:center;gap:12px}.line{height:1px;width:54px;background:#7eaaff}.hero h1{font:700 clamp(66px,8vw,124px)/.95 'Space Grotesk',sans-serif;letter-spacing:-.08em;margin:25px 0 24px}.hero h1 span{display:block;color:#a9cfff}.hero-text{color:#d6e4fb;font-size:15px;line-height:1.95;max-width:560px;min-height:85px}.hero-cta{display:inline-flex;align-items:center;gap:16px;border-bottom:1px solid #9cbeef;padding:18px 0;margin-top:18px;font-size:13px;font-weight:800}.hero-cta .arrow{font-size:22px;transition:transform .25s}.hero-cta:hover .arrow{transform:translate(5px,5px)}.hero-media{position:relative;min-width:0}.hero-photo{aspect-ratio:4/4.6;border-radius:200px 200px 22px 22px;overflow:hidden;border:1px solid rgba(190,223,255,.5);box-shadow:0 45px 90px rgba(0,0,0,.3);transform:rotate(3deg);transition:transform .8s var(--ease)}.hero-photo:hover{transform:rotate(0deg) scale(1.015)}.photo-fill{width:100%;height:100%;object-fit:cover;display:block}.photo-empty{height:100%;min-height:140px;width:100%;display:grid;place-items:center;text-align:center;gap:10px;align-content:center;padding:25px;background:linear-gradient(145deg,#163d78,#081b3c);color:#adcafa;font-size:12px;letter-spacing:.02em}.photo-empty svg{width:44px;opacity:.65}.photo-empty small{font-size:10px;opacity:.7}.hero-tag{position:absolute;bottom:8%;left:-9%;max-width:220px;padding:20px 24px;background:#eaf3ff;color:#102c5c;border-radius:14px;transform:rotate(-5deg);box-shadow:0 22px 40px rgba(0,0,0,.24);font:700 17px/1.35 'Space Grotesk',sans-serif}.hero-tag small{font:700 10px 'Be Vietnam Pro';letter-spacing:.15em;color:#4671a9;display:block;margin-bottom:8px;text-transform:uppercase}.hero-rail{position:absolute;bottom:30px;left:0;right:0;display:flex;justify-content:space-between;align-items:center;color:#96b6e3;font:700 10px 'Space Grotesk';letter-spacing:.22em}.scrollhint{display:flex;align-items:center;gap:10px}.scrollhint:before{content:'';display:block;width:28px;height:1px;background:#9abbec}
-.marquee{overflow:hidden;border-block:1px solid var(--line);background:#0e2a59;transform:rotate(-1deg) scale(1.02);padding:18px 0}.marquee-track{display:flex;width:max-content;gap:42px;animation:marquee 33s linear infinite;white-space:nowrap;font:700 clamp(14px,2vw,20px) 'Space Grotesk';letter-spacing:.08em;color:#bddeff}.marquee .spark{color:#6da6ff}
-.section-heading{text-align:center;padding:120px 0 64px}.section-heading h2{font:700 clamp(38px,5.5vw,70px)/1.06 'Space Grotesk';letter-spacing:-.055em;margin:18px auto;max-width:750px}.section-heading p{color:#a8bfdc;font-size:14px;max-width:530px;margin:auto;line-height:1.9}.memory{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;padding:76px 0;border-top:1px solid var(--line);scroll-margin-top:105px}.memory:nth-child(2n){direction:rtl}.memory:nth-child(2n)>*{direction:ltr}.memory-num{font:600 13px 'Space Grotesk';color:#82aef1;letter-spacing:.13em}.memory h3{font:700 clamp(37px,5vw,64px)/1.06 'Space Grotesk';letter-spacing:-.055em;margin:19px 0 18px}.memory .quote-mark{font:700 90px/.7 Georgia,serif;color:#4278ca;opacity:.7}.memory-wish{color:#d8e7ff;font-size:15px;line-height:2.05;min-height:110px}.memory-next{display:inline-flex;gap:15px;align-items:center;margin-top:22px;color:#a9cdfd;font-weight:700;font-size:12px;letter-spacing:.02em;border-bottom:1px solid #658bbd;padding:12px 0;transition:gap .3s}.memory-next:hover{gap:24px}.memory-photos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:180px 180px;gap:12px;position:relative;transform:rotate(-2deg)}.memory:nth-child(2n) .memory-photos{transform:rotate(2deg)}.memory-photos .photo-frame{overflow:hidden;border-radius:13px;border:1px solid rgba(190,222,255,.18);position:relative;transition:transform .5s var(--ease),filter .5s;box-shadow:0 13px 30px rgba(0,0,0,.12)}.memory-photos .photo-frame:hover{transform:translateY(-8px) rotate(1deg);z-index:2}.memory-photos .photo-frame:first-child{grid-row:span 2}.memory-photos .photo-frame:nth-child(4){display:none}.memory-photos .photo-frame:nth-child(3){grid-column:2}.memory-photos .photo-frame .photo-empty{min-height:100%}.memory-photos:after{content:'✳';position:absolute;right:-18px;top:-27px;color:#8db9fa;font-size:42px;animation:spin 22s linear infinite;pointer-events:none}.memory-photos .photo-frame:nth-child(4){display:block;position:absolute;width:31%;height:110px;bottom:-36px;left:27%;transform:rotate(7deg);border:5px solid #eef5ff;box-shadow:0 12px 25px rgba(0,0,0,.3)}.memory-photos .photo-frame:nth-child(4):hover{transform:rotate(0deg) scale(1.05)}
-.gallery-section{padding:120px 0;scroll-margin-top:100px}.gallery-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.gallery-top h2{font:700 clamp(42px,6vw,76px)/1 'Space Grotesk';letter-spacing:-.06em;margin:12px 0}.gallery-top p{color:#aec4e4;font-size:13px;line-height:1.8;max-width:390px}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.gallery-item{margin:0}.gallery-item:nth-child(2n){transform:translateY(40px)}.gallery-photo{aspect-ratio:3/4;overflow:hidden;border-radius:16px;border:1px solid var(--line);transition:transform .55s var(--ease),box-shadow .55s}.gallery-item:hover .gallery-photo{transform:translateY(-9px);box-shadow:0 24px 50px rgba(0,0,0,.25)}.gallery-item figcaption{font-size:13px;color:#c9ddfa;line-height:1.7;margin-top:13px}.closing{padding:140px 0 110px;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 100%,#2a5cac 0%,#12386c 55%,#0b2857 80%)}.closing h2{font:700 clamp(44px,7vw,92px)/1.04 'Space Grotesk';letter-spacing:-.06em;margin:22px auto;max-width:950px}.closing h2 span{color:#a4ccff}.closing p{color:#a9c3e4;font-size:14px;line-height:1.9}.video-wrap{width:min(790px,100%);margin:45px auto 0;border:1px solid rgba(168,205,255,.22);border-radius:20px;background:#081a3c;padding:9px;box-shadow:0 30px 75px rgba(0,0,0,.3)}.video-slot{display:grid;place-items:center;min-height:340px;aspect-ratio:16/9;border-radius:12px;background:linear-gradient(145deg,#143a78,#07172f);color:#aac9f3}.video-slot strong{display:block;font:700 21px 'Space Grotesk';margin-bottom:10px}.video-slot span{font-size:12px}.video-slot svg{width:45px;margin-bottom:20px}.video-slot video{width:100%;height:100%;max-height:520px;border-radius:12px;display:block}.footer{border-top:1px solid var(--line);padding:25px 0;color:#91afd9;font-size:11px;display:flex;justify-content:space-between;gap:14px}
-/* Edit studio */
-.edit-backdrop{display:none;position:fixed;inset:0;z-index:150;background:rgba(0,7,23,.72);backdrop-filter:blur(8px)}.edit-backdrop.open{display:block}.edit-panel{position:absolute;right:0;top:0;bottom:0;width:min(620px,100%);background:#f7faff;color:#0c2851;overflow-y:auto;padding:35px;box-shadow:-20px 0 80px #0007;animation:slideIn .45s var(--ease)}.edit-head{display:flex;justify-content:space-between;gap:20px;align-items:start;border-bottom:1px solid #cfdaea;padding-bottom:20px}.edit-panel h2{font:700 30px 'Space Grotesk';letter-spacing:-.045em;margin:4px 0}.edit-panel p.help{color:#566e90;font-size:12px;line-height:1.8;margin:16px 0}.edit-panel label{display:block;font-size:11px;font-weight:800;letter-spacing:.025em;margin:17px 0 8px}.edit-panel input:not([type=file]),.edit-panel textarea{width:100%;border:1px solid #b8cae2;background:white;border-radius:10px;color:#092451;padding:12px 14px;outline:none;font-size:13px;line-height:1.65}.edit-panel textarea{resize:vertical;min-height:92px}.edit-panel input:focus,.edit-panel textarea:focus{border-color:#3479e3;box-shadow:0 0 0 3px #3479e322}.edit-panel input[type=file]{font-size:11px;max-width:100%}.edit-group{border:1px solid #d3dff0;background:white;border-radius:14px;padding:17px;margin:18px 0}.edit-group h3{font:700 17px 'Space Grotesk';margin:0 0 6px}.edit-actions{display:flex;flex-wrap:wrap;gap:9px;padding:22px 0 30px}.edit-panel .pill{color:#15345d;border-color:#b8cae1}.edit-panel .pill.primary{background:#143e86;color:white;border-color:#143e86}.edit-panel .pill:hover{background:#e1edfb}.edit-panel .pill.primary:hover{background:#2353a6}.mini{font-size:11px;color:#6580a1}.upload-row{display:flex;align-items:center;gap:10px;margin:10px 0;flex-wrap:wrap}.tiny{border:0;background:#e6eef9;color:#173d74;border-radius:8px;padding:6px 10px;font-size:11px}.toast{position:fixed;z-index:200;bottom:25px;left:50%;transform:translate(-50%,30px);opacity:0;pointer-events:none;background:#f1f7ff;color:#082451;padding:13px 22px;border-radius:99px;font-size:12px;font-weight:700;transition:all .3s}.toast.show{opacity:1;transform:translate(-50%,0)}
-@keyframes float{50%{transform:translateY(-22px) rotate(5deg)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes marquee{to{transform:translateX(-50%)}}@keyframes slideIn{from{transform:translateX(60px);opacity:.4}to{transform:none;opacity:1}}
-@media(max-width:900px){.hero-layout{gap:28px}.memory{gap:35px}.memory-photos{grid-template-rows:145px 145px}.gallery{gap:12px}}
-@media(max-width:700px){.shell{width:calc(100% - 36px)}.topbar-inner{height:65px}.brand{font-size:11px}.brandmark{width:30px;height:30px}.pill{padding:9px 12px;font-size:11px}.mobilehide{display:none}.hero{padding:130px 0 85px;min-height:auto}.hero-layout{grid-template-columns:1fr;gap:46px}.hero h1{font-size:clamp(66px,15vw,100px)}.hero-media{width:78%;margin:0 auto}.hero-tag{left:-13%;font-size:13px;padding:13px 16px}.hero-rail{bottom:15px}.section-heading{padding:88px 0 45px}.memory{grid-template-columns:1fr;gap:48px;padding:66px 0}.memory:nth-child(2n){direction:ltr}.memory-photos{order:2;grid-template-rows:170px 170px;margin:0 12px 20px}.memory:nth-child(2n) .memory-photos{order:2}.memory h3{font-size:45px}.gallery-section{padding:80px 0}.gallery-top{display:block}.gallery{grid-template-columns:repeat(2,1fr);gap:28px 12px}.gallery-item:nth-child(2n){transform:translateY(18px)}.closing{padding:95px 0}.video-slot{min-height:190px}.edit-panel{padding:22px}.footer{flex-direction:column}.scrollhint{display:none}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2458a1">
+  <title>Gửi anh Cẩm Anh — Những điều tụi em muốn nói</title>
+  
+  <meta property="og:image" content="https://to-cam-anh-with-love.netlify.app/.netlify/og-image/c4f66dca8df8bd556b705ea551fec499.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-/* Farewell refinements */
-.hero-text{white-space:pre-line;max-width:640px;font-size:14px;line-height:1.85;min-height:0;max-height:none;color:#e7f1ff}
-.hero-layout{grid-template-columns:minmax(0,1.28fr) minmax(0,.72fr);gap:46px}
-.hero{min-height:0;padding-top:150px;padding-bottom:112px}
-.hero h1{font-size:clamp(64px,7.1vw,104px)}
-.hero-tag{max-width:245px;font-size:15px}
-.memory-photos .photo-frame{opacity:0;filter:blur(9px);translate:0 32px;scale:.9;transition:opacity .8s var(--ease),filter .8s var(--ease),translate .85s var(--ease),scale .85s var(--ease),transform .5s var(--ease)}
-.memory-photos .photo-frame.photo-shown{opacity:1;filter:blur(0);translate:0 0;scale:1}
-.memory-wish{white-space:pre-wrap;min-height:155px}
-.type-caret{display:inline-block;height:1.12em;border-right:2px solid #a6d3ff;vertical-align:-.15em;margin-left:2px;animation:caretPulse .8s steps(1) infinite}
-@keyframes caretPulse{50%{opacity:0}}
-@media(max-width:900px){.hero-layout{grid-template-columns:1fr 1fr}}
-@media(max-width:700px){.hero-layout{grid-template-columns:1fr}.hero-text{font-size:13px;line-height:1.85}.hero{padding-top:110px}.hero-media{width:78%}}
-@media(prefers-reduced-motion:reduce){.memory-photos .photo-frame{opacity:1;filter:none;translate:none;scale:1;transition:none}.type-caret{animation:none}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-/* Fresh-blue farewell edition */
-:root{--navy:#2458a1;--deep:#326db8;--blue:#78b9ff;--ice:#f0f8ff;--muted:#e0edff;--line:rgba(213,232,255,.3)}
-body{background:linear-gradient(180deg,#2760ac,#235296 55%,#1d488a)}
-.topbar{background:rgba(30,77,148,.85)}
-.hero-glow{background:radial-gradient(ellipse at 78% 30%,rgba(161,213,255,.50),transparent 48%),radial-gradient(ellipse at 4% 92%,rgba(127,184,255,.40),transparent 52%),linear-gradient(130deg,#2862ad 0%,#3f81cd 100%)}
-.hero h1{font-size:clamp(52px,6.5vw,94px);letter-spacing:-.06em;min-height:1.95em}
-.hero h1 .hero-headline-static{color:#fff;display:block;white-space:normal}
-.hero h1 .hero-headline-static em{font-style:normal;color:#cce8ff;display:block}
-.hero h1 .hero-headline-static.is-typing:after{content:'';display:inline-block;width:3px;height:.83em;background:#fff;vertical-align:-.07em;animation:caretPulse .75s step-end infinite}
-.hero-text{color:#f1f8ff;font-size:14px;line-height:1.85;min-height:0}
-.hero-tag{background:#f1f8ff}
-.marquee{background:#2562ac}.marquee-track{color:#e1f1ff}
-.section-heading p,.gallery-top p,.closing p{color:#deecff}
-.memory-wish{color:#eef7ff}.memory-num{color:#cee4ff}.memory .quote-mark{color:#b6d8ff}
-.photo-empty{background:linear-gradient(145deg,#4a89d3,#1c488e);color:#ecf7ff;border:1px dashed rgba(218,237,255,.45)}
-.album-accent{color:#c9eaff}
-.gallery-section{overflow:hidden}.gallery-top p{max-width:460px}
-.gallery-window{overflow:hidden;width:100%;padding:24px 0 32px;mask-image:linear-gradient(to right, transparent, #000 6%,#000 94%,transparent)}
-.gallery.gallery-track{display:flex;width:max-content;gap:22px;animation:albumTravel 42s linear infinite;align-items:flex-start}
-.gallery-window:hover .gallery-track,.gallery-window:focus-within .gallery-track{animation-play-state:paused}
-.gallery-track .gallery-item{width:clamp(190px,23vw,270px);flex:0 0 auto;transform:none!important;transition:transform .5s var(--ease)}
-.gallery-track .gallery-item:nth-child(even){margin-top:36px}
-.gallery-track .gallery-item:hover{transform:translateY(-10px) rotate(-1deg)!important}
-.gallery-track .gallery-photo{box-shadow:0 18px 32px rgba(9,35,83,.18)}
-.gallery-track figcaption{color:#edf7ff}
-.gallery-hint{font-size:11px;color:#cde5ff;margin-top:8px}
-@keyframes albumTravel{to{transform:translateX(-50%)}}
-.closing{background:radial-gradient(ellipse at 50% 98%,#5894da,#2e68b1 58%,#204f99 100%)}
-.surprise-zone{max-width:770px;margin:100px auto 0;padding:44px 35px;border:1px solid rgba(230,243,255,.4);border-radius:26px;background:linear-gradient(150deg,rgba(255,255,255,.17),rgba(255,255,255,.06));box-shadow:0 28px 65px rgba(13,46,94,.23);backdrop-filter:blur(12px)}
-.surprise-spark{font:700 11px 'Space Grotesk';letter-spacing:.25em;color:#d0eaff}
-.surprise-zone h3{font:700 clamp(26px,4vw,40px)/1.15 'Space Grotesk';letter-spacing:-.045em;margin:20px 0 12px}
-.surprise-zone>p{max-width:520px;margin:0 auto 25px}
-.surprise-button{border:1px solid #e1f3ff;background:#f1f9ff;color:#194987;border-radius:99px;padding:16px 25px;font-weight:800;box-shadow:0 12px 35px rgba(0,22,75,.2);transition:transform .3s var(--ease),box-shadow .3s}
-.surprise-button:hover{transform:translateY(-5px);box-shadow:0 20px 45px rgba(0,22,75,.28)}
-.surprise-letter{margin:30px auto 0;max-width:580px;border-radius:17px;background:#f8fcff;color:#245293;padding:32px;box-shadow:0 20px 55px rgba(10,43,88,.23);animation:letterAppear .7s var(--ease);transform-origin:top}
-.surprise-letter[hidden]{display:none}.surprise-letter p{color:#245293;font:500 17px/1.95 'Be Vietnam Pro';white-space:pre-wrap}.surprise-letter span{font-size:12px;color:#477bb2}.letter-star{color:#5a9fe6;font-size:30px}
-@keyframes letterAppear{from{opacity:0;transform:translateY(25px) rotate(-2deg) scale(.95)}to{opacity:1;transform:none}}
-@media(max-width:700px){.hero h1{font-size:clamp(51px,12vw,76px);min-height:1.9em}.gallery.gallery-track{gap:14px;animation-duration:32s}.gallery-track .gallery-item{width:185px}.surprise-zone{margin-top:75px;padding:32px 20px}.surprise-letter{padding:22px}}
-@media(prefers-reduced-motion:reduce){.gallery.gallery-track{animation:none;transform:none}.gallery-window{overflow-x:auto;mask-image:none}}
-
-/* ===== BLUE POLAROID STORY / 2026 redesign ===== */
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-:root{--navy:#0935a9;--deep:#125ed3;--blue:#42bbff;--ice:#ebf8ff;--line:rgba(235,249,255,.25);--ease:cubic-bezier(.2,.9,.2,1)}
-html{scroll-padding-top:90px}body{background:#0755d4;color:#fff}body::before{opacity:.045}
-.topbar{background:rgba(4,54,164,.79);border-bottom:1px solid rgba(255,255,255,.24);box-shadow:0 10px 30px #0838a51a}.topbar-inner{height:72px}.brandmark{background:#ffffff1c;border-color:#e2f5ff}.pill{background:#ffffff14}.pill.primary{background:#fff;color:#0750c4}
-.hero{padding:150px 0 115px;min-height:800px}.hero-glow{background:radial-gradient(ellipse at 85% 24%,#69daff90,transparent 46%),radial-gradient(ellipse at 0% 93%,#00379be0,transparent 43%),linear-gradient(126deg,#0031a9 0%,#0865ee 60%,#1ec0ff 100%)}
-.court-lines{opacity:.11;background:repeating-linear-gradient(116deg,transparent 0 105px,#fff 107px,transparent 109px)}.orb{right:-8%;top:-10%;width:580px;height:580px;border-color:#ffffff4d;box-shadow:0 0 0 70px #fff1,0 0 0 160px #fff1}
-.hero-watermark{position:absolute;top:14%;right:1%;opacity:.07;font:900 clamp(80px,16vw,240px) 'Manrope',sans-serif;letter-spacing:-.1em;transform:rotate(-10deg);pointer-events:none}.hero-doodle{position:absolute;font-size:60px;color:#d8ff51;animation:float 9s infinite}.doodle-one{right:8%;top:15%}.doodle-two{left:3%;bottom:10%;font-size:38px;color:#fff}
-.hero-layout{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:35px}.hero-kicker .eyebrow{color:#e6faff}.hero h1{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.072em;font-size:clamp(45px,5.4vw,84px);line-height:1.11;min-height:2.2em;text-shadow:0 8px 25px #00328655}.hero h1 em{font-family:'Caveat',cursive;font-weight:700!important;color:#efff55!important;font-size:1.28em;line-height:.9;letter-spacing:-.04em;transform:rotate(-4deg);transform-origin:left center;text-shadow:0 6px 0 #0542af66}
-.hero-text{font-size:13px;line-height:1.9;color:#f6fcff;max-width:660px;text-shadow:0 1px 8px #0033a466}.hero-cta{color:white;border-bottom:2px solid #dbf3ff}.hero-rail{color:#f1f9ff}
-.hero-media{padding:45px 18px 44px 26px;isolation:isolate}.hero-photo{position:relative;aspect-ratio:4/4.7;border:13px solid white;border-bottom-width:62px;border-radius:3px;background:#e6f2ff;transform:rotate(6deg);box-shadow:0 28px 0 #022f8c22,0 38px 75px #00247677;overflow:hidden}.hero-photo:after{content:'THREE YEARS, COUNTLESS MEMORIES  ♡';position:absolute;bottom:-51px;left:0;right:0;text-align:center;color:#1c57ba;font:700 13px 'Caveat',cursive;letter-spacing:.04em;z-index:2}.hero-photo .photo-fill{object-fit:cover}.hero-photo .photo-empty{background:linear-gradient(135deg,#a9dffe,#3785d9);color:white}.hero-photo .photo-empty small{color:#fff}
-.polaroid-stack{position:absolute;inset:0;pointer-events:none}.stack-card{position:absolute;border:10px solid white;border-bottom:35px solid white;background:linear-gradient(135deg,#b6ebff,#2871da);width:50%;aspect-ratio:4/5;box-shadow:0 24px 55px #002e7b77;border-radius:3px}.stack-card span{position:absolute;bottom:-29px;left:6px;color:#21539f;font:700 18px 'Caveat',cursive}.stack-card-a{top:8%;left:-16%;transform:rotate(-14deg)}.stack-card-b{bottom:0;right:-15%;transform:rotate(15deg);background:linear-gradient(160deg,#89d9ff,#0940be)}.hero-tag{position:absolute;z-index:4;bottom:-4%;left:-8%;background:#e9ff6a;color:#0b369c;transform:rotate(-7deg);border-radius:2px;box-shadow:4px 10px 0 #0432ac66;max-width:260px}.hero-tag small{color:#36649a}.photo-sticker{position:absolute;z-index:5;right:-8%;top:11%;border:2px dashed #fff;color:#fff;background:#0e56e5;padding:10px 16px;border-radius:99px;font:800 11px 'Manrope';letter-spacing:.08em;transform:rotate(12deg)}
-.marquee{background:#e9ff63;border:0;padding:16px 0;transform:rotate(-1deg) scale(1.01)}.marquee-track{color:#083bb1;font-weight:800;font-family:'Manrope';font-size:15px}.marquee .spark{color:#1472de}
-.section-heading{padding:128px 0 70px}.section-heading h2,.gallery-top h2{font-family:'Manrope';font-weight:800;letter-spacing:-.065em}.section-heading h2{max-width:1000px}.script-accent{font-family:'Caveat',cursive;font-size:1.2em;color:#ecff6c;font-weight:700;letter-spacing:-.01em}.section-heading p{color:#d5eeff}
-.memory{gap:80px;border-top:1px solid #ffffff48;padding:112px 0}.memory-num{color:#f1ff78}.memory h3{font-family:'Manrope';letter-spacing:-.06em}.memory-wish{background:rgba(255,255,255,.10);border:1px solid #ffffff38;border-radius:18px;padding:22px 26px;backdrop-filter:blur(12px);font-size:14px;line-height:2.1;min-height:160px}.memory .quote-mark{font-size:65px;color:#ebff5d}.memory-next{color:#f4ff93}.memory-photos{display:grid!important;grid-template-columns:1fr!important;grid-template-rows:repeat(2,minmax(0,180px))!important;gap:20px!important;transform:none!important;min-height:400px;align-content:center;width:100%;max-width:560px;margin-inline:auto}.memory-photos .photo-frame{position:relative!important;display:block!important;width:100%!important;height:180px!important;min-height:180px!important;max-height:180px!important;border:10px solid #fff;border-bottom-width:30px;border-radius:2px;box-shadow:0 22px 60px #00266c88;transform:none;background:#ebf7ff;aspect-ratio:auto!important;overflow:hidden}.memory-photos .photo-frame:nth-child(1){transform:rotate(-5deg) translate(10px,0)!important;z-index:2}.memory-photos .photo-frame:nth-child(2){transform:rotate(4deg) translate(-8px,-10px)!important;z-index:1}.memory-photos .photo-frame:nth-child(3),.memory-photos .photo-frame:nth-child(4){display:none!important}.memory-photos .photo-frame .photo-fill,.memory-photos .photo-frame .photo-empty{width:100%!important;height:100%!important;min-height:100%!important}.memory-photos .photo-frame.photo-shown:hover{transform:rotate(0deg) scale(1.03)!important;z-index:8}.memory-photos .photo-frame .photo-empty{background:linear-gradient(135deg,#8bd9ff,#2663cd);padding:8px}.memory-photos .photo-frame .photo-empty small{font-size:9px}.memory-photos:after{color:#f0ff6e;font-size:58px;right:-12px;top:-40px}
-.gallery-section{padding:125px 0 150px}.gallery-top h2{line-height:1.08}.album-accent{font:700 1.14em 'Caveat',cursive;color:#eeff67;letter-spacing:0}.gallery-top p{color:#e0f5ff}.film-reel{position:relative;padding:40px 0 42px;background:linear-gradient(180deg,#071938,#092858);border-block:4px solid #133878;box-shadow:0 30px 65px #00236a88;mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent);border-radius:5px}.film-reel:before,.film-reel:after{content:'';position:absolute;left:0;right:0;height:18px;z-index:2;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0 10px,#c8e8ff 10px 31px,transparent 31px 47px);opacity:.9}.film-reel:before{top:9px}.film-reel:after{bottom:9px}.gallery.gallery-track{gap:12px;animation-duration:48s}.gallery-track .gallery-item{background:#092a64;padding:8px 8px 3px;width:245px;transform:none!important}.gallery-track .gallery-item:nth-child(even){margin-top:0}.gallery-track .gallery-photo{aspect-ratio:4/3;border:1px solid #91c5ff;border-radius:0;box-shadow:none;cursor:zoom-in}.gallery-track .gallery-photo .photo-empty{font-size:11px;background:linear-gradient(135deg,#185cc0,#4ba8f4)}.gallery-track figcaption{font:500 12px 'Manrope';margin-top:7px;min-height:24px;color:#eaf8ff}.gallery-track .gallery-item:hover .gallery-photo{transform:scale(1.03)}.gallery-hint{color:#e8fcff;letter-spacing:.04em}
-.closing{background:radial-gradient(ellipse at 48% 120%,#58c9ff99,transparent 45%),linear-gradient(135deg,#0b49c3,#0437a4);padding:120px 0 140px}.closing h2{font-family:'Manrope';font-weight:800}.closing h2 span{font-family:'Caveat';font-size:1.12em;color:#eaff6e;letter-spacing:0}.closing p{color:#e6f7ff}.video-wrap{border:12px solid white;border-bottom-width:28px;border-radius:4px;background:white;transform:rotate(-1deg);box-shadow:0 40px 65px #001f6877}.video-slot{border-radius:0;background:linear-gradient(135deg,#1c65d3,#093387)}.footer{color:#e4f8ff}
-.lightbox[hidden]{display:none}.lightbox{position:fixed;inset:0;background:#00133de8;backdrop-filter:blur(16px);z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:65px 20px 24px}.lightbox img{max-height:75vh;max-width:min(100%,1000px);object-fit:contain;border:9px solid white;box-shadow:0 25px 70px #0008}.lightbox p{font-size:13px;color:white}.lightbox-close{position:absolute;right:24px;top:20px;border:1px solid #ffffff88;color:white;background:#ffffff21;border-radius:50%;width:43px;height:43px}.lightbox-open{overflow:hidden}
-@media(max-width:900px){.hero-layout{grid-template-columns:1fr 1fr;gap:20px}.hero h1{font-size:clamp(44px,6vw,70px)}.memory{gap:40px}.memory-photos{grid-template-rows:160px 160px;min-height:330px}}
-@media(max-width:700px){.hero{min-height:0;padding:108px 0 90px}.hero-layout{grid-template-columns:1fr;gap:12px}.hero h1{font-size:clamp(47px,12vw,67px);min-height:2.5em}.hero-text{font-size:12.5px}.hero-media{width:78%;margin:5px auto 10px}.hero-photo{border-width:8px;border-bottom-width:42px}.hero-photo:after{bottom:-36px;font-size:10px}.hero-tag{left:-12%;font-size:12px;padding:14px}.photo-sticker{font-size:8px}.section-heading{padding:90px 0 36px}.section-heading h2{font-size:clamp(34px,9vw,50px)}.memory{padding:70px 0}.memory-photos{grid-template-rows:repeat(2,minmax(0,150px))!important;min-height:330px;max-width:100%}.memory-photos .photo-frame{height:150px!important;min-height:150px!important;max-height:150px!important;border-width:8px;border-bottom-width:22px}.gallery-top h2{font-size:50px}.gallery-section{padding:85px 0}.film-reel{padding:35px 0}.gallery-track .gallery-item{width:205px}.gallery-hint{font-size:10px}.closing{padding:90px 0}.video-wrap{border-width:7px;border-bottom-width:20px}}
-@media(prefers-reduced-motion:reduce){.hero-doodle{animation:none}.film-reel{overflow-x:auto;mask-image:none}.gallery.gallery-track{animation:none}}
-/* Navigation refinements */
-.brand{font-size:clamp(9px,1.05vw,13px);letter-spacing:.02em;max-width:60%;line-height:1.35}
-.top-actions{flex-shrink:0}
-.save-latest{background:#d9efff!important;color:#0b3477!important;border-color:#d9efff!important;white-space:nowrap}
-.save-latest:hover{background:#fff!important}
-@media(max-width:760px){.brand{max-width:46%;font-size:9px}.top-actions{gap:5px}.top-actions .pill{padding:8px 9px;font-size:10px}.save-latest{max-width:112px;white-space:normal;line-height:1.25}}
-
-/* Two-photo polaroid layout: each photo occupies one distinct slot */
-.memory-photos,.memory:nth-child(2n) .memory-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:310px;gap:12px;min-height:0;align-items:center}
-.memory-photos .photo-frame:first-child,.memory-photos .photo-frame:nth-child(2){grid-column:auto;grid-row:auto;position:relative;inset:auto;width:100%;height:300px;min-height:0;bottom:auto;left:auto;right:auto;top:auto}
-.memory-photos .photo-frame:first-child{transform:rotate(-7deg) translate(8px,8px)}
-.memory-photos .photo-frame:nth-child(2){transform:rotate(7deg) translate(-8px,-4px)}
-.memory-photos .photo-frame .photo-fill{width:100%;height:100%;object-fit:cover}
-@media(max-width:900px){.memory-photos,.memory:nth-child(2n) .memory-photos{grid-template-rows:245px}.memory-photos .photo-frame:first-child,.memory-photos .photo-frame:nth-child(2){height:240px}}
-@media(max-width:700px){.memory-photos,.memory:nth-child(2n) .memory-photos{grid-template-rows:225px;min-height:0;margin:0 8px 20px}.memory-photos .photo-frame:first-child,.memory-photos .photo-frame:nth-child(2){height:220px}}
-
-/* Final horizontal landscape Polaroids: two generous landscape frames per person */
-.memory-photos,.memory:nth-child(2n) .memory-photos{display:grid!important;grid-template-columns:1fr!important;grid-template-rows:repeat(2,280px)!important;gap:25px!important;min-height:585px!important;max-width:560px!important;margin-inline:auto!important}
-.memory-photos .photo-frame:nth-child(1),.memory-photos .photo-frame:nth-child(2){display:block!important;grid-row:auto!important;grid-column:1!important;position:relative!important;inset:auto!important;width:100%!important;height:280px!important;min-height:280px!important;max-height:280px!important;aspect-ratio:auto!important;border:10px solid white!important;border-bottom-width:28px!important;overflow:hidden!important}
-.memory-photos .photo-frame:nth-child(1){transform:rotate(-4deg) translate(8px,0)!important}
-.memory-photos .photo-frame:nth-child(2){transform:rotate(4deg) translate(-6px,-5px)!important}
-.memory-photos .photo-frame.photo-shown:hover{transform:rotate(0deg) scale(1.025)!important}
-.memory-photos .photo-frame .photo-fill{height:100%!important;width:100%!important;object-fit:cover!important}
-@media(max-width:700px){.memory-photos,.memory:nth-child(2n) .memory-photos{grid-template-rows:repeat(2,220px)!important;min-height:465px!important;gap:20px!important}.memory-photos .photo-frame:nth-child(1),.memory-photos .photo-frame:nth-child(2){height:220px!important;min-height:220px!important;max-height:220px!important}}
-.music-upload-label{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;background:#e8ff70;color:#063ba3;border-color:#e8ff70;white-space:nowrap}.music-upload-label:hover{background:#fff}.direct-audio-picker{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;clip-path:inset(50%)}.shortMusic{display:none}@media(max-width:700px){.music-upload-label .mobilehide{display:none}.shortMusic{display:inline}}
-
-/* Presentation mode: keep the original artwork, hide only authoring controls. */
-body.presentation-mode .topbar{transform:translateY(-110%);opacity:0;pointer-events:none}
-.topbar{transition:transform .4s ease, opacity .4s ease}
-body.presentation-mode .hero{padding-top:75px}
-.presentation-control{position:fixed;right:20px;bottom:18px;z-index:120;border:1px solid #ffffff70;border-radius:40px;background:#073994d9;color:#fff;padding:12px 18px;font:700 12px 'Be Vietnam Pro',sans-serif;box-shadow:0 10px 25px #01286c55;cursor:pointer;backdrop-filter:blur(10px)}
-body.presentation-mode .presentation-control{opacity:0;pointer-events:none}
-body.presentation-mode .presentation-control:hover,body.presentation-mode .presentation-control:focus-visible{opacity:.9;pointer-events:auto}
-@media (hover:none){body.presentation-mode .presentation-control{opacity:.1;pointer-events:auto}}
-</style><style>html, body, #root {
-      margin-top: 0; margin-bottom: 0; padding-top: 0; padding-bottom: 0;
-      
+  <style>
+    /* =========================================
+       BASE STYLES & RESET
+       ========================================= */
+    body { transition: opacity ease-in 0.2s; } 
+    body[unresolved] { opacity: 0; display: block; overflow: hidden; position: relative; } 
+    html, body, #root { margin: 0; padding: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    html, body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Helvetica Neue, Arial, sans-serif !important; }
+    button, input, textarea, select { font-family: inherit; }
+    
+    :root {
+      --navy: #0935a9;
+      --deep: #125ed3;
+      --blue: #42bbff;
+      --ice: #ebf8ff;
+      --line: rgba(235, 249, 255, .25);
+      --ease: cubic-bezier(.2, .9, .2, 1);
     }
-html,body,#root{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}html,body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Helvetica Neue,Arial,sans-serif!important}button,input,textarea,select{font-family:inherit}html{background-color:transparent}html.chatgptOled.dark,html.mobileSkybridge.dark{background-color:#000}@supports (font: -apple-system-body){html.mobileSkybridge{font:-apple-system-body}}html.desktopSkybridge.dark{background-color:#1e1e1e}html.transparentSkybridgeBackground,html.transparentSkybridgeBackground.dark{background-color:transparent}html.androidSkybridge,html.androidSkybridge body,html.androidSkybridge *{-webkit-tap-highlight-color:rgba(255,255,255,0)}html.androidSkybridge *::selection,html.androidSkybridge *::-moz-selection{background:#fff0;color:inherit}</style><style id="github-pages-viewer">
-.top-actions,.presentation-control,.edit-backdrop,.edit-panel,.music-upload-label,.save-latest{display:none!important}
-.topbar-inner{justify-content:center}.topbar .brand{max-width:100%;text-align:center}
-body.presentation-mode .topbar{transform:none!important;opacity:1!important;pointer-events:auto!important}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}}
-</style></head><body style=""><button id="viewerMusic" type="button" aria-label="Bật hoặc tắt nhạc nền" style="position:fixed;z-index:105;bottom:19px;right:19px;border:1px solid #e8faff99;border-radius:100px;background:#073994e8;color:white;padding:12px 19px;font:700 13px sans-serif;box-shadow:0 12px 28px #001d6566;cursor:pointer">♫ Bật nhạc</button>
-<button id="presentationToggle" class="presentation-control" type="button" title="Ẩn các công cụ để trình chiếu">▶ Trình chiếu</button>
-<div class="progress" id="progress" style="width: 0%;"></div>
-<header class="topbar"><div class="shell topbar-inner"><a href="#home" class="brand"><span class="brandmark"><svg viewBox="0 0 32 32" fill="none" stroke="#b9d7ff" stroke-width="1.6"><path d="M7 26 21 12M10 8l14 14M12 6 26 20"></path><ellipse cx="22" cy="9" rx="6" ry="9" transform="rotate(44 22 9)"></ellipse></svg></span> NHỮNG ĐIỀU THẦM KÍN GỬI ĐẾN ANH <span style="font-size:10px;color:#9fbbe3;font-weight:500">/ 2026</span></a><div class="top-actions"><label class="pill music-upload-label" for="musicDirectFile" title="Nhạc đã chọn: Phép Màu (Đàn Cá Gỗ OST) - Mounter x MAYDAYs, Minh Tốc - Official MV.mp3">＋ <span class="mobilehide">Đã chọn nhạc</span><span class="shortMusic">✓ MP3</span></label><input id="musicDirectFile" class="direct-audio-picker" type="file" accept="audio/mpeg,audio/mp3,audio/wav,audio/ogg,audio/mp4,.mp3,.m4a,.wav,.ogg" aria-label="Chọn tệp nhạc nền trên máy tính"><button class="pill" id="musicToggle" type="button" title="Bật/tắt nhạc nền">♫ <span class="mobilehide">Âm nhạc</span></button><button class="pill primary" id="editOpen" type="button">✎ Chỉnh sửa</button><button class="pill save-latest" id="backupData" type="button" title="Sao lưu những thay đổi vào tệp JSON nhỏ gọn">↓ Sao lưu nội dung</button><button class="pill save-latest" id="saveLatest" type="button" title="Lưu thay đổi ngay trên trình duyệt, không tải file">✓ Lưu thay đổi</button></div></div></header>
-<section class="hero" id="home"><div class="hero-glow"></div><div class="court-lines"></div><div class="orb" aria-hidden="true"></div><div class="hero-watermark" aria-hidden="true">MEMORIES</div><span class="hero-doodle doodle-one" aria-hidden="true">✳</span><span class="hero-doodle doodle-two" aria-hidden="true">✦</span><div class="shell hero-layout"><div class="reveal visible"><div class="hero-kicker"><span class="line"></span><span class="eyebrow">GỬI ANH, BẰNG TẤT CẢ SỰ QUÝ MẾN · <span id="heroDate">28.10.2026</span></span></div><h1 id="heroTitle" aria-label="Thân gửi anh Cẩm Anh"><span class="hero-headline-static">Thân gửi anh <em>Cẩm Anh.</em></span></h1><p class="hero-text" id="heroWish">Gửi người anh, người sếp, người leader và cạ cứng xịn xịn của tụi em!
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; background: #0755d4; color: #fff; font-family: 'Be Vietnam Pro', sans-serif; overflow-x: hidden; }
+    body::before {
+      content: ""; pointer-events: none; position: fixed; inset: 0; z-index: 30;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.21'/%3E%3C/svg%3E");
+      opacity: .045;
+    }
+    ::selection { background: #87bbff; color: #071633; }
+    button { cursor: pointer; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+    .shell { width: min(1180px, calc(100% - 56px)); margin: auto; }
+    .eyebrow { font: 700 11px 'Space Grotesk', sans-serif; letter-spacing: .23em; text-transform: uppercase; color: #a7cbff; }
+    .reveal { opacity: 0; transform: translateY(34px); transition: opacity .95s var(--ease), transform .95s var(--ease); }
+    .reveal.visible { opacity: 1; transform: none; }
+    .progress { position: fixed; z-index: 100; top: 0; left: 0; height: 3px; width: 0; background: linear-gradient(90deg, #8dbbff, #fff); box-shadow: 0 0 20px #8dbbff; }
+    
+    /* =========================================
+       TOPBAR & BUTTONS
+       ========================================= */
+    .topbar { position: fixed; z-index: 50; top: 0; left: 0; right: 0; border-bottom: 1px solid rgba(255, 255, 255, .24); background: rgba(4, 54, 164, .79); backdrop-filter: blur(22px); box-shadow: 0 10px 30px #0838a51a; transition: transform .4s ease, opacity .4s ease; }
+    .topbar-inner { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: flex; align-items: center; gap: 12px; font: 700 14px 'Space Grotesk', sans-serif; letter-spacing: .07em; }
+    .brandmark { width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid #e2f5ff; border-radius: 11px; background: #ffffff1c; }
+    .brandmark svg { width: 24px; height: 24px; }
+    .top-actions { display: flex; gap: 9px; align-items: center; flex-shrink: 0; }
+    .pill { border: 1px solid rgba(186, 211, 252, .35); background: #ffffff14; color: white; border-radius: 999px; padding: 10px 15px; font-size: 12px; font-weight: 700; transition: background .25s, transform .25s, border-color .25s; }
+    .pill:hover { background: rgba(148, 190, 255, .17); transform: translateY(-2px); border-color: #b2d5ff; }
+    .pill.primary { background: #fff; color: #0750c4; border-color: #fff; }
+    .pill.primary:hover { background: #f0f8ff; }
+    .save-latest { background: #d9efff !important; color: #0b3477 !important; border-color: #d9efff !important; white-space: nowrap; }
+    .save-latest:hover { background: #fff !important; }
+    .mobilehide { display: inline; }
+
+    /* =========================================
+       HERO SECTION
+       ========================================= */
+    .hero { position: relative; padding: 150px 0 115px; min-height: 800px; display: flex; align-items: center; isolation: isolate; overflow: hidden; }
+    .hero-glow { position: absolute; inset: 0; z-index: -3; background: radial-gradient(ellipse at 85% 24%, #69daff90, transparent 46%), radial-gradient(ellipse at 0% 93%, #00379be0, transparent 43%), linear-gradient(126deg, #0031a9 0%, #0865ee 60%, #1ec0ff 100%); }
+    .court-lines { position: absolute; inset: -20% -5%; z-index: -2; opacity: .11; background: repeating-linear-gradient(116deg, transparent 0 105px, #fff 107px, transparent 109px); transform: rotate(-9deg); }
+    .orb { position: absolute; width: 580px; height: 580px; border-radius: 50%; border: 1px solid #ffffff4d; right: -8%; top: -10%; box-shadow: 0 0 0 70px #fff1, 0 0 0 160px #fff1; animation: float 9s ease-in-out infinite; z-index: -1; }
+    .hero-watermark { position: absolute; top: 14%; right: 1%; opacity: .07; font: 900 clamp(80px, 16vw, 240px) 'Manrope', sans-serif; letter-spacing: -.1em; transform: rotate(-10deg); pointer-events: none; }
+    .hero-doodle { position: absolute; font-size: 60px; color: #d8ff51; animation: float 9s infinite; }
+    .doodle-one { right: 8%; top: 15%; }
+    .doodle-two { left: 3%; bottom: 10%; font-size: 38px; color: #fff; }
+    .hero-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 35px; align-items: center; }
+    .hero-kicker { display: flex; align-items: center; gap: 12px; }
+    .hero-kicker .eyebrow { color: #e6faff; }
+    .line { height: 1px; width: 54px; background: #7eaaff; }
+    .hero h1 { font-family: 'Manrope', sans-serif; font-weight: 800; letter-spacing: -.072em; font-size: clamp(45px, 5.4vw, 84px); line-height: 1.11; min-height: 2.2em; text-shadow: 0 8px 25px #00328655; margin: 25px 0 24px; }
+    .hero h1 .hero-headline-static { color: #fff; display: block; white-space: normal; }
+    .hero h1 em { font-family: 'Caveat', cursive; font-weight: 700 !important; color: #efff55 !important; font-size: 1.28em; line-height: .9; letter-spacing: -.04em; transform: rotate(-4deg); transform-origin: left center; text-shadow: 0 6px 0 #0542af66; display: inline-block; }
+    .hero h1 .hero-headline-static.is-typing:after { content: ''; display: inline-block; width: 3px; height: .83em; background: #fff; vertical-align: -.07em; animation: caretPulse .75s step-end infinite; }
+    .hero-text { font-size: 13px; line-height: 1.9; color: #f6fcff; max-width: 660px; text-shadow: 0 1px 8px #0033a466; white-space: pre-line; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 16px; border-bottom: 2px solid #dbf3ff; padding: 18px 0; margin-top: 18px; font-size: 13px; font-weight: 800; color: white; }
+    .hero-cta .arrow { font-size: 22px; transition: transform .25s; }
+    .hero-cta:hover .arrow { transform: translate(5px, 5px); }
+    
+    .hero-media { position: relative; min-width: 0; padding: 45px 18px 44px 26px; isolation: isolate; }
+    .hero-photo { position: relative; aspect-ratio: 4/4.7; border: 13px solid white; border-bottom-width: 62px; border-radius: 3px; background: #e6f2ff; transform: rotate(6deg); box-shadow: 0 28px 0 #022f8c22, 0 38px 75px #00247677; overflow: hidden; transition: transform .8s var(--ease); }
+    .hero-photo:hover { transform: rotate(0deg) scale(1.015); }
+    .hero-photo:after { content: 'THREE YEARS, COUNTLESS MEMORIES ♡'; position: absolute; bottom: -51px; left: 0; right: 0; text-align: center; color: #1c57ba; font: 700 13px 'Caveat', cursive; letter-spacing: .04em; z-index: 2; }
+    .photo-fill { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo-empty { height: 100%; min-height: 140px; width: 100%; display: grid; place-items: center; text-align: center; gap: 10px; align-content: center; padding: 25px; background: linear-gradient(135deg, #a9dffe, #3785d9); color: white; font-size: 12px; letter-spacing: .02em; }
+    .photo-empty svg { width: 44px; opacity: .65; }
+    .photo-empty small { font-size: 10px; color: #fff; }
+    
+    .polaroid-stack { position: absolute; inset: 0; pointer-events: none; }
+    .stack-card { position: absolute; border: 10px solid white; border-bottom: 35px solid white; background: linear-gradient(135deg, #b6ebff, #2871da); width: 50%; aspect-ratio: 4/5; box-shadow: 0 24px 55px #002e7b77; border-radius: 3px; }
+    .stack-card span { position: absolute; bottom: -29px; left: 6px; color: #21539f; font: 700 18px 'Caveat', cursive; }
+    .stack-card-a { top: 8%; left: -16%; transform: rotate(-14deg); }
+    .stack-card-b { bottom: 0; right: -15%; transform: rotate(15deg); background: linear-gradient(160deg, #89d9ff, #0940be); }
+    
+    .hero-tag { position: absolute; z-index: 4; bottom: -4%; left: -8%; background: #e9ff6a; color: #0b369c; transform: rotate(-7deg); border-radius: 2px; box-shadow: 4px 10px 0 #0432ac66; max-width: 260px; padding: 20px 24px; font: 700 15px/1.35 'Space Grotesk', sans-serif; }
+    .hero-tag small { font: 700 10px 'Be Vietnam Pro'; letter-spacing: .15em; color: #36649a; display: block; margin-bottom: 8px; text-transform: uppercase; }
+    .photo-sticker { position: absolute; z-index: 5; right: -8%; top: 11%; border: 2px dashed #fff; color: #fff; background: #0e56e5; padding: 10px 16px; border-radius: 99px; font: 800 11px 'Manrope'; letter-spacing: .08em; transform: rotate(12deg); }
+    
+    .hero-rail { position: absolute; bottom: 30px; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; color: #f1f9ff; font: 700 10px 'Space Grotesk'; letter-spacing: .22em; }
+    .scrollhint { display: flex; align-items: center; gap: 10px; }
+    .scrollhint:before { content: ''; display: block; width: 28px; height: 1px; background: #9abbec; }
+    
+    /* =========================================
+       MARQUEE
+       ========================================= */
+    .marquee { overflow: hidden; border-block: 1px solid var(--line); background: #e9ff63; transform: rotate(-1deg) scale(1.01); padding: 16px 0; border: 0; }
+    .marquee-track { display: flex; width: max-content; gap: 42px; animation: marquee 33s linear infinite; white-space: nowrap; font: 800 clamp(14px, 2vw, 15px) 'Manrope'; letter-spacing: .08em; color: #083bb1; }
+    .marquee .spark { color: #1472de; }
+    
+    /* =========================================
+       MEMORIES SECTION
+       ========================================= */
+    .section-heading { text-align: center; padding: 128px 0 70px; }
+    .section-heading h2 { font: 800 clamp(38px, 5.5vw, 70px)/1.06 'Manrope'; letter-spacing: -.065em; margin: 18px auto; max-width: 1000px; }
+    .script-accent { font-family: 'Caveat', cursive; font-size: 1.2em; color: #ecff6c; font-weight: 700; letter-spacing: -.01em; }
+    .section-heading p { color: #d5eeff; font-size: 14px; max-width: 530px; margin: auto; line-height: 1.9; }
+    
+    .memory { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 112px 0; border-top: 1px solid #ffffff48; scroll-margin-top: 105px; }
+    .memory:nth-child(2n) { direction: rtl; }
+    .memory:nth-child(2n) > * { direction: ltr; }
+    .memory-num { font: 600 13px 'Space Grotesk'; color: #f1ff78; letter-spacing: .13em; }
+    .memory h3 { font: 800 clamp(37px, 5vw, 64px)/1.06 'Manrope'; letter-spacing: -.06em; margin: 19px 0 18px; }
+    .memory .quote-mark { font: 700 65px/.7 Georgia, serif; color: #ebff5d; opacity: .7; }
+    
+    .memory-wish { background: rgba(255, 255, 255, .10); border: 1px solid #ffffff38; border-radius: 18px; padding: 22px 26px; backdrop-filter: blur(12px); font-size: 14px; line-height: 2.1; min-height: 160px; color: #eef7ff; white-space: pre-wrap; }
+    .memory-next { display: inline-flex; gap: 15px; align-items: center; margin-top: 22px; color: #f4ff93; font-weight: 700; font-size: 12px; letter-spacing: .02em; border-bottom: 1px solid #658bbd; padding: 12px 0; transition: gap .3s; }
+    .memory-next:hover { gap: 24px; }
+    
+    .memory-photos, .memory:nth-child(2n) .memory-photos { display: grid !important; grid-template-columns: 1fr !important; grid-template-rows: repeat(2, 280px) !important; gap: 25px !important; min-height: 585px !important; max-width: 560px !important; margin-inline: auto !important; align-content: center; }
+    .memory-photos .photo-frame:nth-child(1), .memory-photos .photo-frame:nth-child(2) { display: block !important; grid-row: auto !important; grid-column: 1 !important; position: relative !important; inset: auto !important; width: 100% !important; height: 280px !important; min-height: 280px !important; max-height: 280px !important; aspect-ratio: auto !important; border: 10px solid white !important; border-bottom-width: 28px !important; border-radius: 2px; box-shadow: 0 22px 60px #00266c88; overflow: hidden !important; background: #ebf7ff; }
+    .memory-photos .photo-frame:nth-child(1) { transform: rotate(-4deg) translate(8px, 0) !important; z-index: 2; }
+    .memory-photos .photo-frame:nth-child(2) { transform: rotate(4deg) translate(-6px, -5px) !important; z-index: 1; }
+    .memory-photos .photo-frame:nth-child(3), .memory-photos .photo-frame:nth-child(4) { display: none !important; }
+    .memory-photos .photo-frame.photo-shown { opacity: 1; filter: blur(0); translate: 0 0; scale: 1; }
+    .memory-photos .photo-frame.photo-shown:hover { transform: rotate(0deg) scale(1.025) !important; z-index: 8; }
+    .memory-photos .photo-frame { opacity: 0; filter: blur(9px); translate: 0 32px; scale: .9; transition: opacity .8s var(--ease), filter .8s var(--ease), translate .85s var(--ease), scale .85s var(--ease), transform .5s var(--ease); }
+    .memory-photos:after { content: '✳'; position: absolute; color: #f0ff6e; font-size: 58px; right: -12px; top: -40px; animation: spin 22s linear infinite; pointer-events: none; }
+    
+    .type-caret { display: inline-block; height: 1.12em; border-right: 2px solid #a6d3ff; vertical-align: -.15em; margin-left: 2px; animation: caretPulse .8s steps(1) infinite; }
+    
+    /* =========================================
+       GALLERY & VIDEO SECTION
+       ========================================= */
+    .gallery-section { padding: 125px 0 150px; scroll-margin-top: 100px; overflow: hidden; }
+    .gallery-top { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 38px; }
+    .gallery-top h2 { font: 800 clamp(42px, 6vw, 76px)/1.08 'Manrope'; letter-spacing: -.06em; margin: 12px 0; }
+    .album-accent { font: 700 1.14em 'Caveat', cursive; color: #eeff67; letter-spacing: 0; }
+    .gallery-top p { color: #e0f5ff; font-size: 13px; line-height: 1.8; max-width: 460px; }
+    
+    .gallery-window { overflow: hidden; width: 100%; padding: 24px 0 32px; }
+    .film-reel { position: relative; padding: 40px 0 42px; background: linear-gradient(180deg, #071938, #092858); border-block: 4px solid #133878; box-shadow: 0 30px 65px #00236a88; mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent); border-radius: 5px; }
+    .film-reel:before, .film-reel:after { content: ''; position: absolute; left: 0; right: 0; height: 18px; z-index: 2; pointer-events: none; background: repeating-linear-gradient(90deg, transparent 0 10px, #c8e8ff 10px 31px, transparent 31px 47px); opacity: .9; }
+    .film-reel:before { top: 9px; }
+    .film-reel:after { bottom: 9px; }
+    
+    .gallery.gallery-track { display: flex; width: max-content; gap: 12px; animation: albumTravel 48s linear infinite; align-items: flex-start; }
+    .gallery-window:hover .gallery-track, .gallery-window:focus-within .gallery-track { animation-play-state: paused; }
+    .gallery-track .gallery-item { background: #092a64; padding: 8px 8px 3px; width: 245px; flex: 0 0 auto; transform: none !important; transition: transform .5s var(--ease); margin: 0; }
+    .gallery-track .gallery-item:nth-child(even) { margin-top: 0; }
+    .gallery-track .gallery-item:hover { transform: translateY(-10px) rotate(-1deg) !important; }
+    .gallery-track .gallery-photo { aspect-ratio: 4/3; border: 1px solid #91c5ff; border-radius: 0; overflow: hidden; transition: transform .55s var(--ease); cursor: zoom-in; }
+    .gallery-track .gallery-item:hover .gallery-photo { transform: scale(1.03); }
+    .gallery-track figcaption { font: 500 12px 'Manrope'; margin-top: 7px; min-height: 24px; color: #eaf8ff; line-height: 1.7; }
+    .gallery-hint { font-size: 11px; color: #e8fcff; margin-top: 8px; letter-spacing: .04em; }
+    
+    .closing { background: radial-gradient(ellipse at 48% 120%, #58c9ff99, transparent 45%), linear-gradient(135deg, #0b49c3, #0437a4); padding: 120px 0 140px; text-align: center; position: relative; overflow: hidden; }
+    .closing h2 { font: 800 clamp(44px, 7vw, 92px)/1.04 'Manrope'; letter-spacing: -.06em; margin: 22px auto; max-width: 950px; }
+    .closing h2 span { font-family: 'Caveat'; font-size: 1.12em; color: #eaff6e; letter-spacing: 0; }
+    .closing p { color: #e6f7ff; font-size: 14px; line-height: 1.9; }
+    
+    .video-wrap { width: min(790px, 100%); margin: 45px auto 0; border: 12px solid white; border-bottom-width: 28px; border-radius: 4px; background: white; transform: rotate(-1deg); box-shadow: 0 40px 65px #001f6877; padding: 0; }
+    .video-slot { display: grid; place-items: center; min-height: 340px; aspect-ratio: 16/9; border-radius: 0; background: linear-gradient(135deg, #1c65d3, #093387); color: #aac9f3; }
+    .video-slot strong { display: block; font: 700 21px 'Space Grotesk'; margin-bottom: 10px; }
+    .video-slot span { font-size: 12px; }
+    .video-slot svg { width: 45px; margin-bottom: 20px; }
+    .video-slot video { width: 100%; height: 100%; max-height: 520px; display: block; }
+    
+    .footer { border-top: 1px solid var(--line); padding: 25px 0; color: #e4f8ff; font-size: 11px; display: flex; justify-content: space-between; gap: 14px; }
+    
+    /* =========================================
+       EDIT STUDIO & LIGHTBOX
+       ========================================= */
+    .edit-backdrop { display: none; position: fixed; inset: 0; z-index: 150; background: rgba(0, 7, 23, .72); backdrop-filter: blur(8px); }
+    .edit-backdrop.open { display: block; }
+    .edit-panel { position: absolute; right: 0; top: 0; bottom: 0; width: min(620px, 100%); background: #f7faff; color: #0c2851; overflow-y: auto; padding: 35px; box-shadow: -20px 0 80px #0007; animation: slideIn .45s var(--ease); }
+    .edit-head { display: flex; justify-content: space-between; gap: 20px; align-items: start; border-bottom: 1px solid #cfdaea; padding-bottom: 20px; }
+    .edit-panel h2 { font: 700 30px 'Space Grotesk'; letter-spacing: -.045em; margin: 4px 0; }
+    .edit-panel p.help { color: #566e90; font-size: 12px; line-height: 1.8; margin: 16px 0; }
+    .edit-panel label { display: block; font-size: 11px; font-weight: 800; letter-spacing: .025em; margin: 17px 0 8px; }
+    .edit-panel input:not([type=file]), .edit-panel textarea { width: 100%; border: 1px solid #b8cae2; background: white; border-radius: 10px; color: #092451; padding: 12px 14px; outline: none; font-size: 13px; line-height: 1.65; }
+    .edit-panel textarea { resize: vertical; min-height: 92px; }
+    .edit-panel input:focus, .edit-panel textarea:focus { border-color: #3479e3; box-shadow: 0 0 0 3px #3479e322; }
+    .edit-panel input[type=file] { font-size: 11px; max-width: 100%; }
+    .edit-group { border: 1px solid #d3dff0; background: white; border-radius: 14px; padding: 17px; margin: 18px 0; }
+    .edit-group h3 { font: 700 17px 'Space Grotesk'; margin: 0 0 6px; }
+    .edit-actions { display: flex; flex-wrap: wrap; gap: 9px; padding: 22px 0 30px; }
+    .edit-panel .pill { color: #15345d; border-color: #b8cae1; }
+    .edit-panel .pill.primary { background: #143e86; color: white; border-color: #143e86; }
+    .edit-panel .pill:hover { background: #e1edfb; }
+    .edit-panel .pill.primary:hover { background: #2353a6; }
+    .mini { font-size: 11px; color: #6580a1; }
+    .upload-row { display: flex; align-items: center; gap: 10px; margin: 10px 0; flex-wrap: wrap; }
+    .tiny { border: 0; background: #e6eef9; color: #173d74; border-radius: 8px; padding: 6px 10px; font-size: 11px; }
+    
+    .toast { position: fixed; z-index: 200; bottom: 25px; left: 50%; transform: translate(-50%, 30px); opacity: 0; pointer-events: none; background: #f1f7ff; color: #082451; padding: 13px 22px; border-radius: 99px; font-size: 12px; font-weight: 700; transition: all .3s; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+    
+    .lightbox[hidden] { display: none; }
+    .lightbox { position: fixed; inset: 0; background: #00133de8; backdrop-filter: blur(16px); z-index: 500; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 65px 20px 24px; }
+    .lightbox img { max-height: 75vh; max-width: min(100%, 1000px); object-fit: contain; border: 9px solid white; box-shadow: 0 25px 70px #0008; }
+    .lightbox p { font-size: 13px; color: white; margin-top: 15px; }
+    .lightbox-close { position: absolute; right: 24px; top: 20px; border: 1px solid #ffffff88; color: white; background: #ffffff21; border-radius: 50%; width: 43px; height: 43px; }
+    .lightbox-open { overflow: hidden; }
+    
+    .music-upload-label { display: inline-flex; align-items: center; justify-content: center; cursor: pointer; background: #e8ff70; color: #063ba3; border-color: #e8ff70; white-space: nowrap; }
+    .music-upload-label:hover { background: #fff; }
+    .direct-audio-picker { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; clip-path: inset(50%); }
+    .shortMusic { display: none; }
+    
+    .presentation-control { position: fixed; right: 20px; bottom: 18px; z-index: 120; border: 1px solid #ffffff70; border-radius: 40px; background: #073994d9; color: #fff; padding: 12px 18px; font: 700 12px 'Be Vietnam Pro', sans-serif; box-shadow: 0 10px 25px #01286c55; cursor: pointer; backdrop-filter: blur(10px); }
+    body.presentation-mode .topbar { transform: translateY(-110%); opacity: 0; pointer-events: none; }
+    body.presentation-mode .hero { padding-top: 75px; }
+    body.presentation-mode .presentation-control { opacity: 0; pointer-events: none; }
+    body.presentation-mode .presentation-control:hover, body.presentation-mode .presentation-control:focus-visible { opacity: .9; pointer-events: auto; }
+    
+    @keyframes float { 50% { transform: translateY(-22px) rotate(5deg); } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+    @keyframes slideIn { from { transform: translateX(60px); opacity: .4; } to { transform: none; opacity: 1; } }
+    @keyframes caretPulse { 50% { opacity: 0; } }
+    @keyframes albumTravel { to { transform: translateX(-50%); } }
+    
+    /* =========================================
+       RESPONSIVE RULES
+       ========================================= */
+    @media(max-width: 900px) {
+      .hero-layout { grid-template-columns: 1fr 1fr; gap: 20px; }
+      .hero h1 { font-size: clamp(44px, 6vw, 70px); }
+      .memory { gap: 40px; }
+    }
+    @media(max-width: 760px) {
+      .brand { max-width: 46%; font-size: 9px; line-height: 1.35; }
+      .top-actions { gap: 5px; }
+      .top-actions .pill { padding: 8px 9px; font-size: 10px; }
+      .save-latest { max-width: 112px; white-space: normal; line-height: 1.25; }
+    }
+    @media(max-width: 700px) {
+      .shell { width: calc(100% - 36px); }
+      .topbar-inner { height: 65px; }
+      .brandmark { width: 30px; height: 30px; }
+      .mobilehide { display: none; }
+      .hero { min-height: 0; padding: 108px 0 90px; }
+      .hero-layout { grid-template-columns: 1fr; gap: 12px; }
+      .hero h1 { font-size: clamp(47px, 12vw, 67px); min-height: 2.5em; }
+      .hero-text { font-size: 12.5px; }
+      .hero-media { width: 78%; margin: 5px auto 10px; }
+      .hero-photo { border-width: 8px; border-bottom-width: 42px; }
+      .hero-photo:after { bottom: -36px; font-size: 10px; }
+      .hero-tag { left: -12%; font-size: 12px; padding: 14px; }
+      .photo-sticker { font-size: 8px; }
+      .hero-rail { bottom: 15px; }
+      .section-heading { padding: 90px 0 36px; }
+      .section-heading h2 { font-size: clamp(34px, 9vw, 50px); }
+      .memory { padding: 70px 0; grid-template-columns: 1fr; gap: 48px; }
+      .memory:nth-child(2n) { direction: ltr; }
+      .memory h3 { font-size: 45px; }
+      .memory-photos { order: 2; margin: 0 8px 20px; }
+      .memory:nth-child(2n) .memory-photos { order: 2; }
+      .memory-photos, .memory:nth-child(2n) .memory-photos { grid-template-rows: repeat(2, 220px) !important; min-height: 465px !important; gap: 20px !important; }
+      .memory-photos .photo-frame:nth-child(1), .memory-photos .photo-frame:nth-child(2) { height: 220px !important; min-height: 220px !important; max-height: 220px !important; }
+      .gallery-top { display: block; }
+      .gallery-top h2 { font-size: 50px; }
+      .gallery-section { padding: 85px 0; }
+      .film-reel { padding: 35px 0; }
+      .gallery-track .gallery-item { width: 205px; }
+      .gallery-hint { font-size: 10px; }
+      .closing { padding: 90px 0; }
+      .video-wrap { border-width: 7px; border-bottom-width: 20px; }
+      .video-slot { min-height: 190px; }
+      .edit-panel { padding: 22px; }
+      .footer { flex-direction: column; }
+      .scrollhint { display: none; }
+      .music-upload-label .mobilehide { display: none; }
+      .shortMusic { display: inline; }
+    }
+    @media(prefers-reduced-motion: reduce) {
+      *, *:before, *:after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .memory-photos .photo-frame { opacity: 1; filter: none; translate: none; scale: 1; transition: none; }
+      .type-caret { animation: none; }
+      .hero-doodle { animation: none; }
+      .film-reel { overflow-x: auto; mask-image: none; }
+      .gallery.gallery-track { animation: none; }
+    }
+    @media (hover: none) {
+      body.presentation-mode .presentation-control { opacity: .1; pointer-events: auto; }
+    }
+    
+    /* GITHUB PAGES VIEWER STYLES */
+    #github-pages-viewer .top-actions,
+    #github-pages-viewer .presentation-control,
+    #github-pages-viewer .edit-backdrop,
+    #github-pages-viewer .edit-panel,
+    #github-pages-viewer .music-upload-label,
+    #github-pages-viewer .save-latest { display: none !important; }
+    #github-pages-viewer .topbar-inner { justify-content: center; }
+    #github-pages-viewer .topbar .brand { max-width: 100%; text-align: center; }
+    body.presentation-mode .topbar { transform: none !important; opacity: 1 !important; pointer-events: auto !important; }
+  </style>
+  <style id="github-pages-viewer"></style>
+</head>
+<body>
+  <button id="viewerMusic" type="button" aria-label="Bật hoặc tắt nhạc nền" style="position:fixed;z-index:105;bottom:19px;right:19px;border:1px solid #e8faff99;border-radius:100px;background:#073994e8;color:white;padding:12px 19px;font:700 13px sans-serif;box-shadow:0 12px 28px #001d6566;cursor:pointer">♫ Bật nhạc</button>
+  <button id="presentationToggle" class="presentation-control" type="button" title="Ẩn các công cụ để trình chiếu">▶ Trình chiếu</button>
+  <div class="progress" id="progress" style="width: 0%;"></div>
+  
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a href="#home" class="brand">
+        <span class="brandmark">
+          <svg viewBox="0 0 32 32" fill="none" stroke="#b9d7ff" stroke-width="1.6">
+            <path d="M7 26 21 12M10 8l14 14M12 6 26 20"></path>
+            <ellipse cx="22" cy="9" rx="6" ry="9" transform="rotate(44 22 9)"></ellipse>
+          </svg>
+        </span>
+        NHỮNG ĐIỀU THẦM KÍN GỬI ĐẾN ANH <span style="font-size:10px;color:#9fbbe3;font-weight:500">/ 2026</span>
+      </a>
+      <div class="top-actions">
+        <label class="pill music-upload-label" for="musicDirectFile" title="Nhạc đã chọn: Phép Màu (Đàn Cá Gỗ OST) - Mounter x MAYDAYs, Minh Tốc - Official MV.mp3">
+          ＋ <span class="mobilehide">Đã chọn nhạc</span><span class="shortMusic">✓ MP3</span>
+        </label>
+        <input id="musicDirectFile" class="direct-audio-picker" type="file" accept="audio/mpeg,audio/mp3,audio/wav,audio/ogg,audio/mp4,.mp3,.m4a,.wav,.ogg" aria-label="Chọn tệp nhạc nền trên máy tính">
+        <button class="pill" id="musicToggle" type="button" title="Bật/tắt nhạc nền">♫ <span class="mobilehide">Âm nhạc</span></button>
+        <button class="pill primary" id="editOpen" type="button">✎ Chỉnh sửa</button>
+        <button class="pill save-latest" id="backupData" type="button" title="Sao lưu những thay đổi vào tệp JSON nhỏ gọn">↓ Sao lưu nội dung</button>
+        <button class="pill save-latest" id="saveLatest" type="button" title="Lưu thay đổi ngay trên trình duyệt, không tải file">✓ Lưu thay đổi</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-glow"></div>
+    <div class="court-lines"></div>
+    <div class="orb" aria-hidden="true"></div>
+    <div class="hero-watermark" aria-hidden="true">MEMORIES</div>
+    <span class="hero-doodle doodle-one" aria-hidden="true">✳</span>
+    <span class="hero-doodle doodle-two" aria-hidden="true">✦</span>
+    <div class="shell hero-layout">
+      <div class="reveal visible">
+        <div class="hero-kicker">
+          <span class="line"></span>
+          <span class="eyebrow">GỬI ANH, BẰNG TẤT CẢ SỰ QUÝ MẾN · <span id="heroDate">28.10.2026</span></span>
+        </div>
+        <h1 id="heroTitle" aria-label="Thân gửi anh Cẩm Anh">
+          <span class="hero-headline-static">Thân gửi anh <em>Cẩm Anh.</em></span>
+        </h1>
+        <p class="hero-text" id="heroWish">Gửi người anh, người sếp, người leader và cạ cứng xịn xịn của tụi em!
 
 Vậy là hành trình 3 năm mình đồng hành cùng nhau đã đi tới đoạn chuyển giao rồi. Cảm ơn anh thật nhiều vì đã luôn chia sẻ, chỉ dẫn cho tụi em trong công việc. Càng cảm ơn hơn vì những chuyến đi không chỉ có công việc mà còn tràn ngập tiếng cười và bao nhiêu kỷ niệm đẹp.
 
@@ -158,12 +377,84 @@ Tụi em tin rằng quyết định dừng lại lúc này sẽ là cơ hội tu
 
 Dù ở đâu thì mong anh luôn giữ phong độ, niềm vui và tinh thần tích cực này nhé! Chúc anh cùng gia đình luôn bình an, hạnh phúc và gặt hái thật nhiều thành công trên con đường phía trước.
 
-May the road ahead bring you fresh energy and exciting adventures. Keep in touch!</p><a href="#memories" class="hero-cta">MỞ NHỮNG MẢNH KỶ NIỆM <span class="arrow">↘</span></a></div><div class="hero-media reveal visible"><div class="polaroid-stack" aria-hidden="true"><div class="stack-card stack-card-a"><span>the good old days ✳</span></div><div class="stack-card stack-card-b"><span>our story, our people</span></div></div><div class="hero-photo" id="heroPhoto"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-01-792b521ec0.jpg" alt="Ảnh cả nhóm · Gia tộc Lẩu"></div><span class="photo-sticker" aria-hidden="true">✽ OUR LITTLE STORY</span><div class="hero-tag"><small>FROM ALL OF US</small><span id="heroFrom">Từ những người đồng hành luôn quý mến anh</span></div></div></div><div class="shell hero-rail"><span>A LITTLE NOTE, WITH LOTS OF LOVE</span><span class="scrollhint">SCROLL TO EXPLORE ↓</span></div></section>
-<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"><span>NHỮNG NGÀY THẬT ĐẸP.</span><span class="spark">✳</span><span>ALWAYS IN OUR HEARTS.</span><span class="spark">✳</span><span>NHỮNG NGÀY THẬT ĐẸP.</span><span class="spark">✳</span><span>ALWAYS IN OUR HEARTS.</span><span class="spark">✳</span><span>NHỮNG NGÀY THẬT ĐẸP.</span><span class="spark">✳</span><span>ALWAYS IN OUR HEARTS.</span><span class="spark">✳</span><span>NHỮNG NGÀY THẬT ĐẸP.</span><span class="spark">✳</span><span>ALWAYS IN OUR HEARTS.</span><span class="spark">✳</span><span>NHỮNG NGÀY THẬT ĐẸP.</span><span class="spark">✳</span><span>ALWAYS IN OUR HEARTS.</span><span class="spark">✳</span><span>NHỮNG NGÀY THẬT ĐẸP.</span><span class="spark">✳</span><span>ALWAYS IN OUR HEARTS.</span><span class="spark">✳</span><span>NHỮNG NGÀY THẬT ĐẸP.</span><span class="spark">✳</span><span>ALWAYS IN OUR HEARTS.</span><span class="spark">✳</span><span>NHỮNG NGÀY THẬT ĐẸP.</span><span class="spark">✳</span><span>ALWAYS IN OUR HEARTS.</span><span class="spark">✳</span></div></div>
-<main><section class="shell" id="memories"><div class="section-heading reveal visible"><span class="eyebrow">01 / NOTES FROM THE TEAM</span><h2>Những điều chưa nói.<br><span class="script-accent">Gửi anh, bằng cả tấm lòng.</span></h2><p>Mỗi người giữ một mảnh ký ức. Tụi em gom lại thành một album thật riêng để dành tặng anh.</p></div><div id="cards"><article class="memory reveal visible" id="thuong"><div class="memory-photos"><div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-02-1d99233d00.jpg" alt="Thí Thương · Ảnh 1"></div><div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-03-bca3ba05af.jpg" alt="Thí Thương · Ảnh 2"></div></div><div class="memory-copy"><span class="memory-num">01 / A MESSAGE FROM</span><h3>Thí Thương</h3><div class="quote-mark">“</div><p class="memory-wish" data-full-wish="“Thanks for the unforgettable 3-year ride! Here’s to setting sail for new horizons—may peace, happiness, and ultimate success follow you wherever you go.”
-&quot;Every end is a new beginning. Thank you for being an inspiring leader and a great partner on the road. Take this time to recharge, reset, and gear up for your next big adventure. Wish you peace, joy, and nothing but the best ahead!&quot;" aria-label="“Thanks for the unforgettable 3-year ride! Here’s to setting sail for new horizons—may peace, happiness, and ultimate success follow you wherever you go.”
-&quot;Every end is a new beginning. Thank you for being an inspiring leader and a great partner on the road. Take this time to recharge, reset, and gear up for your next big adventure. Wish you peace, joy, and nothing but the best ahead!&quot;">“Thanks for the unforgettable 3-year ride! Here’s to setting sail for new horizons—may peace, happiness, and ultimate success follow you wherever you go.”
-"Every end is a new beginning. Thank you for being an inspiring leader and a great partner on the road. Take this time to recharge, reset, and gear up for your next big adventure. Wish you peace, joy, and nothing but the best ahead!"</p><a class="memory-next" href="#dung"><span>Một kỷ niệm nữa đang chờ anh ở phía dưới…</span><span>↗</span></a></div></article><article class="memory reveal visible" id="dung"><div class="memory-photos"><div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-04-82a6d5dd58.jpg" alt="Dun Dun · Ảnh 1"></div><div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-05-00fbb5d7d1.jpg" alt="Dun Dun · Ảnh 2"></div></div><div class="memory-copy"><span class="memory-num">02 / A MESSAGE FROM</span><h3>Dun Dun</h3><div class="quote-mark">“</div><p class="memory-wish" data-full-wish="“Cảm ơn anh vì thời gian qua đã vừa là đồng nghiệp, vừa là bạn và là một người anh. Cảm ơn anh vì đã luôn đồng hành trong những chuyến đi, kiên nhẫn với những thiếu sót, và đã luôn đưa ra lời khuyên cho tụi em khi cần. Một đoạn đường không dài nhưng rất nhiều niềm vui và kỷ niệm đẹp. Chúc anh của những ngày sau, dù gặp bao nhiêu người, đi bao nhiêu đường, trải bao nhiêu chuyện, vẫn luôn thong dong tự tại, được là chính mình.”" aria-label="“Cảm ơn anh vì thời gian qua đã vừa là đồng nghiệp, vừa là bạn và là một người anh. Cảm ơn anh vì đã luôn đồng hành trong những chuyến đi, kiên nhẫn với những thiếu sót, và đã luôn đưa ra lời khuyên cho tụi em khi cần. Một đoạn đường không dài nhưng rất nhiều niềm vui và kỷ niệm đẹp. Chúc anh của những ngày sau, dù gặp bao nhiêu người, đi bao nhiêu đường, trải bao nhiêu chuyện, vẫn luôn thong dong tự tại, được là chính mình.”">“Cảm ơn anh vì thời gian qua đã vừa là đồng nghiệp, vừa là bạn và là một người anh. Cảm ơn anh vì đã luôn đồng hành trong những chuyến đi, kiên nhẫn với những thiếu sót, và đã luôn đưa ra lời khuyên cho tụi em khi cần. Một đoạn đường không dài nhưng rất nhiều niềm vui và kỷ niệm đẹp. Chúc anh của những ngày sau, dù gặp bao nhiêu người, đi bao nhiêu đường, trải bao nhiêu chuyện, vẫn luôn thong dong tự tại, được là chính mình.”</p><a class="memory-next" href="#huyen"><span>Cùng mở tiếp lời nhắn của người kế tiếp nhé!</span><span>↗</span></a></div></article><article class="memory reveal visible" id="huyen"><div class="memory-photos"><div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-06-6c494cb601.jpg" alt="Ngọc Hìn · Ảnh 1"></div><div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-07-d31c9c756f.jpg" alt="Ngọc Hìn · Ảnh 2"></div></div><div class="memory-copy"><span class="memory-num">03 / A MESSAGE FROM</span><h3>Ngọc Hìn</h3><div class="quote-mark">“</div><p class="memory-wish" data-full-wish="“Trước giờ em cảm ơn thấy rất may mắn vì đã được anh - Second line Manager viết cho rất nhiều lời ghi nhận, vinh danh, nên hôm nay em cũng muốn đáp lễ lại anh bằng những câu từ tận đáy lòng. 
+May the road ahead bring you fresh energy and exciting adventures. Keep in touch!</p>
+        <a href="#memories" class="hero-cta">MỞ NHỮNG MẢNH KỶ NIỆM <span class="arrow">↘</span></a>
+      </div>
+      <div class="hero-media reveal visible">
+        <div class="polaroid-stack" aria-hidden="true">
+          <div class="stack-card stack-card-a"><span>the good old days ✳</span></div>
+          <div class="stack-card stack-card-b"><span>our story, our people</span></div>
+        </div>
+        <div class="hero-photo" id="heroPhoto">
+          <img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-01-792b521ec0.jpg" alt="Ảnh cả nhóm · Gia tộc Lẩu">
+        </div>
+        <span class="photo-sticker" aria-hidden="true">✽ OUR LITTLE STORY</span>
+        <div class="hero-tag">
+          <small>FROM ALL OF US</small>
+          <span id="heroFrom">Từ những người đồng hành luôn quý mến anh</span>
+        </div>
+      </div>
+    </div>
+    <div class="shell hero-rail">
+      <span>A LITTLE NOTE, WITH LOTS OF LOVE</span>
+      <span class="scrollhint">SCROLL TO EXPLORE ↓</span>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee">
+      <!-- Sẽ được điền tự động bằng JavaScript -->
+    </div>
+  </div>
+
+  <main>
+    <section class="shell" id="memories">
+      <div class="section-heading reveal visible">
+        <span class="eyebrow">01 / NOTES FROM THE TEAM</span>
+        <h2>Những điều chưa nói.<br><span class="script-accent">Gửi anh, bằng cả tấm lòng.</span></h2>
+        <p>Mỗi người giữ một mảnh ký ức. Tụi em gom lại thành một album thật riêng để dành tặng anh.</p>
+      </div>
+      <div id="cards">
+        <!-- Đã đồng bộ 5 người để chống lỗi giật trang khi load (dù JS cũng sẽ load lại) -->
+        <article class="memory reveal visible" id="thuong">
+          <div class="memory-photos">
+            <div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-02-1d99233d00.jpg" alt="Thí Thương · Ảnh 1"></div>
+            <div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-03-bca3ba05af.jpg" alt="Thí Thương · Ảnh 2"></div>
+          </div>
+          <div class="memory-copy">
+            <span class="memory-num">01 / A MESSAGE FROM</span>
+            <h3>Thí Thương</h3>
+            <div class="quote-mark">“</div>
+            <p class="memory-wish" data-full-wish="“Thanks for the unforgettable 3-year ride! Here’s to setting sail for new horizons—may peace, happiness, and ultimate success follow you wherever you go.”&#10;&quot;Every end is a new beginning. Thank you for being an inspiring leader and a great partner on the road. Take this time to recharge, reset, and gear up for your next big adventure. Wish you peace, joy, and nothing but the best ahead!&quot;" aria-label="“Thanks for the unforgettable 3-year ride! Here’s to setting sail for new horizons—may peace, happiness, and ultimate success follow you wherever you go.”&#10;&quot;Every end is a new beginning. Thank you for being an inspiring leader and a great partner on the road. Take this time to recharge, reset, and gear up for your next big adventure. Wish you peace, joy, and nothing but the best ahead!&quot;">“Thanks for the unforgettable 3-year ride! Here’s to setting sail for new horizons—may peace, happiness, and ultimate success follow you wherever you go.”
+"Every end is a new beginning. Thank you for being an inspiring leader and a great partner on the road. Take this time to recharge, reset, and gear up for your next big adventure. Wish you peace, joy, and nothing but the best ahead!"</p>
+            <a class="memory-next" href="#dung"><span>Một kỷ niệm nữa đang chờ anh ở phía dưới…</span><span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="memory reveal visible" id="dung">
+          <div class="memory-photos">
+            <div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-04-82a6d5dd58.jpg" alt="Dun Dun · Ảnh 1"></div>
+            <div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-05-00fbb5d7d1.jpg" alt="Dun Dun · Ảnh 2"></div>
+          </div>
+          <div class="memory-copy">
+            <span class="memory-num">02 / A MESSAGE FROM</span>
+            <h3>Dun Dun</h3>
+            <div class="quote-mark">“</div>
+            <p class="memory-wish" data-full-wish="“Cảm ơn anh vì thời gian qua đã vừa là đồng nghiệp, vừa là bạn và là một người anh. Cảm ơn anh vì đã luôn đồng hành trong những chuyến đi, kiên nhẫn với những thiếu sót, và đã luôn đưa ra lời khuyên cho tụi em khi cần. Một đoạn đường không dài nhưng rất nhiều niềm vui và kỷ niệm đẹp. Chúc anh của những ngày sau, dù gặp bao nhiêu người, đi bao nhiêu đường, trải bao nhiêu chuyện, vẫn luôn thong dong tự tại, được là chính mình.”" aria-label="“Cảm ơn anh vì thời gian qua đã vừa là đồng nghiệp, vừa là bạn và là một người anh. Cảm ơn anh vì đã luôn đồng hành trong những chuyến đi, kiên nhẫn với những thiếu sót, và đã luôn đưa ra lời khuyên cho tụi em khi cần. Một đoạn đường không dài nhưng rất nhiều niềm vui và kỷ niệm đẹp. Chúc anh của những ngày sau, dù gặp bao nhiêu người, đi bao nhiêu đường, trải bao nhiêu chuyện, vẫn luôn thong dong tự tại, được là chính mình.”">“Cảm ơn anh vì thời gian qua đã vừa là đồng nghiệp, vừa là bạn và là một người anh. Cảm ơn anh vì đã luôn đồng hành trong những chuyến đi, kiên nhẫn với những thiếu sót, và đã luôn đưa ra lời khuyên cho tụi em khi cần. Một đoạn đường không dài nhưng rất nhiều niềm vui và kỷ niệm đẹp. Chúc anh của những ngày sau, dù gặp bao nhiêu người, đi bao nhiêu đường, trải bao nhiêu chuyện, vẫn luôn thong dong tự tại, được là chính mình.”</p>
+            <a class="memory-next" href="#huyen"><span>Cùng mở tiếp lời nhắn của người kế tiếp nhé!</span><span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="memory reveal visible" id="huyen">
+          <div class="memory-photos">
+            <div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-06-6c494cb601.jpg" alt="Ngọc Hìn · Ảnh 1"></div>
+            <div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-07-d31c9c756f.jpg" alt="Ngọc Hìn · Ảnh 2"></div>
+          </div>
+          <div class="memory-copy">
+            <span class="memory-num">03 / A MESSAGE FROM</span>
+            <h3>Ngọc Hìn</h3>
+            <div class="quote-mark">“</div>
+            <p class="memory-wish" data-full-wish="“Trước giờ em cảm ơn thấy rất may mắn vì đã được anh - Second line Manager viết cho rất nhiều lời ghi nhận, vinh danh, nên hôm nay em cũng muốn đáp lễ lại anh bằng những câu từ tận đáy lòng. 
 
 Thật lòng mà nói anh vừa là người sếp đáng kính và đáng sợ của em tại DKSH, nhiều lúc em rất vui vì ở công ty em như có một chỗ dựa, một người ba thứ hai vậy. Anh là tấm gương cho em học tập được nhiều đức tính tốt: không ngừng học hỏi, giữ vững lập trường và nguyên tắc làm việc đúng đắn, giúp đỡ người cần giúp và mở rộng mối quan hệ một cách chân thật. Cách đối nhân xử thế của anh cũng là điều em muốn hướng tới. Còn đáng sợ là vì, anh luôn cho thấy sự tin tưởng của anh dành cho em và đội nhóm, nên em rất sợ em không làm được như những gì anh kì vọng.
 
@@ -175,266 +466,893 @@ Ba năm vừa qua sẽ mãi là kỉ niệm em không bao giờ quên, hy vọng
 
 Thật lòng mà nói anh vừa là người sếp đáng kính và đáng sợ của em tại DKSH, nhiều lúc em rất vui vì ở công ty em như có một chỗ dựa, một người ba thứ hai vậy. Anh là tấm gương cho em học tập được nhiều đức tính tốt: không ngừng học hỏi, giữ vững lập trường và nguyên tắc làm việc đúng đắn, giúp đỡ người cần giúp và mở rộng mối quan hệ một cách chân thật. Cách đối nhân xử thế của anh cũng là điều em muốn hướng tới. Còn đáng sợ là vì, anh luôn cho thấy sự tin tưởng của anh dành cho em và đội nhóm, nên em rất sợ em không làm được như những gì anh kì vọng.
 
-Ba năm vừa qua sẽ mãi là kỉ niệm em không bao giờ quên, hy vọng đây chỉ là kết thúc tạm để mở đầu cho những hành trình mới tốt đẹp hơn. Em mong anh sẽ có khoảng thời gian thư giãn và ổn định lại, rất mong sau này em sẽ có cơ hội làm việc chung với anh. Ở DKSH, em sẽ cố gắng giữ những giá trị mà anh đã xây dựng và đặt nền móng cho tụi em.”</p><a class="memory-next" href="#gallerySection"><span>Và cuối cùng là hình ảnh cùng Gia tộc Lẩu </span><span>↗</span></a></div></article></div></section><section class="shell gallery-section" id="gallerySection"><div class="gallery-top reveal visible"><div><span class="eyebrow">02 / THE PHOTO ALBUM</span><h2>Những thước phim của<br><span class="album-accent">Lẩu Các Loại.</span></h2></div><p>Team Lẩu Các Loại đã cùng nhau đi qua những chuyến đi, những cuộc vui và rất nhiều lần cười hết cỡ. Tụi em sẽ lưu giữ lại những kỷ niệm ấy ở đây như một phần ký ức không thể xóa nhòa về anh.</p></div><div class="gallery-window film-reel" aria-label="Băng chuyền ảnh kỷ niệm Lẩu Các Loại"><div class="gallery gallery-track" id="gallery"><figure class="gallery-item reveal"><div class="gallery-photo"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-08-2b8d9d4e12.jpg" alt="Ảnh cả nhóm 1"></div><figcaption>Sinh nhật Ka Tê</figcaption></figure><figure class="gallery-item reveal visible"><div class="gallery-photo"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-09-32d8e73938.jpg" alt="Ảnh cả nhóm 2"></div><figcaption>YEP 2025</figcaption></figure><figure class="gallery-item reveal visible"><div class="gallery-photo"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-10-a2df56f4b5.jpg" alt="Ảnh cả nhóm 3"></div><figcaption>Vùng kí ức đẹp tại Quy Nhơn</figcaption></figure><figure class="gallery-item reveal visible"><div class="gallery-photo"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-11-39224c4323.jpg" alt="Ảnh cả nhóm 4"></div><figcaption>Bữa cơm gia đình sum họp </figcaption></figure><figure class="gallery-item reveal visible"><div class="gallery-photo"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-08-2b8d9d4e12.jpg" alt="Ảnh cả nhóm 5"></div><figcaption>Sinh nhật Ka Tê</figcaption></figure><figure class="gallery-item reveal visible"><div class="gallery-photo"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-09-32d8e73938.jpg" alt="Ảnh cả nhóm 6"></div><figcaption>YEP 2025</figcaption></figure><figure class="gallery-item reveal visible"><div class="gallery-photo"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-10-a2df56f4b5.jpg" alt="Ảnh cả nhóm 7"></div><figcaption>Vùng kí ức đẹp tại Quy Nhơn</figcaption></figure><figure class="gallery-item reveal"><div class="gallery-photo"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-11-39224c4323.jpg" alt="Ảnh cả nhóm 8"></div><figcaption>Bữa cơm gia đình sum họp </figcaption></figure></div></div><p class="gallery-hint">▶ FILM 01 — Rê chuột để dừng thước phim. Nhấn vào ảnh để xem kỷ niệm lớn hơn.</p></section><section class="closing" id="closing"><div class="shell"><span class="eyebrow">03 / ONE LAST MOMENT</span><h2 class="reveal visible">Hẹn gặp lại anh,<br><span>ở một chương thật đẹp.</span></h2><p class="reveal visible">Ba năm đồng hành không chỉ có công việc, mà còn có những kỷ niệm tụi em luôn trân trọng.<br>Chúc anh thật nhiều niềm vui và có một hành trình mới thật đẹp.</p><div class="video-wrap reveal visible"><div class="video-slot" id="videoSlot"><div style="text-align:center;padding:20px"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="11" width="50" height="42" rx="7"></rect><circle cx="23" cy="26" r="5"></circle><path d="m10 45 15-13 10 8 9-13 11 18"></path></svg><strong>Một thước phim của chúng mình</strong><span>Video kỷ niệm sẽ xuất hiện ở đây</span></div></div></div></div></section></main><footer class="shell footer"><span>THÂN TẶNG ĐẾN CHÚ CÔNG AN</span><span id="footerDate">28.10.2026</span></footer>
-<audio id="bgAudio" loop="" src="assets/nhac-nen.mp3"></audio>
-<div class="edit-backdrop" id="editBackdrop" role="dialog" aria-modal="true" aria-label="Chỉnh sửa website"><aside class="edit-panel"><div class="edit-head"><div><span class="mini">CONTENT STUDIO</span><h2>Chỉnh sửa lời chúc ✎</h2></div><button type="button" class="tiny" id="editClose">Đóng ✕</button></div><p class="help">Bạn có thể chỉnh sửa lời chúc, tên, ảnh, video và nhạc. Ảnh tải lên sẽ được tự động nén gọn để dễ lưu hơn. Bấm <b>Lưu thay đổi</b> trên thanh menu để lưu trên trình duyệt này, không tải file. Nếu cần chia sẻ bản đã chỉnh sửa trên máy khác, dùng tùy chọn xuất HTML bên dưới.</p><div id="editFields"><div class="edit-group"><h3>Thông tin mở đầu</h3><label for="f_date">Ngày</label><input id="f_date" data-field="date" value="28.10.2026"><label for="f_from">Dòng ký tên tập thể</label><input id="f_from" data-field="from" value="Từ những người đồng hành luôn quý mến anh"><label for="f_intro">Lời nhắn chung</label><textarea id="f_intro" data-field="intro">Gửi người anh, người sếp, người leader và cạ cứng xịn xịn của tụi em!
+Ba năm vừa qua sẽ mãi là kỉ niệm em không bao giờ quên, hy vọng đây chỉ là kết thúc tạm để mở đầu cho những hành trình mới tốt đẹp hơn. Em mong anh sẽ có khoảng thời gian thư giãn và ổn định lại, rất mong sau này em sẽ có cơ hội làm việc chung với anh. Ở DKSH, em sẽ cố gắng giữ những giá trị mà anh đã xây dựng và đặt nền móng cho tụi em.”</p>
+            <a class="memory-next" href="#loi-chuc-04"><span>Vẫn còn những lời nhắn gửi anh ở phía dưới nữa nè…</span><span>↗</span></a>
+          </div>
+        </article>
 
-Vậy là hành trình 3 năm mình đồng hành cùng nhau đã đi tới đoạn chuyển giao rồi. Cảm ơn anh thật nhiều vì đã luôn chia sẻ, chỉ dẫn cho tụi em trong công việc. Càng cảm ơn hơn vì những chuyến đi không chỉ có công việc mà còn tràn ngập tiếng cười và bao nhiêu kỷ niệm đẹp.
+        <article class="memory reveal visible" id="loi-chuc-04">
+          <div class="memory-photos">
+            <div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="assets/loi-chuc-4-anh-1.jpg" alt="Team ốc đảo · Ảnh 1"></div>
+            <div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="assets/loi-chuc-4-anh-2.jpg" alt="Team ốc đảo · Ảnh 2"></div>
+          </div>
+          <div class="memory-copy">
+            <span class="memory-num">04 / A MESSAGE FROM</span>
+            <h3>Team ốc đảo (Chi Bu, Ms Cua, Na Chúi)</h3>
+            <div class="quote-mark">“</div>
+            <p class="memory-wish" data-full-wish='"Với Cường Bùi, anh không chỉ là một người anh, một người đồng nghiệp mà còn là một người bạn ăn cơm, luôn sẵn sàng lắng nghe những câu chuyện lớn nhỏ và cùng em gỡ rối biết bao kèo khó.&#10;&#10;Với Na, anh không chỉ là một người sếp mà còn giống như người ba thứ hai ở công ty. Một người luôn âm thầm quan tâm, bảo vệ, cho em những lời khuyên đúng lúc và đặc biệt là có chuyện gì cũng có thể chạy đi méc anh được hihi. &#10;&#10;Cảm ơn anh vì đã luôn nhiệt tình hỗ trợ, chia sẻ kinh nghiệm cho em Tố Uyên. Chúc anh bước sang hành trình mới với thật nhiều năng lượng tích cực, công việc hanh thông và gặt hái thêm nhiều thành công rực rỡ. Tạm biệt ở công ty thôi chứ hội Lẩu Các Loại vẫn còn hẹn nhau dài dài trên những chuyến đi sắp tới nha anh!"' aria-label='"Với Cường Bùi, anh không chỉ là một người anh, một người đồng nghiệp mà còn là một người bạn ăn cơm, luôn sẵn sàng lắng nghe những câu chuyện lớn nhỏ và cùng em gỡ rối biết bao kèo khó.&#10;&#10;Với Na, anh không chỉ là một người sếp mà còn giống như người ba thứ hai ở công ty. Một người luôn âm thầm quan tâm, bảo vệ, cho em những lời khuyên đúng lúc và đặc biệt là có chuyện gì cũng có thể chạy đi méc anh được hihi. &#10;&#10;Cảm ơn anh vì đã luôn nhiệt tình hỗ trợ, chia sẻ kinh nghiệm cho em Tố Uyên. Chúc anh bước sang hành trình mới với thật nhiều năng lượng tích cực, công việc hanh thông và gặt hái thêm nhiều thành công rực rỡ. Tạm biệt ở công ty thôi chứ hội Lẩu Các Loại vẫn còn hẹn nhau dài dài trên những chuyến đi sắp tới nha anh!"'>"Với Cường Bùi, anh không chỉ là một người anh, một người đồng nghiệp mà còn là một người bạn ăn cơm, luôn sẵn sàng lắng nghe những câu chuyện lớn nhỏ và cùng em gỡ rối biết bao kèo khó.
 
-Tụi em tin rằng quyết định dừng lại lúc này sẽ là cơ hội tuyệt vời để anh thả lỏng, nạp lại 100% năng lượng và tìm kiếm những hướng đi mới mẻ, thú vị hơn cho chính mình.
+Với Na, anh không chỉ là một người sếp mà còn giống như người ba thứ hai ở công ty. Một người luôn âm thầm quan tâm, bảo vệ, cho em những lời khuyên đúng lúc và đặc biệt là có chuyện gì cũng có thể chạy đi méc anh được hihi. 
 
-Dù ở đâu thì mong anh luôn giữ phong độ, niềm vui và tinh thần tích cực này nhé! Chúc anh cùng gia đình luôn bình an, hạnh phúc và gặt hái thật nhiều thành công trên con đường phía trước.
+Cảm ơn anh vì đã luôn nhiệt tình hỗ trợ, chia sẻ kinh nghiệm cho em Tố Uyên. Chúc anh bước sang hành trình mới với thật nhiều năng lượng tích cực, công việc hanh thông và gặt hái thêm nhiều thành công rực rỡ. Tạm biệt ở công ty thôi chứ hội Lẩu Các Loại vẫn còn hẹn nhau dài dài trên những chuyến đi sắp tới nha anh!"</p>
+            <a class="memory-next" href="#loi-chuc-05"><span>Mở tiếp lời nhắn yêu thương phía dưới nữa anh nhé!</span><span>↗</span></a>
+          </div>
+        </article>
 
-May the road ahead bring you fresh energy and exciting adventures. Keep in touch!</textarea><div class="upload-row"><label style="margin:0;min-width:95px">Ảnh bìa</label><input aria-label="Ảnh bìa" type="file" accept="image/*" data-file="hero" data-index="0"><button class="tiny" data-remove="hero" data-index="0" type="button">Xóa ảnh</button></div></div><div class="edit-group"><h3>01. Thí Thương</h3><label>Tên người gửi</label><input data-card="0" data-prop="name" value="Thí Thương"><label>Nội dung lời chúc</label><textarea data-card="0" data-prop="wish">“Thanks for the unforgettable 3-year ride! Here’s to setting sail for new horizons—may peace, happiness, and ultimate success follow you wherever you go.”
-"Every end is a new beginning. Thank you for being an inspiring leader and a great partner on the road. Take this time to recharge, reset, and gear up for your next big adventure. Wish you peace, joy, and nothing but the best ahead!"</textarea><label>Câu chuyển tiếp (có thể để trống)</label><input data-card="0" data-prop="tease" value="Một kỷ niệm nữa đang chờ anh ở phía dưới…"><label>Ảnh kỷ niệm (2 ảnh ngang/người, tự động nén khi tải lên)</label><div class="upload-row"><label style="margin:0;min-width:95px">Ảnh 1</label><input aria-label="Ảnh 1" type="file" accept="image/*" data-file="card-0" data-index="0"><button class="tiny" data-remove="card-0" data-index="0" type="button">Xóa ảnh</button></div><div class="upload-row"><label style="margin:0;min-width:95px">Ảnh 2</label><input aria-label="Ảnh 2" type="file" accept="image/*" data-file="card-0" data-index="1"><button class="tiny" data-remove="card-0" data-index="1" type="button">Xóa ảnh</button></div></div><div class="edit-group"><h3>02. Dun Dun</h3><label>Tên người gửi</label><input data-card="1" data-prop="name" value="Dun Dun"><label>Nội dung lời chúc</label><textarea data-card="1" data-prop="wish">“Cảm ơn anh vì thời gian qua đã vừa là đồng nghiệp, vừa là bạn và là một người anh. Cảm ơn anh vì đã luôn đồng hành trong những chuyến đi, kiên nhẫn với những thiếu sót, và đã luôn đưa ra lời khuyên cho tụi em khi cần. Một đoạn đường không dài nhưng rất nhiều niềm vui và kỷ niệm đẹp. Chúc anh của những ngày sau, dù gặp bao nhiêu người, đi bao nhiêu đường, trải bao nhiêu chuyện, vẫn luôn thong dong tự tại, được là chính mình.”</textarea><label>Câu chuyển tiếp (có thể để trống)</label><input data-card="1" data-prop="tease" value="Cùng mở tiếp lời nhắn của người kế tiếp nhé!"><label>Ảnh kỷ niệm (2 ảnh ngang/người, tự động nén khi tải lên)</label><div class="upload-row"><label style="margin:0;min-width:95px">Ảnh 1</label><input aria-label="Ảnh 1" type="file" accept="image/*" data-file="card-1" data-index="0"><button class="tiny" data-remove="card-1" data-index="0" type="button">Xóa ảnh</button></div><div class="upload-row"><label style="margin:0;min-width:95px">Ảnh 2</label><input aria-label="Ảnh 2" type="file" accept="image/*" data-file="card-1" data-index="1"><button class="tiny" data-remove="card-1" data-index="1" type="button">Xóa ảnh</button></div></div><div class="edit-group"><h3>03. Ngọc Hìn</h3><label>Tên người gửi</label><input data-card="2" data-prop="name" value="Ngọc Hìn"><label>Nội dung lời chúc</label><textarea data-card="2" data-prop="wish">“Trước giờ em cảm ơn thấy rất may mắn vì đã được anh - Second line Manager viết cho rất nhiều lời ghi nhận, vinh danh, nên hôm nay em cũng muốn đáp lễ lại anh bằng những câu từ tận đáy lòng. 
+        <article class="memory reveal visible" id="loi-chuc-05">
+          <div class="memory-photos">
+            <div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="assets/loi-chuc-5-anh-1.jpg" alt="Ka Tê · Ảnh 1"></div>
+            <div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="assets/loi-chuc-5-anh-2.jpg" alt="Ka Tê · Ảnh 2"></div>
+          </div>
+          <div class="memory-copy">
+            <span class="memory-num">05 / A MESSAGE FROM</span>
+            <h3>Ka Tê</h3>
+            <div class="quote-mark">“</div>
+            <p class="memory-wish" data-full-wish='"Hôm nay là ngày anh khép lại một chặng đường công việc, em muốn gửi đến anh đôi lời từ sự trân trọng và biết ơn.&#10;&#10;Với em, anh không chỉ là một người anh lớn trong công việc mà còn là người đã luôn sẵn sàng chia sẻ, tư vấn và định hướng cho em trong cả công việc lẫn cuộc sống. Những lời khuyên, những kinh nghiệm anh truyền đạt và cả những lúc anh lắng nghe, động viên đều là những điều em rất quý trọng.&#10;&#10;Em nghĩ rằng, trong hành trình trưởng thành của mỗi người, may mắn không chỉ là gặp được những cơ hội tốt mà còn là gặp được những người anh đi trước sẵn lòng chỉ bảo, giúp mình nhìn nhận vấn đề sâu sắc hơn và vững vàng hơn trước những lựa chọn của cuộc đời. &#10;&#10;Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hành trình mới. Mong rằng dù ở bất kỳ vị trí nào, anh vẫn luôn giữ được sự nhiệt huyết, bản lĩnh và những giá trị tốt đẹp của mình. Và em hy vọng rằng, trong chặng đường sắp tới, em vẫn sẽ có cơ hội được học hỏi, lắng nghe những lời khuyên và nhận được sự chỉ dẫn từ anh."' aria-label='"Hôm nay là ngày anh khép lại một chặng đường công việc, em muốn gửi đến anh đôi lời từ sự trân trọng và biết ơn.&#10;&#10;Với em, anh không chỉ là một người anh lớn trong công việc mà còn là người đã luôn sẵn sàng chia sẻ, tư vấn và định hướng cho em trong cả công việc lẫn cuộc sống. Những lời khuyên, những kinh nghiệm anh truyền đạt và cả những lúc anh lắng nghe, động viên đều là những điều em rất quý trọng.&#10;&#10;Em nghĩ rằng, trong hành trình trưởng thành của mỗi người, may mắn không chỉ là gặp được những cơ hội tốt mà còn là gặp được những người anh đi trước sẵn lòng chỉ bảo, giúp mình nhìn nhận vấn đề sâu sắc hơn và vững vàng hơn trước những lựa chọn của cuộc đời. &#10;&#10;Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hành trình mới. Mong rằng dù ở bất kỳ vị trí nào, anh vẫn luôn giữ được sự nhiệt huyết, bản lĩnh và những giá trị tốt đẹp của mình. Và em hy vọng rằng, trong chặng đường sắp tới, em vẫn sẽ có cơ hội được học hỏi, lắng nghe những lời khuyên và nhận được sự chỉ dẫn từ anh."'>"Hôm nay là ngày anh khép lại một chặng đường công việc, em muốn gửi đến anh đôi lời từ sự trân trọng và biết ơn.
 
-Thật lòng mà nói anh vừa là người sếp đáng kính và đáng sợ của em tại DKSH, nhiều lúc em rất vui vì ở công ty em như có một chỗ dựa, một người ba thứ hai vậy. Anh là tấm gương cho em học tập được nhiều đức tính tốt: không ngừng học hỏi, giữ vững lập trường và nguyên tắc làm việc đúng đắn, giúp đỡ người cần giúp và mở rộng mối quan hệ một cách chân thật. Cách đối nhân xử thế của anh cũng là điều em muốn hướng tới. Còn đáng sợ là vì, anh luôn cho thấy sự tin tưởng của anh dành cho em và đội nhóm, nên em rất sợ em không làm được như những gì anh kì vọng.
+Với em, anh không chỉ là một người anh lớn trong công việc mà còn là người đã luôn sẵn sàng chia sẻ, tư vấn và định hướng cho em trong cả công việc lẫn cuộc sống. Những lời khuyên, những kinh nghiệm anh truyền đạt và cả những lúc anh lắng nghe, động viên đều là những điều em rất quý trọng.
 
-Ba năm vừa qua sẽ mãi là kỉ niệm em không bao giờ quên, hy vọng đây chỉ là kết thúc tạm để mở đầu cho những hành trình mới tốt đẹp hơn. Em mong anh sẽ có khoảng thời gian thư giãn và ổn định lại, rất mong sau này em sẽ có cơ hội làm việc chung với anh. Ở DKSH, em sẽ cố gắng giữ những giá trị mà anh đã xây dựng và đặt nền móng cho tụi em.”</textarea><label>Câu chuyển tiếp (có thể để trống)</label><input data-card="2" data-prop="tease" value="Và cuối cùng là hình ảnh cùng Gia tộc Lẩu "><label>Ảnh kỷ niệm (2 ảnh ngang/người, tự động nén khi tải lên)</label><div class="upload-row"><label style="margin:0;min-width:95px">Ảnh 1</label><input aria-label="Ảnh 1" type="file" accept="image/*" data-file="card-2" data-index="0"><button class="tiny" data-remove="card-2" data-index="0" type="button">Xóa ảnh</button></div><div class="upload-row"><label style="margin:0;min-width:95px">Ảnh 2</label><input aria-label="Ảnh 2" type="file" accept="image/*" data-file="card-2" data-index="1"><button class="tiny" data-remove="card-2" data-index="1" type="button">Xóa ảnh</button></div></div><div class="edit-group"><h3>Album cả nhóm</h3><label>Chú thích ảnh 1</label><input data-caption="0" value="Sinh nhật Ka Tê"><div class="upload-row"><label style="margin:0;min-width:95px">Ảnh 1</label><input aria-label="Ảnh 1" type="file" accept="image/*" data-file="gallery" data-index="0"><button class="tiny" data-remove="gallery" data-index="0" type="button">Xóa ảnh</button></div><label>Chú thích ảnh 2</label><input data-caption="1" value="YEP 2025"><div class="upload-row"><label style="margin:0;min-width:95px">Ảnh 2</label><input aria-label="Ảnh 2" type="file" accept="image/*" data-file="gallery" data-index="1"><button class="tiny" data-remove="gallery" data-index="1" type="button">Xóa ảnh</button></div><label>Chú thích ảnh 3</label><input data-caption="2" value="Vùng kí ức đẹp tại Quy Nhơn"><div class="upload-row"><label style="margin:0;min-width:95px">Ảnh 3</label><input aria-label="Ảnh 3" type="file" accept="image/*" data-file="gallery" data-index="2"><button class="tiny" data-remove="gallery" data-index="2" type="button">Xóa ảnh</button></div><label>Chú thích ảnh 4</label><input data-caption="3" value="Bữa cơm gia đình sum họp "><div class="upload-row"><label style="margin:0;min-width:95px">Ảnh 4</label><input aria-label="Ảnh 4" type="file" accept="image/*" data-file="gallery" data-index="3"><button class="tiny" data-remove="gallery" data-index="3" type="button">Xóa ảnh</button></div></div><div class="edit-group"><h3>Video &amp; âm nhạc</h3><label for="f_video">Link trực tiếp đến file video (.mp4)</label><input id="f_video" data-field="video" value=""><label for="f_music">Link trực tiếp đến file nhạc (.mp3)</label><input id="f_music" data-field="music" value=""><p class="mini">Tải nhạc hoặc video từ máy: file sẽ được lưu riêng vào bộ nhớ trình duyệt, không chiếm dung lượng lưu ảnh. Khi muốn chia sẻ sang máy khác, chọn Xuất HTML để đóng gói cả nhạc/video.</p><label>Hoặc chọn video từ máy</label><input type="file" accept="video/*" data-media="video"><label>Hoặc chọn nhạc từ máy</label><input type="file" accept="audio/*" data-media="music"></div></div><div class="edit-actions"><button class="pill primary" type="button" id="saveNow">Lưu &amp; xem thử</button><button class="pill" type="button" id="exportHtml">↓ Xuất HTML (có thể nặng)</button><button class="pill" type="button" id="resetContent">Khôi phục bản gốc</button></div><p class="mini">Nếu xuất HTML làm Chrome treo, hãy bấm “↓ Sao lưu nội dung” ở thanh trên rồi gửi tệp JSON cho mình đóng gói bản deploy. Lưu trên trình duyệt chỉ giữ thay đổi tại thiết bị và địa chỉ mở trang này. Xuất HTML là một chức năng riêng, chỉ dùng khi bạn muốn gửi bản đã chỉnh sửa cho người khác.</p></aside></div><div class="toast" id="toast" role="status">Thêm nhạc nền trong mục Chỉnh sửa</div><div class="lightbox" id="lightbox" hidden="" role="dialog" aria-modal="true" aria-label="Xem ảnh kỷ niệm"><button class="lightbox-close" type="button" id="lightboxClose" aria-label="Đóng ảnh">✕</button><img id="lightboxImage" alt="Ảnh kỷ niệm phóng to"><p id="lightboxCaption"></p></div>
-<script id="site-data" type="application/json">{"title":"Gửi anh Cẩm Anh","date":"28.10.2026","subtitle":"Một chặng đường khép lại. Những kỷ niệm vẫn ở đây.","from":"Từ những người đồng hành luôn quý mến anh","cards":[{"id":"thuong","name":"Thí Thương","wish":"“Thanks for the unforgettable 3-year ride! Here’s to setting sail for new horizons—may peace, happiness, and ultimate success follow you wherever you go.”\n\"Every end is a new beginning. Thank you for being an inspiring leader and a great partner on the road. Take this time to recharge, reset, and gear up for your next big adventure. Wish you peace, joy, and nothing but the best ahead!\"","tease":"Một kỷ niệm nữa đang chờ anh ở phía dưới…","photos":["https://to-cam-anh-with-love.netlify.app/img/memory-02-1d99233d00.jpg","https://to-cam-anh-with-love.netlify.app/img/memory-03-bca3ba05af.jpg"]},{"id":"dung","name":"Dun Dun","wish":"“Cảm ơn anh vì thời gian qua đã vừa là đồng nghiệp, vừa là bạn và là một người anh. Cảm ơn anh vì đã luôn đồng hành trong những chuyến đi, kiên nhẫn với những thiếu sót, và đã luôn đưa ra lời khuyên cho tụi em khi cần. Một đoạn đường không dài nhưng rất nhiều niềm vui và kỷ niệm đẹp. Chúc anh của những ngày sau, dù gặp bao nhiêu người, đi bao nhiêu đường, trải bao nhiêu chuyện, vẫn luôn thong dong tự tại, được là chính mình.”","tease":"Cùng mở tiếp lời nhắn của người kế tiếp nhé!","photos":["https://to-cam-anh-with-love.netlify.app/img/memory-04-82a6d5dd58.jpg","https://to-cam-anh-with-love.netlify.app/img/memory-05-00fbb5d7d1.jpg"]},{"id":"huyen","name":"Ngọc Hìn","wish":"“Trước giờ em cảm ơn thấy rất may mắn vì đã được anh - Second line Manager viết cho rất nhiều lời ghi nhận, vinh danh, nên hôm nay em cũng muốn đáp lễ lại anh bằng những câu từ tận đáy lòng. \n\nThật lòng mà nói anh vừa là người sếp đáng kính và đáng sợ của em tại DKSH, nhiều lúc em rất vui vì ở công ty em như có một chỗ dựa, một người ba thứ hai vậy. Anh là tấm gương cho em học tập được nhiều đức tính tốt: không ngừng học hỏi, giữ vững lập trường và nguyên tắc làm việc đúng đắn, giúp đỡ người cần giúp và mở rộng mối quan hệ một cách chân thật. Cách đối nhân xử thế của anh cũng là điều em muốn hướng tới. Còn đáng sợ là vì, anh luôn cho thấy sự tin tưởng của anh dành cho em và đội nhóm, nên em rất sợ em không làm được như những gì anh kì vọng.\n\nBa năm vừa qua sẽ mãi là kỉ niệm em không bao giờ quên, hy vọng đây chỉ là kết thúc tạm để mở đầu cho những hành trình mới tốt đẹp hơn. Em mong anh sẽ có khoảng thời gian thư giãn và ổn định lại, rất mong sau này em sẽ có cơ hội làm việc chung với anh. Ở DKSH, em sẽ cố gắng giữ những giá trị mà anh đã xây dựng và đặt nền móng cho tụi em.”","tease":"Vẫn còn những lời nhắn gửi anh ở phía dưới nữa nè…","photos":["https://to-cam-anh-with-love.netlify.app/img/memory-06-6c494cb601.jpg","https://to-cam-anh-with-love.netlify.app/img/memory-07-d31c9c756f.jpg"]},{"id":"loi-chuc-04","name":"Team ốc đảo (Chi Bu, Ms Cua, Na Chúi)","wish":"\"Với Cường Bùi, anh không chỉ là một người anh, một người đồng nghiệp mà còn là một người bạn ăn cơm, luôn sẵn sàng lắng nghe những câu chuyện lớn nhỏ và cùng em gỡ rối biết bao kèo khó.\n\nVới Na, anh không chỉ là một người sếp mà còn giống như người ba thứ hai ở công ty. Một người luôn âm thầm quan tâm, bảo vệ, cho em những lời khuyên đúng lúc và đặc biệt là có chuyện gì cũng có thể chạy đi méc anh được hihi. \n\nCảm ơn anh vì đã luôn nhiệt tình hỗ trợ, chia sẻ kinh nghiệm cho em Tố Uyên. Chúc anh bước sang hành trình mới với thật nhiều năng lượng tích cực, công việc hanh thông và gặt hái thêm nhiều thành công rực rỡ. Tạm biệt ở công ty thôi chứ hội Lẩu Các Loại vẫn còn hẹn nhau dài dài trên những chuyến đi sắp tới nha anh!\"","tease":"Mở tiếp lời nhắn yêu thương phía dưới nữa anh nhé!","photos":["assets/loi-chuc-4-anh-1.jpg","assets/loi-chuc-4-anh-2.jpg"]},{"id":"loi-chuc-05","name":"Ka Tê ","wish":"\"Hôm nay là ngày anh khép lại một chặng đường công việc, em muốn gửi đến anh đôi lời từ sự trân trọng và biết ơn.\n\nVới em, anh không chỉ là một người anh lớn trong công việc mà còn là người đã luôn sẵn sàng chia sẻ, tư vấn và định hướng cho em trong cả công việc lẫn cuộc sống. Những lời khuyên, những kinh nghiệm anh truyền đạt và cả những lúc anh lắng nghe, động viên đều là những điều em rất quý trọng.\n\nEm nghĩ rằng, trong hành trình trưởng thành của mỗi người, may mắn không chỉ là gặp được những cơ hội tốt mà còn là gặp được những người anh đi trước sẵn lòng chỉ bảo, giúp mình nhìn nhận vấn đề sâu sắc hơn và vững vàng hơn trước những lựa chọn của cuộc đời. \n\nChúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hành trình mới. Mong rằng dù ở bất kỳ vị trí nào, anh vẫn luôn giữ được sự nhiệt huyết, bản lĩnh và những giá trị tốt đẹp của mình. Và em hy vọng rằng, trong chặng đường sắp tới, em vẫn sẽ có cơ hội được học hỏi, lắng nghe những lời khuyên và nhận được sự chỉ dẫn từ anh.\"","tease":"Và cuối cùng là những thước phim của Lẩu Các Loại!","photos":["assets/loi-chuc-5-anh-1.jpg","assets/loi-chuc-5-anh-2.jpg"]}],"gallery":[{"photo":"https://to-cam-anh-with-love.netlify.app/img/memory-08-2b8d9d4e12.jpg","caption":"Sinh nhật Ka Tê"},{"photo":"https://to-cam-anh-with-love.netlify.app/img/memory-09-32d8e73938.jpg","caption":"YEP 2025"},{"photo":"https://to-cam-anh-with-love.netlify.app/img/memory-10-a2df56f4b5.jpg","caption":"Vùng kí ức đẹp tại Quy Nhơn"},{"photo":"https://to-cam-anh-with-love.netlify.app/img/memory-11-39224c4323.jpg","caption":"Bữa cơm gia đình sum họp "}],"video":"","music":"assets/nhac-nen.mp3","intro":"Gửi người anh, người sếp, người leader và cạ cứng xịn xịn của tụi em!\n\nVậy là hành trình 3 năm mình đồng hành cùng nhau đã đi tới đoạn chuyển giao rồi. Cảm ơn anh thật nhiều vì đã luôn chia sẻ, chỉ dẫn cho tụi em trong công việc. Càng cảm ơn hơn vì những chuyến đi không chỉ có công việc mà còn tràn ngập tiếng cười và bao nhiêu kỷ niệm đẹp.\n\nTụi em tin rằng quyết định dừng lại lúc này sẽ là cơ hội tuyệt vời để anh thả lỏng, nạp lại 100% năng lượng và tìm kiếm những hướng đi mới mẻ, thú vị hơn cho chính mình.\n\nDù ở đâu thì mong anh luôn giữ phong độ, niềm vui và tinh thần tích cực này nhé! Chúc anh cùng gia đình luôn bình an, hạnh phúc và gặt hái thật nhiều thành công trên con đường phía trước.\n\nMay the road ahead bring you fresh energy and exciting adventures. Keep in touch!","heroPhoto":"https://to-cam-anh-with-love.netlify.app/img/memory-01-792b521ec0.jpg","surprise":"Anh Cẩm Anh ơi, dù mai này mỗi người có một lịch trình riêng, tụi em vẫn luôn dành một chỗ cho anh trong những cuộc hẹn của Lẩu Các Loại. Chỉ cần anh nhắn “lẩu không?”, chắc chắn sẽ có người trả lời ngay! Cảm ơn anh vì ba năm thật đáng nhớ. Hẹn anh ở một bàn lẩu gần nhất nhé!"}</script>
-<script>
-(()=>{'use strict';
-// Display mode can be opened directly via ?present=1. Ctrl+Alt+E exits or enters.
-const presentationToggle=document.getElementById('presentationToggle');
-let presentationMode=new URLSearchParams(location.search).get('present')==='1';
-function updatePresentationMode(){
- document.body.classList.toggle('presentation-mode',presentationMode);
- presentationToggle.textContent=presentationMode?'✎ Chỉnh sửa':'▶ Trình chiếu';
- presentationToggle.title=presentationMode?'Bật lại công cụ chỉnh sửa':'Ẩn các công cụ để trình chiếu';
- if(presentationMode){const panel=document.getElementById('editBackdrop');if(panel?.classList.contains('open')){panel.classList.remove('open');document.body.style.overflow=''}}
-}
-presentationToggle.addEventListener('click',()=>{presentationMode=!presentationMode;updatePresentationMode()});
-document.addEventListener('keydown',event=>{if(event.ctrlKey&&event.altKey&&event.key.toLowerCase()==='e'){event.preventDefault();presentationMode=!presentationMode;updatePresentationMode()}});
-updatePresentationMode();
+Em nghĩ rằng, trong hành trình trưởng thành của mỗi người, may mắn không chỉ là gặp được những cơ hội tốt mà còn là gặp được những người anh đi trước sẵn lòng chỉ bảo, giúp mình nhìn nhận vấn đề sâu sắc hơn và vững vàng hơn trước những lựa chọn của cuộc đời. 
 
-const original=JSON.parse(document.getElementById('site-data').textContent);const storeKey='farewell-github-public-viewer-20261027';let data;try{data=JSON.parse(localStorage.getItem(storeKey))||original}catch(e){data=original}if(!data.cards||!data.gallery)data=original;
-// Giữ hai ảnh đầu của từng người khi nâng cấp từ bản 4 ảnh; không đụng đến album nhóm.
-data.cards.forEach(c=>{c.photos=(Array.isArray(c.photos)?c.photos:[]).slice(0,2);while(c.photos.length<2)c.photos.push('')});
-// Tệp âm thanh/video lớn được lưu riêng vào IndexedDB dưới dạng Blob,
-// tránh vượt giới hạn localStorage đang chứa ảnh và lời chúc.
-const mediaDBName='cam-anh-farewell-media-v1';
-const mediaCache={music:null,video:null};
-const mediaURLs={music:null,video:null};
-function openMediaDB(){return new Promise((resolve,reject)=>{
- if(!('indexedDB' in window))return reject(new Error('Trình duyệt không hỗ trợ lưu media'));
- const request=indexedDB.open(mediaDBName,1);
- request.onupgradeneeded=()=>{if(!request.result.objectStoreNames.contains('media'))request.result.createObjectStore('media')};
- request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);
-})}
-async function storeMedia(kind,blob){const db=await openMediaDB();try{await new Promise((resolve,reject)=>{const tx=db.transaction('media','readwrite');tx.objectStore('media').put(blob,kind);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error||new Error('Không lưu được file'))})}finally{db.close()}}
-async function getMedia(kind){const db=await openMediaDB();try{return await new Promise((resolve,reject)=>{const tx=db.transaction('media','readonly'),req=tx.objectStore('media').get(kind);req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>reject(req.error)})}finally{db.close()}}
-async function removeMedia(kind){const db=await openMediaDB();try{await new Promise((resolve,reject)=>{const tx=db.transaction('media','readwrite');tx.objectStore('media').delete(kind);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)})}finally{db.close()}}
-function updateMediaPreview(kind,blob){if(mediaURLs[kind])URL.revokeObjectURL(mediaURLs[kind]);mediaCache[kind]=blob||null;mediaURLs[kind]=blob?URL.createObjectURL(blob):null;
- if(kind==='music')document.getElementById('bgAudio').src=mediaURLs.music||data.music||'';
- if(kind==='video'){const slot=document.getElementById('videoSlot');if(mediaURLs.video){slot.innerHTML='<video controls playsinline preload="metadata"></video>';slot.querySelector('video').src=mediaURLs.video}else{const link=data.video||'';if(link)slot.innerHTML='<video controls playsinline preload="metadata"></video>',slot.querySelector('video').src=link}}
-}
-async function restoreSavedMedia(){for(const kind of ['music','video'])try{const blob=await getMedia(kind);if(blob){updateMediaPreview(kind,blob);if(kind==='music')markMusicName(blob.name||'Nhạc nền đã lưu')}}catch(e){console.warn('Không thể mở bộ nhớ media',e)}
- // Chuyển dữ liệu media cũ dạng base64 sang IndexedDB khi có thể.
- for(const kind of ['music','video'])if((data[kind]||'').startsWith('data:'))try{const response=await fetch(data[kind]);const blob=await response.blob();await storeMedia(kind,blob);data[kind]='';updateMediaPreview(kind,blob);save()}catch(e){console.warn('Chưa chuyển được media cũ',e)}
-}
-function markMusicName(name){
- const btn=document.querySelector('.music-upload-label');if(!btn)return;
- btn.title=name?'Nhạc đã chọn: '+name:'Chọn nhạc MP3 từ máy tính';
- btn.querySelector('.mobilehide').textContent=name?'Đã chọn nhạc':'Thêm nhạc MP3';
- btn.querySelector('.shortMusic').textContent=name?'✓ MP3':'MP3';
-}
-async function handleMusicChosen(file){
- if(!file)return;
- if(file.size>250*1024*1024){notify('Tệp nhạc lớn hơn 250 MB, vui lòng chọn tệp nhỏ hơn.');return}
- if(!(file.type.startsWith('audio/')||/\.(mp3|m4a|wav|ogg)$/i.test(file.name))){notify('Vui lòng chọn tệp âm thanh MP3, M4A, WAV hoặc OGG.');return}
- try{
-  await storeMedia('music',file);
-  data.music='';save();updateMediaPreview('music',file);markMusicName(file.name);
-  userWantsMusic=false;audio.pause();syncBackgroundMusic();
-  notify('✓ Đã lưu nhạc: '+file.name+'. Bấm Âm nhạc để nghe.');
- }catch(err){
-  // Preview/play is available in this browser session even if persistent storage is blocked.
-  updateMediaPreview('music',file);markMusicName(file.name);
-  notify('Đã chọn nhạc nhưng chưa lưu lâu dài được. Hãy mở HTML bằng Chrome/Edge, không dùng khung xem trước.');
-  console.warn('Lưu nhạc bị chặn:',err);
- }
-}
-document.getElementById('musicDirectFile').addEventListener('change',async e=>{
- const file=e.target.files?.[0];await handleMusicChosen(file);e.target.value='';
-});
-function mediaToDataURL(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(blob)})}
-const $=id=>document.getElementById(id),escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let observer;
-const photoIcon='<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="11" width="50" height="42" rx="7"/><circle cx="23" cy="26" r="5"/><path d="m10 45 15-13 10 8 9-13 11 18"/></svg>';
-function fixedPhotoUrl(src){
- if(typeof src==='string' && src.startsWith('/.netlify/images?')){
-  try { const p=new URLSearchParams(src.split('?')[1]).get('url');return p ? 'https://to-cam-anh-with-love.netlify.app'+p : 'https://to-cam-anh-with-love.netlify.app'+src; }
-  catch(e){return 'https://to-cam-anh-with-love.netlify.app'+src}
- }
- if(typeof src==='string' && src.startsWith('/img/'))return 'https://to-cam-anh-with-love.netlify.app'+src;
- return src;
-}
-function photo(src,label){src=fixedPhotoUrl(src);return src?`<img class="photo-fill" loading="lazy" src="${escape(src)}" alt="${escape(label)}">`:`<div class="photo-empty">${photoIcon}<span>${escape(label)}</span><small>Thêm ảnh trong phần Chỉnh sửa</small></div>`}
-const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-let typingEpoch=0;
-function animateMemory(section){
- const textEl=section.querySelector('.memory-wish');if(!textEl)return;
- const full=textEl.dataset.fullWish||'';const frames=[...section.querySelectorAll('.photo-frame')];
- const epoch=typingEpoch;
- if(reducedMotion||!full){textEl.textContent=full;frames.forEach(f=>f.classList.add('photo-shown'));return;}
- const chars=Array.from(full);const total=chars.length;let index=0;
- const caret=document.createElement('span');caret.className='type-caret';caret.setAttribute('aria-hidden','true');
- textEl.textContent='';textEl.append(caret);
- const revealPhotos=()=>{const count=Math.max(0,Math.min(frames.length,Math.ceil(index/Math.max(total,1)*frames.length)));frames.forEach((f,i)=>{if(i<count)f.classList.add('photo-shown')})};
- // Progressive typing is synchronized to all four photo slots, across the whole message.
- function tick(){if(epoch!==typingEpoch||!textEl.isConnected)return;
-   const chunk=chars.slice(index,index+2).join('');index=Math.min(index+2,total);caret.before(chunk);revealPhotos();
-   if(index<total){const last=chars[index-1]||'';setTimeout(tick,/[.!?…]/.test(last)?310:/[,;:]/.test(last)?135:34)}
-   else{caret.remove();frames.forEach(f=>f.classList.add('photo-shown'))}
- }
- setTimeout(tick,250);
-}
-function animateHero(){
- const title=$('heroTitle'),intro=$('heroWish');const token=typingEpoch;
- const name='Thân gửi anh Cẩm Anh.';const body=data.intro||'';
- if(reducedMotion){title.innerHTML='<span class="hero-headline-static">Thân gửi anh <em>Cẩm Anh.</em></span>';intro.textContent=body;return}
- title.innerHTML='<span class="hero-headline-static is-typing"></span>';intro.textContent='';
- const nameChars=Array.from(name),introChars=Array.from(body);let step=0;
- function headlineTick(){if(token!==typingEpoch)return;step=Math.min(step+2,nameChars.length);
-  const first=nameChars.slice(0,step).join('');const el=title.firstElementChild;
-  if(first.startsWith('Thân gửi anh ')){el.textContent='Thân gửi anh ';const em=document.createElement('em');em.textContent=first.slice('Thân gửi anh '.length);el.appendChild(em)}else{el.textContent=first}
-  if(step<nameChars.length)setTimeout(headlineTick,42);else{el.classList.remove('is-typing');setTimeout(introTick,170)} }
- let i=0;const node=document.createTextNode('');intro.appendChild(node);const caret=document.createElement('span');caret.className='type-caret';intro.appendChild(caret);
- function introTick(){if(token!==typingEpoch)return;const next=Math.min(i+8,introChars.length);node.appendData(introChars.slice(i,next).join(''));i=next;
-  if(i<introChars.length)setTimeout(introTick,23);else caret.remove()}
- setTimeout(headlineTick,310);
-}
-function render(){
- typingEpoch++;
- $('heroDate').textContent=data.date;$('footerDate').textContent=data.date;animateHero();$('heroFrom').textContent=data.from;$('heroPhoto').innerHTML=photo(data.heroPhoto,'Ảnh cả nhóm · Gia tộc Lẩu');
- $('marquee').innerHTML=Array(8).fill('<span>NHỮNG NGÀY THẬT ĐẸP.</span><span class="spark">✳</span><span>ALWAYS IN OUR HEARTS.</span><span class="spark">✳</span>').join('');
- $('cards').innerHTML=data.cards.map((c,i)=>`<article class="memory reveal" id="${escape(c.id)}"><div class="memory-photos">${c.photos.map((p,j)=>`<div class="photo-frame">${photo(p,`${c.name} · Ảnh ${j+1}`)}</div>`).join('')}</div><div class="memory-copy"><span class="memory-num">0${i+1} / A MESSAGE FROM</span><h3>${escape(c.name)}</h3><div class="quote-mark">“</div><p class="memory-wish" data-full-wish="${escape(c.wish)}" aria-label="${escape(c.wish)}"></p>${c.tease?`<a class="memory-next" href="#${data.cards[i+1]?escape(data.cards[i+1].id):'gallerySection'}"><span>${escape(c.tease)}</span><span>↗</span></a>`:''}</div></article>`).join('');
- $('gallery').innerHTML=[...data.gallery,...data.gallery].map((g,i)=>`<figure class="gallery-item reveal"><div class="gallery-photo">${photo(g.photo,`Ảnh cả nhóm ${i+1}`)}</div><figcaption>${escape(g.caption)}</figcaption></figure>`).join('');
- 
- const video=data.video?.trim()||'';let safeVideo='';try{const u=new URL(video,location.href);if(['https:','http:','blob:','data:','file:'].includes(u.protocol))safeVideo=video}catch(e){};
- $('videoSlot').innerHTML=safeVideo?`<video src="${escape(safeVideo)}" controls playsinline preload="metadata"></video>`:`<div style="text-align:center;padding:20px">${photoIcon}<strong>Một thước phim của chúng mình</strong><span>Video kỷ niệm sẽ xuất hiện ở đây</span></div>`;
- $('bgAudio').src=mediaURLs.music||data.music||'';if(observer)observer.disconnect();if('IntersectionObserver' in window){observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');if(e.target.classList.contains('memory'))animateMemory(e.target);observer.unobserve(e.target)}}),{threshold:.10});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
- }
-function save(){try{localStorage.setItem(storeKey,JSON.stringify(data));return true}catch(e){notify('Không thể lưu trên trình duyệt (dung lượng ảnh đang quá lớn). Hãy thử dùng ảnh ít hơn hoặc ảnh nhẹ hơn.');return false}}
-function notify(s){$('toast').textContent=s;$('toast').classList.add('show');clearTimeout(notify.t);notify.t=setTimeout(()=>$('toast').classList.remove('show'),3200)}
-function input(key,label,multi=false){return `<label for="f_${key}">${label}</label>${multi?`<textarea id="f_${key}" data-field="${key}">${escape(data[key])}</textarea>`:`<input id="f_${key}" data-field="${key}" value="${escape(data[key])}">`}`}
-function fileInput(group,index,label,has){return `<div class="upload-row"><label style="margin:0;min-width:95px">${label}</label><input aria-label="${label}" type="file" accept="image/*" data-file="${group}" data-index="${index}">${has?`<button class="tiny" data-remove="${group}" data-index="${index}" type="button">Xóa ảnh</button>`:''}</div>`}
-function editForm(){let html=`<div class="edit-group"><h3>Thông tin mở đầu</h3>${input('date','Ngày')}${input('from','Dòng ký tên tập thể')}${input('intro','Lời nhắn chung',true)}${fileInput('hero','0','Ảnh bìa',!!data.heroPhoto)}</div>`;
- data.cards.forEach((c,i)=>{html+=`<div class="edit-group"><h3>0${i+1}. ${escape(c.name)}</h3><label>Tên người gửi</label><input data-card="${i}" data-prop="name" value="${escape(c.name)}"><label>Nội dung lời chúc</label><textarea data-card="${i}" data-prop="wish">${escape(c.wish)}</textarea><label>Câu chuyển tiếp (có thể để trống)</label><input data-card="${i}" data-prop="tease" value="${escape(c.tease)}"><label>Ảnh kỷ niệm (2 ảnh ngang/người, tự động nén khi tải lên)</label>${c.photos.map((p,j)=>fileInput('card-'+i,j,'Ảnh '+(j+1),!!p)).join('')}</div>`});
- html+=`<div class="edit-group"><h3>Album cả nhóm</h3>${data.gallery.map((g,i)=>`<label>Chú thích ảnh ${i+1}</label><input data-caption="${i}" value="${escape(g.caption)}">${fileInput('gallery',i,'Ảnh '+(i+1),!!g.photo)}`).join('')}</div><div class="edit-group"><h3>Video & âm nhạc</h3>${input('video','Link trực tiếp đến file video (.mp4)')}${input('music','Link trực tiếp đến file nhạc (.mp3)')}<p class="mini">Tải nhạc hoặc video từ máy: file sẽ được lưu riêng vào bộ nhớ trình duyệt, không chiếm dung lượng lưu ảnh. Khi muốn chia sẻ sang máy khác, chọn Xuất HTML để đóng gói cả nhạc/video.</p><label>Hoặc chọn video từ máy</label><input type="file" accept="video/*" data-media="video"><label>Hoặc chọn nhạc từ máy</label><input type="file" accept="audio/*" data-media="music"></div>`;$('editFields').innerHTML=html;
- }
-function syncInputs(){document.querySelectorAll('[data-field]').forEach(el=>{data[el.dataset.field]=el.value});document.querySelectorAll('[data-card]').forEach(el=>{data.cards[+el.dataset.card][el.dataset.prop]=el.value});document.querySelectorAll('[data-caption]').forEach(el=>{data.gallery[+el.dataset.caption].caption=el.value})}
-function setImage(group,index,value){if(group==='hero')data.heroPhoto=value;else if(group==='gallery')data.gallery[+index].photo=value;else if(group.startsWith('card-'))data.cards[+group.split('-')[1]].photos[+index]=value}
-function readFile(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(file)})}
-// Nén ảnh trước khi lưu localStorage: dữ liệu JPEG nhỏ hơn ảnh gốc nhiều lần.
-async function readOptimizedImage(file){
- if(!file.type.startsWith('image/')||file.type==='image/svg+xml')return readFile(file);
- const url=URL.createObjectURL(file);
- try{
-  const img=await new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=reject;image.src=url});
-  const maxEdge=900,ratio=Math.min(1,maxEdge/Math.max(img.naturalWidth,img.naturalHeight));
-  const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.naturalWidth*ratio));canvas.height=Math.max(1,Math.round(img.naturalHeight*ratio));
-  const ctx=canvas.getContext('2d');if(!ctx)return readFile(file);
-  ctx.fillStyle='#ffffff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);
-  return canvas.toDataURL('image/jpeg',0.58);
- }catch(e){return readFile(file)}finally{URL.revokeObjectURL(url)}
-}
+Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hành trình mới. Mong rằng dù ở bất kỳ vị trí nào, anh vẫn luôn giữ được sự nhiệt huyết, bản lĩnh và những giá trị tốt đẹp của mình. Và em hy vọng rằng, trong chặng đường sắp tới, em vẫn sẽ có cơ hội được học hỏi, lắng nghe những lời khuyên và nhận được sự chỉ dẫn từ anh."</p>
+            <a class="memory-next" href="#gallerySection"><span>Và cuối cùng là những thước phim của Lẩu Các Loại!</span><span>↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-$('editFields').addEventListener('input',e=>{if(e.target.matches('[data-field],[data-card],[data-caption]')){syncInputs();save();render()}});
-$('editFields').addEventListener('change',async e=>{const el=e.target;if(el.dataset.file&&el.files?.[0]){const value=await readOptimizedImage(el.files[0]);syncInputs();setImage(el.dataset.file,el.dataset.index,value);const ok=save();render();editForm();notify(ok?'Đã thêm ảnh (đã nén gọn để dễ lưu hơn)':'Ảnh đã hiện nhưng chưa lưu được; hãy xuất HTML hoặc xóa bớt ảnh cũ.');}if(el.dataset.media&&el.files?.[0]){const kind=el.dataset.media,file=el.files[0];if(kind==='music'){await handleMusicChosen(file);editForm();return;}if(file.size>250*1024*1024){notify('File quá lớn (trên 250 MB); hãy dùng đường dẫn media.');return}try{await storeMedia(kind,file);syncInputs();data[kind]='';save();render();updateMediaPreview(kind,file);editForm();notify('✓ Đã lưu '+(kind==='music'?'nhạc nền':'video')+' riêng, không chiếm dung lượng lưu ảnh.')}catch(err){notify('Không thể lưu '+(kind==='music'?'nhạc':'video')+' trên trình duyệt này. Hãy thử Chrome hoặc Edge.');console.error(err)}}});
-$('editFields').addEventListener('click',e=>{const b=e.target.closest('[data-remove]');if(!b)return;syncInputs();setImage(b.dataset.remove,b.dataset.index,'');save();render();editForm()});
-function openEdit(){editForm();$('editBackdrop').classList.add('open');document.body.style.overflow='hidden'}function closeEdit(){syncInputs();save();render();$('editBackdrop').classList.remove('open');document.body.style.overflow=''}$('editOpen').addEventListener('click',openEdit);$('editClose').addEventListener('click',closeEdit);$('editBackdrop').addEventListener('click',e=>{if(e.target===$('editBackdrop'))closeEdit()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('editBackdrop').classList.contains('open'))closeEdit()});$('saveNow').addEventListener('click',()=>{closeEdit();notify('Đã lưu thay đổi')});$('resetContent').addEventListener('click',()=>{if(!confirm('Khôi phục toàn bộ lời chúc và ảnh về bản gốc?'))return;data=structuredClone(original);save();render();editForm();notify('Đã khôi phục bản gốc')});
-$('saveLatest').addEventListener('click',()=>{if($('editBackdrop').classList.contains('open'))syncInputs();if(save()){notify('✓ Đã lưu giao diện và nội dung trên trình duyệt');const btn=$('saveLatest');btn.textContent='✓ Đã lưu';clearTimeout(btn._restore);btn._restore=setTimeout(()=>btn.textContent='✓ Lưu thay đổi',2300)}});
-// Sao lưu JSON nhỏ gọn: không nhân bản DOM hay nhúng lại MP3/Video.
-async function safeBackup(){
- if($('editBackdrop').classList.contains('open'))syncInputs();
- save();
- const pack={format:'farewell-cam-anh-backup-v1',date:new Date().toISOString(),data:{...data}};
- const mediaNote={};
- for(const kind of ['music','video']){
-  const val=pack.data[kind];
-  if(typeof val==='string' && val.startsWith('data:')){
-   mediaNote[kind]='Nhúng sẵn trong HTML gốc, sẽ dùng từ bản gốc';
-   pack.data[kind]='__KEEP_ORIGINAL_EMBEDDED_MEDIA__';
-  }else if(mediaCache[kind]){
-   mediaNote[kind]='Tệp media được chọn trong trình duyệt - cần gửi thêm tệp gốc khi deploy';
-   pack.data[kind]='__MEDIA_IN_BROWSER__';
+    <section class="shell gallery-section" id="gallerySection">
+      <div class="gallery-top reveal visible">
+        <div>
+          <span class="eyebrow">02 / THE PHOTO ALBUM</span>
+          <h2>Những thước phim của<br><span class="album-accent">Lẩu Các Loại.</span></h2>
+        </div>
+        <p>Team Lẩu Các Loại đã cùng nhau đi qua những chuyến đi, những cuộc vui và rất nhiều lần cười hết cỡ. Tụi em sẽ lưu giữ lại những kỷ niệm ấy ở đây như một phần ký ức không thể xóa nhòa về anh.</p>
+      </div>
+      <div class="gallery-window film-reel" aria-label="Băng chuyền ảnh kỷ niệm Lẩu Các Loại">
+        <div class="gallery gallery-track" id="gallery">
+          <!-- Sẽ được điền tự động bằng JavaScript -->
+        </div>
+      </div>
+      <p class="gallery-hint">▶ FILM 01 — Rê chuột để dừng thước phim. Nhấn vào ảnh để xem kỷ niệm lớn hơn.</p>
+    </section>
+
+    <section class="closing" id="closing">
+      <div class="shell">
+        <span class="eyebrow">03 / ONE LAST MOMENT</span>
+        <h2 class="reveal visible">Hẹn gặp lại anh,<br><span>ở một chương thật đẹp.</span></h2>
+        <p class="reveal visible">Ba năm đồng hành không chỉ có công việc, mà còn có những kỷ niệm tụi em luôn trân trọng.<br>Chúc anh thật nhiều niềm vui và có một hành trình mới thật đẹp.</p>
+        <div class="video-wrap reveal visible">
+          <div class="video-slot" id="videoSlot">
+            <!-- Khu vực hiện video -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <span>THÂN TẶNG ĐẾN CHÚ CÔNG AN</span>
+    <span id="footerDate">28.10.2026</span>
+  </footer>
+
+  <audio id="bgAudio" loop="" src="assets/nhac-nen.mp3"></audio>
+
+  <!-- Edit Studio -->
+  <div class="edit-backdrop" id="editBackdrop" role="dialog" aria-modal="true" aria-label="Chỉnh sửa website">
+    <aside class="edit-panel">
+      <div class="edit-head">
+        <div>
+          <span class="mini">CONTENT STUDIO</span>
+          <h2>Chỉnh sửa lời chúc ✎</h2>
+        </div>
+        <button type="button" class="tiny" id="editClose">Đóng ✕</button>
+      </div>
+      <p class="help">Bạn có thể chỉnh sửa lời chúc, tên, ảnh, video và nhạc. Ảnh tải lên sẽ được tự động nén gọn để dễ lưu hơn. Bấm <b>Lưu thay đổi</b> trên thanh menu để lưu trên trình duyệt này, không tải file. Nếu cần chia sẻ bản đã chỉnh sửa trên máy khác, dùng tùy chọn xuất HTML bên dưới.</p>
+      <div id="editFields">
+        <!-- Chứa các field edit được sinh ra bằng JS -->
+      </div>
+      <div class="edit-actions">
+        <button class="pill primary" type="button" id="saveNow">Lưu &amp; xem thử</button>
+        <button class="pill" type="button" id="exportHtml">↓ Xuất HTML (có thể nặng)</button>
+        <button class="pill" type="button" id="resetContent">Khôi phục bản gốc</button>
+      </div>
+      <p class="mini">Nếu xuất HTML làm Chrome treo, hãy bấm “↓ Sao lưu nội dung” ở thanh trên rồi gửi tệp JSON cho mình đóng gói bản deploy. Lưu trên trình duyệt chỉ giữ thay đổi tại thiết bị và địa chỉ mở trang này.</p>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status">Thêm nhạc nền trong mục Chỉnh sửa</div>
+  <div class="lightbox" id="lightbox" hidden="" role="dialog" aria-modal="true" aria-label="Xem ảnh kỷ niệm">
+    <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Đóng ảnh">✕</button>
+    <img id="lightboxImage" alt="Ảnh kỷ niệm phóng to">
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <!-- JSON Data Configuration -->
+  <script id="site-data" type="application/json">
+  {
+    "title": "Gửi anh Cẩm Anh",
+    "date": "28.10.2026",
+    "subtitle": "Một chặng đường khép lại. Những kỷ niệm vẫn ở đây.",
+    "from": "Từ những người đồng hành luôn quý mến anh",
+    "cards": [
+      {
+        "id": "thuong",
+        "name": "Thí Thương",
+        "wish": "“Thanks for the unforgettable 3-year ride! Here’s to setting sail for new horizons—may peace, happiness, and ultimate success follow you wherever you go.”\n\"Every end is a new beginning. Thank you for being an inspiring leader and a great partner on the road. Take this time to recharge, reset, and gear up for your next big adventure. Wish you peace, joy, and nothing but the best ahead!\"",
+        "tease": "Một kỷ niệm nữa đang chờ anh ở phía dưới…",
+        "photos": [
+          "https://to-cam-anh-with-love.netlify.app/img/memory-02-1d99233d00.jpg",
+          "https://to-cam-anh-with-love.netlify.app/img/memory-03-bca3ba05af.jpg"
+        ]
+      },
+      {
+        "id": "dung",
+        "name": "Dun Dun",
+        "wish": "“Cảm ơn anh vì thời gian qua đã vừa là đồng nghiệp, vừa là bạn và là một người anh. Cảm ơn anh vì đã luôn đồng hành trong những chuyến đi, kiên nhẫn với những thiếu sót, và đã luôn đưa ra lời khuyên cho tụi em khi cần. Một đoạn đường không dài nhưng rất nhiều niềm vui và kỷ niệm đẹp. Chúc anh của những ngày sau, dù gặp bao nhiêu người, đi bao nhiêu đường, trải bao nhiêu chuyện, vẫn luôn thong dong tự tại, được là chính mình.”",
+        "tease": "Cùng mở tiếp lời nhắn của người kế tiếp nhé!",
+        "photos": [
+          "https://to-cam-anh-with-love.netlify.app/img/memory-04-82a6d5dd58.jpg",
+          "https://to-cam-anh-with-love.netlify.app/img/memory-05-00fbb5d7d1.jpg"
+        ]
+      },
+      {
+        "id": "huyen",
+        "name": "Ngọc Hìn",
+        "wish": "“Trước giờ em cảm ơn thấy rất may mắn vì đã được anh - Second line Manager viết cho rất nhiều lời ghi nhận, vinh danh, nên hôm nay em cũng muốn đáp lễ lại anh bằng những câu từ tận đáy lòng. \n\nThật lòng mà nói anh vừa là người sếp đáng kính và đáng sợ của em tại DKSH, nhiều lúc em rất vui vì ở công ty em như có một chỗ dựa, một người ba thứ hai vậy. Anh là tấm gương cho em học tập được nhiều đức tính tốt: không ngừng học hỏi, giữ vững lập trường và nguyên tắc làm việc đúng đắn, giúp đỡ người cần giúp và mở rộng mối quan hệ một cách chân thật. Cách đối nhân xử thế của anh cũng là điều em muốn hướng tới. Còn đáng sợ là vì, anh luôn cho thấy sự tin tưởng của anh dành cho em và đội nhóm, nên em rất sợ em không làm được như những gì anh kì vọng.\n\nBa năm vừa qua sẽ mãi là kỉ niệm em không bao giờ quên, hy vọng đây chỉ là kết thúc tạm để mở đầu cho những hành trình mới tốt đẹp hơn. Em mong anh sẽ có khoảng thời gian thư giãn và ổn định lại, rất mong sau này em sẽ có cơ hội làm việc chung với anh. Ở DKSH, em sẽ cố gắng giữ những giá trị mà anh đã xây dựng và đặt nền móng cho tụi em.”",
+        "tease": "Vẫn còn những lời nhắn gửi anh ở phía dưới nữa nè…",
+        "photos": [
+          "https://to-cam-anh-with-love.netlify.app/img/memory-06-6c494cb601.jpg",
+          "https://to-cam-anh-with-love.netlify.app/img/memory-07-d31c9c756f.jpg"
+        ]
+      },
+      {
+        "id": "loi-chuc-04",
+        "name": "Team ốc đảo (Chi Bu, Ms Cua, Na Chúi)",
+        "wish": "\"Với Cường Bùi, anh không chỉ là một người anh, một người đồng nghiệp mà còn là một người bạn ăn cơm, luôn sẵn sàng lắng nghe những câu chuyện lớn nhỏ và cùng em gỡ rối biết bao kèo khó.\n\nVới Na, anh không chỉ là một người sếp mà còn giống như người ba thứ hai ở công ty. Một người luôn âm thầm quan tâm, bảo vệ, cho em những lời khuyên đúng lúc và đặc biệt là có chuyện gì cũng có thể chạy đi méc anh được hihi. \n\nCảm ơn anh vì đã luôn nhiệt tình hỗ trợ, chia sẻ kinh nghiệm cho em Tố Uyên. Chúc anh bước sang hành trình mới với thật nhiều năng lượng tích cực, công việc hanh thông và gặt hái thêm nhiều thành công rực rỡ. Tạm biệt ở công ty thôi chứ hội Lẩu Các Loại vẫn còn hẹn nhau dài dài trên những chuyến đi sắp tới nha anh!\"",
+        "tease": "Mở tiếp lời nhắn yêu thương phía dưới nữa anh nhé!",
+        "photos": [
+          "assets/loi-chuc-4-anh-1.jpg",
+          "assets/loi-chuc-4-anh-2.jpg"
+        ]
+      },
+      {
+        "id": "loi-chuc-05",
+        "name": "Ka Tê ",
+        "wish": "\"Hôm nay là ngày anh khép lại một chặng đường công việc, em muốn gửi đến anh đôi lời từ sự trân trọng và biết ơn.\n\nVới em, anh không chỉ là một người anh lớn trong công việc mà còn là người đã luôn sẵn sàng chia sẻ, tư vấn và định hướng cho em trong cả công việc lẫn cuộc sống. Những lời khuyên, những kinh nghiệm anh truyền đạt và cả những lúc anh lắng nghe, động viên đều là những điều em rất quý trọng.\n\nEm nghĩ rằng, trong hành trình trưởng thành của mỗi người, may mắn không chỉ là gặp được những cơ hội tốt mà còn là gặp được những người anh đi trước sẵn lòng chỉ bảo, giúp mình nhìn nhận vấn đề sâu sắc hơn và vững vàng hơn trước những lựa chọn của cuộc đời. \n\nChúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hành trình mới. Mong rằng dù ở bất kỳ vị trí nào, anh vẫn luôn giữ được sự nhiệt huyết, bản lĩnh và những giá trị tốt đẹp của mình. Và em hy vọng rằng, trong chặng đường sắp tới, em vẫn sẽ có cơ hội được học hỏi, lắng nghe những lời khuyên và nhận được sự chỉ dẫn từ anh.\"",
+        "tease": "Và cuối cùng là những thước phim của Lẩu Các Loại!",
+        "photos": [
+          "assets/loi-chuc-5-anh-1.jpg",
+          "assets/loi-chuc-5-anh-2.jpg"
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "photo": "https://to-cam-anh-with-love.netlify.app/img/memory-08-2b8d9d4e12.jpg",
+        "caption": "Sinh nhật Ka Tê"
+      },
+      {
+        "photo": "https://to-cam-anh-with-love.netlify.app/img/memory-09-32d8e73938.jpg",
+        "caption": "YEP 2025"
+      },
+      {
+        "photo": "https://to-cam-anh-with-love.netlify.app/img/memory-10-a2df56f4b5.jpg",
+        "caption": "Vùng kí ức đẹp tại Quy Nhơn"
+      },
+      {
+        "photo": "https://to-cam-anh-with-love.netlify.app/img/memory-11-39224c4323.jpg",
+        "caption": "Bữa cơm gia đình sum họp "
+      }
+    ],
+    "video": "",
+    "music": "assets/nhac-nen.mp3",
+    "intro": "Gửi người anh, người sếp, người leader và cạ cứng xịn xịn của tụi em!\n\nVậy là hành trình 3 năm mình đồng hành cùng nhau đã đi tới đoạn chuyển giao rồi. Cảm ơn anh thật nhiều vì đã luôn chia sẻ, chỉ dẫn cho tụi em trong công việc. Càng cảm ơn hơn vì những chuyến đi không chỉ có công việc mà còn tràn ngập tiếng cười và bao nhiêu kỷ niệm đẹp.\n\nTụi em tin rằng quyết định dừng lại lúc này sẽ là cơ hội tuyệt vời để anh thả lỏng, nạp lại 100% năng lượng và tìm kiếm những hướng đi mới mẻ, thú vị hơn cho chính mình.\n\nDù ở đâu thì mong anh luôn giữ phong độ, niềm vui và tinh thần tích cực này nhé! Chúc anh cùng gia đình luôn bình an, hạnh phúc và gặt hái thật nhiều thành công trên con đường phía trước.\n\nMay the road ahead bring you fresh energy and exciting adventures. Keep in touch!",
+    "heroPhoto": "https://to-cam-anh-with-love.netlify.app/img/memory-01-792b521ec0.jpg",
+    "surprise": "Anh Cẩm Anh ơi, dù mai này mỗi người có một lịch trình riêng, tụi em vẫn luôn dành một chỗ cho anh trong những cuộc hẹn của Lẩu Các Loại. Chỉ cần anh nhắn “lẩu không?”, chắc chắn sẽ có người trả lời ngay! Cảm ơn anh vì ba năm thật đáng nhớ. Hẹn anh ở một bàn lẩu gần nhất nhé!"
   }
- }
- pack.mediaNote=mediaNote;
- const json=JSON.stringify(pack);
- const url=URL.createObjectURL(new Blob([json],{type:'application/json;charset=utf-8'}));
- const a=document.createElement('a');a.href=url;a.download='SAO-LUU-5-LOI-CHUC.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
- notify('✓ Đã sao lưu lời chúc và ảnh thành JSON. Gửi file này cho ChatGPT để đóng gói Netlify.');
-}
-$('backupData').addEventListener('click',safeBackup);
-$('exportHtml').addEventListener('click',async()=>{
- syncInputs();if(!save())notify('Không lưu được nội dung lên trình duyệt, vẫn thử xuất bản HTML.');
- const exportData=structuredClone(data);
- // Bản xuất HTML chứa luôn Blob dưới dạng data URL để mang sang máy khác.
- for(const kind of ['music','video']){
-  let blob=mediaCache[kind];if(!blob)try{blob=await getMedia(kind)}catch(e){}
-  if(blob){try{exportData[kind]=await mediaToDataURL(blob)}catch(e){notify('Không đóng gói được '+kind+' vào file HTML');return}}
- }
- const clone=document.documentElement.cloneNode(true);
- clone.querySelector('#site-data').textContent=JSON.stringify(exportData).replace(/</g,'\\u003c');
- clone.querySelector('#editBackdrop').classList.remove('open');clone.querySelector('body').style.overflow='';
- // Bỏ trạng thái đang chạy và các script công cụ xem trước đã chèn vào DOM.
- clone.querySelectorAll('script').forEach(sc=>{if(sc.id!=='site-data'&&!sc.textContent.includes("(()=>{'use strict';"))sc.remove()});
- const scriptCopy=[...clone.querySelectorAll('script')].find(el=>el.id!=='site-data');
- if(scriptCopy)scriptCopy.textContent=scriptCopy.textContent.replace("farewell-cam-anh-blue-collage-v1",'farewell-cam-anh-saved-'+Date.now());
- const file='<!doctype html>\n'+clone.outerHTML;
- const url=URL.createObjectURL(new Blob([file],{type:'text/html;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='farewell-cam-anh-5-loi-chuc-co-nhac.html';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);notify('Đã xuất HTML kèm lời chúc, ảnh và media');
-});
+  </script>
 
-// Background music belongs to the memories only; the farewell video keeps its own soundtrack.
-const audio=$('bgAudio'),musicButton=$('musicToggle');
-let userWantsMusic=false;
-function videoSectionReached(){return $('closing').getBoundingClientRect().top<=window.innerHeight*.60;}
-function syncBackgroundMusic(){
- if(videoSectionReached()){
-  if(!audio.paused)audio.pause();
-  musicButton.innerHTML='♫ <span class="mobilehide">Nhạc nền</span>';
-  musicButton.title='Nhạc nền tự dừng ở phần video';
-  return;
- }
- musicButton.title='Bật/tắt nhạc nền';
- if(userWantsMusic&&(mediaURLs.music||data.music)){
-  if(audio.paused)audio.play().catch(()=>{userWantsMusic=false;notify('Không phát được nhạc; hãy kiểm tra file nhạc')});
-  musicButton.innerHTML='♫ <span class="mobilehide">Tắt nhạc</span>';
- }else{
-  if(!audio.paused)audio.pause();
-  musicButton.innerHTML='♫ <span class="mobilehide">Âm nhạc</span>';
- }
-}
-musicButton.addEventListener('click',()=>{
- if(!(mediaURLs.music||data.music)){openEdit();notify('Thêm nhạc nền trong mục Chỉnh sửa');return}
- if(videoSectionReached()){notify('Đến phần clip, nhạc nền được tắt để nghe nhạc riêng của video.');return}
- userWantsMusic=!userWantsMusic;syncBackgroundMusic();
-});
-window.addEventListener('scroll',syncBackgroundMusic,{passive:true});
-window.addEventListener('resize',syncBackgroundMusic);
-$('videoSlot').addEventListener('play',e=>{if(e.target.tagName==='VIDEO'){audio.pause();musicButton.innerHTML='♫ <span class="mobilehide">Nhạc nền</span>'}},true);
+  <!-- Main Logic JavaScript -->
+  <script>
+  (() => {
+    'use strict';
+    
+    // Display mode control
+    const presentationToggle = document.getElementById('presentationToggle');
+    let presentationMode = new URLSearchParams(location.search).get('present') === '1';
+    
+    function updatePresentationMode() {
+      document.body.classList.toggle('presentation-mode', presentationMode);
+      presentationToggle.textContent = presentationMode ? '✎ Chỉnh sửa' : '▶ Trình chiếu';
+      presentationToggle.title = presentationMode ? 'Bật lại công cụ chỉnh sửa' : 'Ẩn các công cụ để trình chiếu';
+      if (presentationMode) {
+        const panel = document.getElementById('editBackdrop');
+        if (panel?.classList.contains('open')) {
+          panel.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      }
+    }
+    
+    presentationToggle.addEventListener('click', () => { 
+      presentationMode = !presentationMode; 
+      updatePresentationMode(); 
+    });
+    
+    document.addEventListener('keydown', event => {
+      if (event.ctrlKey && event.altKey && event.key.toLowerCase() === 'e') {
+        event.preventDefault();
+        presentationMode = !presentationMode;
+        updatePresentationMode();
+      }
+    });
+    updatePresentationMode();
 
+    // Data handling
+    const original = JSON.parse(document.getElementById('site-data').textContent);
+    const storeKey = 'farewell-github-public-viewer-20261027';
+    let data;
+    
+    try {
+      data = JSON.parse(localStorage.getItem(storeKey)) || original;
+    } catch (e) {
+      data = original;
+    }
+    if (!data.cards || !data.gallery) data = original;
 
-// Full-screen photo viewing for uploaded gallery images.
-$('gallery').addEventListener('click',e=>{const item=e.target.closest('.gallery-item');if(!item)return;const image=item.querySelector('img');if(!image)return;$('lightboxImage').src=image.src;$('lightboxImage').alt=image.alt;$('lightboxCaption').textContent=item.querySelector('figcaption')?.textContent||'';$('lightbox').hidden=false;document.body.classList.add('lightbox-open')});
-function closeLightbox(){$('lightbox').hidden=true;document.body.classList.remove('lightbox-open')}
-$('lightboxClose').addEventListener('click',closeLightbox);$('lightbox').addEventListener('click',e=>{if(e.target===$('lightbox'))closeLightbox()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+    // Ensure 2 photos max per card
+    data.cards.forEach(c => {
+      c.photos = (Array.isArray(c.photos) ? c.photos : []).slice(0, 2);
+      while (c.photos.length < 2) c.photos.push('');
+    });
 
- function progress(){const h=document.documentElement;const max=h.scrollHeight-innerHeight;$('progress').style.width=`${max>0?Math.min(100,scrollY/max*100):0}%`}window.addEventListener('scroll',progress,{passive:true});window.addEventListener('resize',progress);render();progress();restoreSavedMedia();syncBackgroundMusic();
-})();
-</script>
+    const mediaDBName = 'cam-anh-farewell-media-v1';
+    const mediaCache = { music: null, video: null };
+    const mediaURLs = { music: null, video: null };
 
-<script id="viewer-only-script">
-(function(){
-const btn=document.getElementById('viewerMusic');
-const audio=document.getElementById('bgAudio');
-const original=document.getElementById('musicToggle');
-if(!btn)return;
-btn.addEventListener('click',function(){
- if(original){original.click();return;}
- if(audio){if(audio.paused){audio.play().catch(()=>{});}else{audio.pause();}}
-});
-if(audio){audio.addEventListener('play',()=>btn.textContent='♫ Tắt nhạc');audio.addEventListener('pause',()=>btn.textContent='♫ Bật nhạc');}
-})();
-</script></body></html>
+    // IndexedDB for media
+    function openMediaDB() {
+      return new Promise((resolve, reject) => {
+        if (!('indexedDB' in window)) return reject(new Error('Trình duyệt không hỗ trợ lưu media'));
+        const request = indexedDB.open(mediaDBName, 1);
+        request.onupgradeneeded = () => {
+          if (!request.result.objectStoreNames.contains('media')) 
+            request.result.createObjectStore('media');
+        };
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      });
+    }
+
+    async function storeMedia(kind, blob) {
+      const db = await openMediaDB();
+      try {
+        await new Promise((resolve, reject) => {
+          const tx = db.transaction('media', 'readwrite');
+          tx.objectStore('media').put(blob, kind);
+          tx.oncomplete = resolve;
+          tx.onerror = () => reject(tx.error || new Error('Không lưu được file'));
+        });
+      } finally { db.close(); }
+    }
+
+    async function getMedia(kind) {
+      const db = await openMediaDB();
+      try {
+        return await new Promise((resolve, reject) => {
+          const tx = db.transaction('media', 'readonly');
+          const req = tx.objectStore('media').get(kind);
+          req.onsuccess = () => resolve(req.result || null);
+          req.onerror = () => reject(req.error);
+        });
+      } finally { db.close(); }
+    }
+
+    function updateMediaPreview(kind, blob) {
+      if (mediaURLs[kind]) URL.revokeObjectURL(mediaURLs[kind]);
+      mediaCache[kind] = blob || null;
+      mediaURLs[kind] = blob ? URL.createObjectURL(blob) : null;
+      
+      if (kind === 'music') {
+        document.getElementById('bgAudio').src = mediaURLs.music || data.music || '';
+      }
+      if (kind === 'video') {
+        const slot = document.getElementById('videoSlot');
+        if (mediaURLs.video) {
+          slot.innerHTML = '<video controls playsinline preload="metadata"></video>';
+          slot.querySelector('video').src = mediaURLs.video;
+        } else {
+          const link = data.video || '';
+          if (link) {
+            slot.innerHTML = '<video controls playsinline preload="metadata"></video>';
+            slot.querySelector('video').src = link;
+          }
+        }
+      }
+    }
+
+    async function restoreSavedMedia() {
+      for (const kind of ['music', 'video']) {
+        try {
+          const blob = await getMedia(kind);
+          if (blob) {
+            updateMediaPreview(kind, blob);
+            if (kind === 'music') markMusicName(blob.name || 'Nhạc nền đã lưu');
+          }
+        } catch (e) {
+          console.warn('Không thể mở bộ nhớ media', e);
+        }
+      }
+      // Migrate base64 to IndexedDB if any
+      for (const kind of ['music', 'video']) {
+        if ((data[kind] || '').startsWith('data:')) {
+          try {
+            const response = await fetch(data[kind]);
+            const blob = await response.blob();
+            await storeMedia(kind, blob);
+            data[kind] = '';
+            updateMediaPreview(kind, blob);
+            save();
+          } catch (e) {
+            console.warn('Chưa chuyển được media cũ', e);
+          }
+        }
+      }
+    }
+
+    function markMusicName(name) {
+      const btn = document.querySelector('.music-upload-label');
+      if (!btn) return;
+      btn.title = name ? 'Nhạc đã chọn: ' + name : 'Chọn nhạc MP3 từ máy tính';
+      btn.querySelector('.mobilehide').textContent = name ? 'Đã chọn nhạc' : 'Thêm nhạc MP3';
+      btn.querySelector('.shortMusic').textContent = name ? '✓ MP3' : 'MP3';
+    }
+
+    async function handleMusicChosen(file) {
+      if (!file) return;
+      if (file.size > 250 * 1024 * 1024) {
+        notify('Tệp nhạc lớn hơn 250 MB, vui lòng chọn tệp nhỏ hơn.');
+        return;
+      }
+      if (!(file.type.startsWith('audio/') || /\.(mp3|m4a|wav|ogg)$/i.test(file.name))) {
+        notify('Vui lòng chọn tệp âm thanh MP3, M4A, WAV hoặc OGG.');
+        return;
+      }
+      try {
+        await storeMedia('music', file);
+        data.music = ''; save();
+        updateMediaPreview('music', file);
+        markMusicName(file.name);
+        userWantsMusic = false;
+        audio.pause();
+        syncBackgroundMusic();
+        notify('✓ Đã lưu nhạc: ' + file.name + '. Bấm Âm nhạc để nghe.');
+      } catch (err) {
+        updateMediaPreview('music', file);
+        markMusicName(file.name);
+        notify('Đã chọn nhạc nhưng chưa lưu lâu dài được. Hãy mở HTML bằng Chrome/Edge.');
+      }
+    }
+
+    document.getElementById('musicDirectFile').addEventListener('change', async e => {
+      const file = e.target.files?.[0];
+      await handleMusicChosen(file);
+      e.target.value = '';
+    });
+
+    function mediaToDataURL(blob) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => reject(reader.error);
+        reader.readAsDataURL(blob);
+      });
+    }
+
+    const $ = id => document.getElementById(id);
+    const escape = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    let observer;
+    const photoIcon = '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="11" width="50" height="42" rx="7"/><circle cx="23" cy="26" r="5"/><path d="m10 45 15-13 10 8 9-13 11 18"/></svg>';
+
+    function fixedPhotoUrl(src) {
+      if (typeof src === 'string' && src.startsWith('/.netlify/images?')) {
+        try {
+          const p = new URLSearchParams(src.split('?')[1]).get('url');
+          return p ? 'https://to-cam-anh-with-love.netlify.app' + p : 'https://to-cam-anh-with-love.netlify.app' + src;
+        } catch (e) {
+          return 'https://to-cam-anh-with-love.netlify.app' + src;
+        }
+      }
+      if (typeof src === 'string' && src.startsWith('/img/')) return 'https://to-cam-anh-with-love.netlify.app' + src;
+      return src;
+    }
+
+    function photo(src, label) {
+      src = fixedPhotoUrl(src);
+      return src ? `<img class="photo-fill" loading="lazy" src="${escape(src)}" alt="${escape(label)}">` 
+                 : `<div class="photo-empty">${photoIcon}<span>${escape(label)}</span><small>Thêm ảnh trong phần Chỉnh sửa</small></div>`;
+    }
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let typingEpoch = 0;
+
+    function animateMemory(section) {
+      const textEl = section.querySelector('.memory-wish');
+      if (!textEl) return;
+      const full = textEl.dataset.fullWish || '';
+      const frames = [...section.querySelectorAll('.photo-frame')];
+      const epoch = typingEpoch;
+      
+      if (reducedMotion || !full) {
+        textEl.textContent = full;
+        frames.forEach(f => f.classList.add('photo-shown'));
+        return;
+      }
+      
+      const chars = Array.from(full);
+      const total = chars.length;
+      let index = 0;
+      const caret = document.createElement('span');
+      caret.className = 'type-caret';
+      caret.setAttribute('aria-hidden', 'true');
+      textEl.textContent = '';
+      textEl.append(caret);
+      
+      const revealPhotos = () => {
+        const count = Math.max(0, Math.min(frames.length, Math.ceil(index / Math.max(total, 1) * frames.length)));
+        frames.forEach((f, i) => { if (i < count) f.classList.add('photo-shown'); });
+      };
+      
+      function tick() {
+        if (epoch !== typingEpoch || !textEl.isConnected) return;
+        const chunk = chars.slice(index, index + 2).join('');
+        index = Math.min(index + 2, total);
+        caret.before(chunk);
+        revealPhotos();
+        if (index < total) {
+          const last = chars[index - 1] || '';
+          setTimeout(tick, /[.!?…]/.test(last) ? 310 : /[,;:]/.test(last) ? 135 : 34);
+        } else {
+          caret.remove();
+          frames.forEach(f => f.classList.add('photo-shown'));
+        }
+      }
+      setTimeout(tick, 250);
+    }
+
+    function animateHero() {
+      const title = $('heroTitle'), intro = $('heroWish');
+      const token = typingEpoch;
+      const name = 'Thân gửi anh Cẩm Anh.';
+      const body = data.intro || '';
+      
+      if (reducedMotion) {
+        title.innerHTML = '<span class="hero-headline-static">Thân gửi anh <em>Cẩm Anh.</em></span>';
+        intro.textContent = body;
+        return;
+      }
+      
+      title.innerHTML = '<span class="hero-headline-static is-typing"></span>';
+      intro.textContent = '';
+      const nameChars = Array.from(name), introChars = Array.from(body);
+      let step = 0;
+      
+      function headlineTick() {
+        if (token !== typingEpoch) return;
+        step = Math.min(step + 2, nameChars.length);
+        const first = nameChars.slice(0, step).join('');
+        const el = title.firstElementChild;
+        if (first.startsWith('Thân gửi anh ')) {
+          el.textContent = 'Thân gửi anh ';
+          const em = document.createElement('em');
+          em.textContent = first.slice('Thân gửi anh '.length);
+          el.appendChild(em);
+        } else {
+          el.textContent = first;
+        }
+        if (step < nameChars.length) setTimeout(headlineTick, 42);
+        else { el.classList.remove('is-typing'); setTimeout(introTick, 170); }
+      }
+      
+      let i = 0;
+      const node = document.createTextNode('');
+      intro.appendChild(node);
+      const caret = document.createElement('span');
+      caret.className = 'type-caret';
+      intro.appendChild(caret);
+      
+      function introTick() {
+        if (token !== typingEpoch) return;
+        const next = Math.min(i + 8, introChars.length);
+        node.appendData(introChars.slice(i, next).join(''));
+        i = next;
+        if (i < introChars.length) setTimeout(introTick, 23);
+        else caret.remove();
+      }
+      setTimeout(headlineTick, 310);
+    }
+
+    function render() {
+      typingEpoch++;
+      $('heroDate').textContent = data.date;
+      $('footerDate').textContent = data.date;
+      animateHero();
+      $('heroFrom').textContent = data.from;
+      $('heroPhoto').innerHTML = photo(data.heroPhoto, 'Ảnh cả nhóm · Gia tộc Lẩu');
+      
+      $('marquee').innerHTML = Array(8).fill('<span>NHỮNG NGÀY THẬT ĐẸP.</span><span class="spark">✳</span><span>ALWAYS IN OUR HEARTS.</span><span class="spark">✳</span>').join('');
+      
+      $('cards').innerHTML = data.cards.map((c, i) => `
+        <article class="memory reveal" id="${escape(c.id)}">
+          <div class="memory-photos">
+            ${c.photos.map((p, j) => `<div class="photo-frame">${photo(p, `${c.name} · Ảnh ${j + 1}`)}</div>`).join('')}
+          </div>
+          <div class="memory-copy">
+            <span class="memory-num">0${i + 1} / A MESSAGE FROM</span>
+            <h3>${escape(c.name)}</h3>
+            <div class="quote-mark">“</div>
+            <p class="memory-wish" data-full-wish="${escape(c.wish)}" aria-label="${escape(c.wish)}"></p>
+            ${c.tease ? `<a class="memory-next" href="#${data.cards[i + 1] ? escape(data.cards[i + 1].id) : 'gallerySection'}"><span>${escape(c.tease)}</span><span>↗</span></a>` : ''}
+          </div>
+        </article>
+      `).join('');
+      
+      $('gallery').innerHTML = [...data.gallery, ...data.gallery].map((g, i) => `
+        <figure class="gallery-item reveal">
+          <div class="gallery-photo">${photo(g.photo, `Ảnh cả nhóm ${i + 1}`)}</div>
+          <figcaption>${escape(g.caption)}</figcaption>
+        </figure>
+      `).join('');
+      
+      const video = data.video?.trim() || '';
+      let safeVideo = '';
+      try {
+        const u = new URL(video, location.href);
+        if (['https:', 'http:', 'blob:', 'data:', 'file:'].includes(u.protocol)) safeVideo = video;
+      } catch (e) {}
+      
+      $('videoSlot').innerHTML = safeVideo ? 
+        `<video src="${escape(safeVideo)}" controls playsinline preload="metadata"></video>` : 
+        `<div style="text-align:center;padding:20px">${photoIcon}<strong>Một thước phim của chúng mình</strong><span>Video kỷ niệm sẽ xuất hiện ở đây</span></div>`;
+      
+      $('bgAudio').src = mediaURLs.music || data.music || '';
+      
+      if (observer) observer.disconnect();
+      if ('IntersectionObserver' in window) {
+        observer = new IntersectionObserver(es => es.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            if (e.target.classList.contains('memory')) animateMemory(e.target);
+            observer.unobserve(e.target);
+          }
+        }), { threshold: .10 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      } else {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      }
+    }
+
+    function save() {
+      try {
+        localStorage.setItem(storeKey, JSON.stringify(data));
+        return true;
+      } catch (e) {
+        notify('Không thể lưu trên trình duyệt (dung lượng ảnh quá lớn). Hãy giảm ảnh hoặc dùng ảnh nhẹ hơn.');
+        return false;
+      }
+    }
+
+    function notify(s) {
+      $('toast').textContent = s;
+      $('toast').classList.add('show');
+      clearTimeout(notify.t);
+      notify.t = setTimeout(() => $('toast').classList.remove('show'), 3200);
+    }
+
+    function input(key, label, multi = false) {
+      return `<label for="f_${key}">${label}</label>${multi ? `<textarea id="f_${key}" data-field="${key}">${escape(data[key])}</textarea>` : `<input id="f_${key}" data-field="${key}" value="${escape(data[key])}">`}`;
+    }
+
+    function fileInput(group, index, label, has) {
+      return `<div class="upload-row"><label style="margin:0;min-width:95px">${label}</label><input aria-label="${label}" type="file" accept="image/*" data-file="${group}" data-index="${index}">${has ? `<button class="tiny" data-remove="${group}" data-index="${index}" type="button">Xóa ảnh</button>` : ''}</div>`;
+    }
+
+    function editForm() {
+      let html = `<div class="edit-group"><h3>Thông tin mở đầu</h3>${input('date', 'Ngày')}${input('from', 'Dòng ký tên tập thể')}${input('intro', 'Lời nhắn chung', true)}${fileInput('hero', '0', 'Ảnh bìa', !!data.heroPhoto)}</div>`;
+      
+      data.cards.forEach((c, i) => {
+        html += `<div class="edit-group">
+          <h3>0${i + 1}. ${escape(c.name)}</h3>
+          <label>Tên người gửi</label><input data-card="${i}" data-prop="name" value="${escape(c.name)}">
+          <label>Nội dung lời chúc</label><textarea data-card="${i}" data-prop="wish">${escape(c.wish)}</textarea>
+          <label>Câu chuyển tiếp (có thể để trống)</label><input data-card="${i}" data-prop="tease" value="${escape(c.tease)}">
+          <label>Ảnh kỷ niệm (2 ảnh ngang/người, nén tự động)</label>
+          ${c.photos.map((p, j) => fileInput('card-' + i, j, 'Ảnh ' + (j + 1), !!p)).join('')}
+        </div>`;
+      });
+      
+      html += `<div class="edit-group"><h3>Album cả nhóm</h3>${data.gallery.map((g, i) => `<label>Chú thích ảnh ${i + 1}</label><input data-caption="${i}" value="${escape(g.caption)}">${fileInput('gallery', i, 'Ảnh ' + (i + 1), !!g.photo)}`).join('')}</div>`;
+      html += `<div class="edit-group"><h3>Video & âm nhạc</h3>${input('video', 'Link trực tiếp đến file video (.mp4)')}${input('music', 'Link trực tiếp đến file nhạc (.mp3)')}<p class="mini">Tải nhạc hoặc video từ máy sẽ được lưu riêng, không làm đầy dung lượng ảnh.</p><label>Hoặc chọn video từ máy</label><input type="file" accept="video/*" data-media="video"><label>Hoặc chọn nhạc từ máy</label><input type="file" accept="audio/*" data-media="music"></div>`;
+      
+      $('editFields').innerHTML = html;
+    }
+
+    function syncInputs() {
+      document.querySelectorAll('[data-field]').forEach(el => { data[el.dataset.field] = el.value; });
+      document.querySelectorAll('[data-card]').forEach(el => { data.cards[+el.dataset.card][el.dataset.prop] = el.value; });
+      document.querySelectorAll('[data-caption]').forEach(el => { data.gallery[+el.dataset.caption].caption = el.value; });
+    }
+
+    function setImage(group, index, value) {
+      if (group === 'hero') data.heroPhoto = value;
+      else if (group === 'gallery') data.gallery[+index].photo = value;
+      else if (group.startsWith('card-')) data.cards[+group.split('-')[1]].photos[+index] = value;
+    }
+
+    function readFile(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    async function readOptimizedImage(file) {
+      if (!file.type.startsWith('image/') || file.type === 'image/svg+xml') return readFile(file);
+      const url = URL.createObjectURL(file);
+      try {
+        const img = await new Promise((resolve, reject) => {
+          const image = new Image();
+          image.onload = () => resolve(image);
+          image.onerror = reject;
+          image.src = url;
+        });
+        const maxEdge = 900, ratio = Math.min(1, maxEdge / Math.max(img.naturalWidth, img.naturalHeight));
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.max(1, Math.round(img.naturalWidth * ratio));
+        canvas.height = Math.max(1, Math.round(img.naturalHeight * ratio));
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return readFile(file);
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        return canvas.toDataURL('image/jpeg', 0.58);
+      } catch (e) {
+        return readFile(file);
+      } finally {
+        URL.revokeObjectURL(url);
+      }
+    }
+
+    $('editFields').addEventListener('input', e => {
+      if (e.target.matches('[data-field],[data-card],[data-caption]')) {
+        syncInputs(); save(); render();
+      }
+    });
+
+    $('editFields').addEventListener('change', async e => {
+      const el = e.target;
+      if (el.dataset.file && el.files?.[0]) {
+        const value = await readOptimizedImage(el.files[0]);
+        syncInputs();
+        setImage(el.dataset.file, el.dataset.index, value);
+        const ok = save();
+        render(); editForm();
+        notify(ok ? 'Đã thêm ảnh (đã nén gọn)' : 'Ảnh hiện lên nhưng quá nặng chưa lưu được.');
+      }
+      if (el.dataset.media && el.files?.[0]) {
+        const kind = el.dataset.media, file = el.files[0];
+        if (kind === 'music') {
+          await handleMusicChosen(file);
+          editForm();
+          return;
+        }
+        if (file.size > 250 * 1024 * 1024) {
+          notify('File quá lớn (trên 250 MB); hãy dùng đường dẫn media.');
+          return;
+        }
+        try {
+          await storeMedia(kind, file);
+          syncInputs(); data[kind] = ''; save(); render();
+          updateMediaPreview(kind, file); editForm();
+          notify('✓ Đã lưu ' + (kind === 'music' ? 'nhạc nền' : 'video') + ' an toàn.');
+        } catch (err) {
+          notify('Lỗi trình duyệt khi lưu media lớn.');
+        }
+      }
+    });
+
+    $('editFields').addEventListener('click', e => {
+      const b = e.target.closest('[data-remove]');
+      if (!b) return;
+      syncInputs(); setImage(b.dataset.remove, b.dataset.index, ''); save(); render(); editForm();
+    });
+
+    function openEdit() { editForm(); $('editBackdrop').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeEdit() { syncInputs(); save(); render(); $('editBackdrop').classList.remove('open'); document.body.style.overflow = ''; }
+    
+    $('editOpen').addEventListener('click', openEdit);
+    $('editClose').addEventListener('click', closeEdit);
+    $('editBackdrop').addEventListener('click', e => { if (e.target === $('editBackdrop')) closeEdit(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('editBackdrop').classList.contains('open')) closeEdit(); });
+    
+    $('saveNow').addEventListener('click', () => { closeEdit(); notify('Đã lưu thay đổi'); });
+    $('resetContent').addEventListener('click', () => {
+      if (!confirm('Khôi phục toàn bộ lời chúc và ảnh về bản gốc?')) return;
+      data = structuredClone(original); save(); render(); editForm(); notify('Đã khôi phục bản gốc');
+    });
+
+    $('saveLatest').addEventListener('click', () => {
+      if ($('editBackdrop').classList.contains('open')) syncInputs();
+      if (save()) {
+        notify('✓ Đã lưu giao diện và nội dung');
+        const btn = $('saveLatest');
+        btn.textContent = '✓ Đã lưu';
+        clearTimeout(btn._restore);
+        btn._restore = setTimeout(() => btn.textContent = '✓ Lưu thay đổi', 2300);
+      }
+    });
+
+    async function safeBackup() {
+      if ($('editBackdrop').classList.contains('open')) syncInputs();
+      save();
+      const pack = { format: 'farewell-cam-anh-backup-v1', date: new Date().toISOString(), data: { ...data } };
+      const mediaNote = {};
+      for (const kind of ['music', 'video']) {
+        const val = pack.data[kind];
+        if (typeof val === 'string' && val.startsWith('data:')) {
+          mediaNote[kind] = 'Nhúng sẵn trong HTML gốc';
+          pack.data[kind] = '__KEEP_ORIGINAL_EMBEDDED_MEDIA__';
+        } else if (mediaCache[kind]) {
+          mediaNote[kind] = 'Tệp media nội bộ';
+          pack.data[kind] = '__MEDIA_IN_BROWSER__';
+        }
+      }
+      pack.mediaNote = mediaNote;
+      const json = JSON.stringify(pack);
+      const url = URL.createObjectURL(new Blob([json], { type: 'application/json;charset=utf-8' }));
+      const a = document.createElement('a'); a.href = url; a.download = 'SAO-LUU-5-LOI-CHUC.json';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 3000);
+      notify('✓ Đã sao lưu dữ liệu JSON.');
+    }
+    
+    $('backupData').addEventListener('click', safeBackup);
+    
+    $('exportHtml').addEventListener('click', async () => {
+      syncInputs();
+      if (!save()) notify('Không lưu được nội dung trên trình duyệt, vẫn xuất bản HTML.');
+      const exportData = structuredClone(data);
+      for (const kind of ['music', 'video']) {
+        let blob = mediaCache[kind];
+        if (!blob) try { blob = await getMedia(kind); } catch (e) {}
+        if (blob) {
+          try { exportData[kind] = await mediaToDataURL(blob); }
+          catch (e) { notify('Không đóng gói được ' + kind + ' vào file HTML'); return; }
+        }
+      }
+      const clone = document.documentElement.cloneNode(true);
+      clone.querySelector('#site-data').textContent = JSON.stringify(exportData).replace(/</g, '\\u003c');
+      clone.querySelector('#editBackdrop').classList.remove('open');
+      clone.querySelector('body').style.overflow = '';
+      
+      clone.querySelectorAll('script').forEach(sc => {
+        if (sc.id !== 'site-data' && !sc.textContent.includes("(() => { 'use strict';")) sc.remove();
+      });
+      const scriptCopy = [...clone.querySelectorAll('script')].find(el => el.id !== 'site-data');
+      if (scriptCopy) scriptCopy.textContent = scriptCopy.textContent.replace("farewell-cam-anh-blue-collage-v1", 'farewell-cam-anh-saved-' + Date.now());
+      
+      const file = '<!doctype html>\n' + clone.outerHTML;
+      const url = URL.createObjectURL(new Blob([file], { type: 'text/html;charset=utf-8' }));
+      const a = document.createElement('a'); a.href = url; a.download = 'farewell-cam-anh-5-loi-chuc-co-nhac.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 10000);
+      notify('Đã xuất HTML kèm hình ảnh & truyền thông.');
+    });
+
+    // Music logic
+    const audio = $('bgAudio'), musicButton = $('musicToggle');
+    let userWantsMusic = false;
+    
+    function videoSectionReached() {
+      return $('closing').getBoundingClientRect().top <= window.innerHeight * .60;
+    }
+    
+    function syncBackgroundMusic() {
+      if (videoSectionReached()) {
+        if (!audio.paused) audio.pause();
+        musicButton.innerHTML = '♫ <span class="mobilehide">Nhạc nền</span>';
+        musicButton.title = 'Nhạc nền tự dừng ở phần video';
+        return;
+      }
+      musicButton.title = 'Bật/tắt nhạc nền';
+      if (userWantsMusic && (mediaURLs.music || data.music)) {
+        if (audio.paused) audio.play().catch(() => { userWantsMusic = false; notify('Kiểm tra lại file nhạc.'); });
+        musicButton.innerHTML = '♫ <span class="mobilehide">Tắt nhạc</span>';
+      } else {
+        if (!audio.paused) audio.pause();
+        musicButton.innerHTML = '♫ <span class="mobilehide">Âm nhạc</span>';
+      }
+    }
+    
+    musicButton.addEventListener('click', () => {
+      if (!(mediaURLs.music || data.music)) { openEdit(); notify('Thêm nhạc nền trong mục Chỉnh sửa'); return; }
+      if (videoSectionReached()) { notify('Đang ở phần video, nhạc nền sẽ tắt tạm thời.'); return; }
+      userWantsMusic = !userWantsMusic;
+      syncBackgroundMusic();
+    });
+    
+    window.addEventListener('scroll', syncBackgroundMusic, { passive: true });
+    window.addEventListener('resize', syncBackgroundMusic);
+    
+    $('videoSlot').addEventListener('play', e => {
+      if (e.target.tagName === 'VIDEO') { audio.pause(); musicButton.innerHTML = '♫ <span class="mobilehide">Nhạc nền</span>'; }
+    }, true);
+
+    // Lightbox for Gallery
+    $('gallery').addEventListener('click', e => {
+      const item = e.target.closest('.gallery-item');
+      if (!item) return;
+      const image = item.querySelector('img');
+      if (!image) return;
+      $('lightboxImage').src = image.src;
+      $('lightboxImage').alt = image.alt;
+      $('lightboxCaption').textContent = item.querySelector('figcaption')?.textContent || '';
+      $('lightbox').hidden = false;
+      document.body.classList.add('lightbox-open');
+    });
+    
+    function closeLightbox() { $('lightbox').hidden = true; document.body.classList.remove('lightbox-open'); }
+    $('lightboxClose').addEventListener('click', closeLightbox);
+    $('lightbox').addEventListener('click', e => { if (e.target === $('lightbox')) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // Progress Bar
+    function progress() {
+      const h = document.documentElement;
+      const max = h.scrollHeight - innerHeight;
+      $('progress').style.width = `${max > 0 ? Math.min(100, scrollY / max * 100) : 0}%`;
+    }
+    
+    window.addEventListener('scroll', progress, { passive: true });
+    window.addEventListener('resize', progress);
+    
+    // Initial calls
+    render();
+    progress();
+    restoreSavedMedia();
+    syncBackgroundMusic();
+    
+  })();
+  </script>
+
+  <script id="viewer-only-script">
+  (function(){
+    const btn = document.getElementById('viewerMusic');
+    const audio = document.getElementById('bgAudio');
+    const original = document.getElementById('musicToggle');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      if (original) { original.click(); return; }
+      if (audio) { if (audio.paused) { audio.play().catch(()=>{}); } else { audio.pause(); } }
+    });
+    if (audio) {
+      audio.addEventListener('play', () => btn.textContent = '♫ Tắt nhạc');
+      audio.addEventListener('pause', () => btn.textContent = '♫ Bật nhạc');
+    }
+  })();
+  </script>
+</body>
+</html>
