@@ -545,7 +545,7 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
     <span id="footerDate">28.10.2026</span>
   </footer>
 
-  <audio id="bgAudio" loop="" src="nhac-nen.mp3"></audio>
+  <audio id="bgAudio" loop="" src="nhacmp3.mp3"></audio>
 
   <!-- Edit Studio -->
   <div class="edit-backdrop" id="editBackdrop" role="dialog" aria-modal="true" aria-label="Chỉnh sửa website">
@@ -655,7 +655,7 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
       }
     ],
     "video": "https://youtu.be/AxygfmpgSq8",
-    "music": "nhac-nen.mp3",
+    "music": "nhacmp3.mp3",
     "intro": "Gửi người anh, người sếp, người leader và cạ cứng xịn xịn của tụi em!\n\nVậy là hành trình 3 năm mình đồng hành cùng nhau đã đi tới đoạn chuyển giao rồi. Cảm ơn anh thật nhiều vì đã luôn chia sẻ, chỉ dẫn cho tụi em trong công việc. Càng cảm ơn hơn vì những chuyến đi không chỉ có công việc mà còn tràn ngập tiếng cười và bao nhiêu kỷ niệm đẹp.\n\nTụi em tin rằng quyết định dừng lại lúc này sẽ là cơ hội tuyệt vời để anh thả lỏng, nạp lại 100% năng lượng và tìm kiếm những hướng đi mới mẻ, thú vị hơn cho chính mình.\n\nDù ở đâu thì mong anh luôn giữ phong độ, niềm vui và tinh thần tích cực này nhé! Chúc anh cùng gia đình luôn bình an, hạnh phúc và gặt hái thật nhiều thành công trên con đường phía trước.\n\nMay the road ahead bring you fresh energy and exciting adventures. Keep in touch!",
     "heroPhoto": "https://to-cam-anh-with-love.netlify.app/img/memory-01-792b521ec0.jpg",
     "surprise": "Anh Cẩm Anh ơi, dù mai này mỗi người có một lịch trình riêng, tụi em vẫn luôn dành một chỗ cho anh trong những cuộc hẹn của Lẩu Các Loại. Chỉ cần anh nhắn “lẩu không?”, chắc chắn sẽ có người trả lời ngay! Cảm ơn anh vì ba năm thật đáng nhớ. Hẹn anh ở một bàn lẩu gần nhất nhé!"
@@ -700,8 +700,8 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
 
     // Data handling
     const original = JSON.parse(document.getElementById('site-data').textContent);
-    // Đã đổi storeKey thành bản v2 để bộ nhớ đệm tự động tải lại video youtube mới
-    const storeKey = 'farewell-github-public-viewer-20261028-youtube-v2';
+    // Đã đổi storeKey thành bản v3 để bộ nhớ đệm tự động tải lại file nhạc mới
+    const storeKey = 'farewell-github-public-viewer-20261028-nhacmp3';
     let data;
     
     try {
@@ -1074,7 +1074,7 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
     }
 
     function editForm() {
-      let html = `<div class="edit-group"><h3>Thông tin mở đầu</h3>${input('date', 'Ngày')}${input('from', 'Dòng ký tên tập thể')}${input('intro', 'Lời nhắn chung', true)}${fileInput('hero', '0', 'Ảnh bìa', !!data.heroPhoto)}</div>`;
+      let html = `<div class="edit-group"><h3>Thông Thông tin mở đầu</h3>${input('date', 'Ngày')}${input('from', 'Dòng ký tên tập thể')}${input('intro', 'Lời nhắn chung', true)}${fileInput('hero', '0', 'Ảnh bìa', !!data.heroPhoto)}</div>`;
       
       data.cards.forEach((c, i) => {
         html += `<div class="edit-group">
