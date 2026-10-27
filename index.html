@@ -183,12 +183,12 @@
     .closing h2 span { font-family: 'Caveat'; font-size: 1.12em; color: #eaff6e; letter-spacing: 0; }
     .closing p { color: #e6f7ff; font-size: 14px; line-height: 1.9; }
     
-    .video-wrap { width: min(790px, 100%); margin: 45px auto 0; border: 12px solid white; border-bottom-width: 28px; border-radius: 4px; background: white; transform: rotate(-1deg); box-shadow: 0 40px 65px #001f6877; padding: 0; }
+    .video-wrap { width: min(790px, 100%); margin: 45px auto 0; border: 12px solid white; border-bottom-width: 28px; border-radius: 4px; background: white; transform: rotate(-1deg); box-shadow: 0 40px 65px #001f6877; padding: 0; overflow: hidden; }
     .video-slot { display: grid; place-items: center; min-height: 340px; aspect-ratio: 16/9; border-radius: 0; background: linear-gradient(135deg, #1c65d3, #093387); color: #aac9f3; }
     .video-slot strong { display: block; font: 700 21px 'Space Grotesk'; margin-bottom: 10px; }
     .video-slot span { font-size: 12px; }
     .video-slot svg { width: 45px; margin-bottom: 20px; }
-    .video-slot video { width: 100%; height: 100%; max-height: 520px; display: block; }
+    .video-slot video, .video-slot iframe { width: 100%; height: 100%; max-height: 520px; display: block; border: none; }
     
     .footer { border-top: 1px solid var(--line); padding: 25px 0; color: #e4f8ff; font-size: 11px; display: flex; justify-content: space-between; gap: 14px; }
     
@@ -415,7 +415,6 @@ May the road ahead bring you fresh energy and exciting adventures. Keep in touch
         <p>Mỗi người giữ một mảnh ký ức. Tụi em gom lại thành một album thật riêng để dành tặng anh.</p>
       </div>
       <div id="cards">
-        <!-- Đã đồng bộ 5 người để chống lỗi giật trang khi load -->
         <article class="memory reveal visible" id="thuong">
           <div class="memory-photos">
             <div class="photo-frame photo-shown"><img class="photo-fill" loading="lazy" src="https://to-cam-anh-with-love.netlify.app/img/memory-02-1d99233d00.jpg" alt="Thí Thương · Ảnh 1"></div>
@@ -655,7 +654,7 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
         "caption": "Bữa cơm gia đình sum họp "
       }
     ],
-    "video": "clip.mp4",
+    "video": "https://youtu.be/AxygfmpgSq8",
     "music": "nhac-nen.mp3",
     "intro": "Gửi người anh, người sếp, người leader và cạ cứng xịn xịn của tụi em!\n\nVậy là hành trình 3 năm mình đồng hành cùng nhau đã đi tới đoạn chuyển giao rồi. Cảm ơn anh thật nhiều vì đã luôn chia sẻ, chỉ dẫn cho tụi em trong công việc. Càng cảm ơn hơn vì những chuyến đi không chỉ có công việc mà còn tràn ngập tiếng cười và bao nhiêu kỷ niệm đẹp.\n\nTụi em tin rằng quyết định dừng lại lúc này sẽ là cơ hội tuyệt vời để anh thả lỏng, nạp lại 100% năng lượng và tìm kiếm những hướng đi mới mẻ, thú vị hơn cho chính mình.\n\nDù ở đâu thì mong anh luôn giữ phong độ, niềm vui và tinh thần tích cực này nhé! Chúc anh cùng gia đình luôn bình an, hạnh phúc và gặt hái thật nhiều thành công trên con đường phía trước.\n\nMay the road ahead bring you fresh energy and exciting adventures. Keep in touch!",
     "heroPhoto": "https://to-cam-anh-with-love.netlify.app/img/memory-01-792b521ec0.jpg",
@@ -701,7 +700,8 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
 
     // Data handling
     const original = JSON.parse(document.getElementById('site-data').textContent);
-    const storeKey = 'farewell-github-public-viewer-20261028-video';
+    // Đã đổi storeKey thành bản v2 để bộ nhớ đệm tự động tải lại video youtube mới
+    const storeKey = 'farewell-github-public-viewer-20261028-youtube-v2';
     let data;
     
     try {
@@ -767,18 +767,9 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
       if (kind === 'music') {
         document.getElementById('bgAudio').src = mediaURLs.music || data.music || '';
       }
-      if (kind === 'video') {
+      if (kind === 'video' && mediaURLs.video) {
         const slot = document.getElementById('videoSlot');
-        if (mediaURLs.video) {
-          slot.innerHTML = '<video controls playsinline preload="metadata"></video>';
-          slot.querySelector('video').src = mediaURLs.video;
-        } else {
-          const link = data.video || '';
-          if (link) {
-            slot.innerHTML = '<video controls playsinline preload="metadata"></video>';
-            slot.querySelector('video').src = link;
-          }
-        }
+        slot.innerHTML = `<video controls playsinline preload="metadata" src="${mediaURLs.video}"></video>`;
       }
     }
 
@@ -888,4 +879,485 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
     let typingEpoch = 0;
 
     function animateMemory(section) {
-      const text
+      const textEl = section.querySelector('.memory-wish');
+      if (!textEl) return;
+      const full = textEl.dataset.fullWish || '';
+      const frames = [...section.querySelectorAll('.photo-frame')];
+      const epoch = typingEpoch;
+      
+      if (reducedMotion || !full) {
+        textEl.textContent = full;
+        frames.forEach(f => f.classList.add('photo-shown'));
+        return;
+      }
+      
+      const chars = Array.from(full);
+      const total = chars.length;
+      let index = 0;
+      const caret = document.createElement('span');
+      caret.className = 'type-caret';
+      caret.setAttribute('aria-hidden', 'true');
+      textEl.textContent = '';
+      textEl.append(caret);
+      
+      const revealPhotos = () => {
+        const count = Math.max(0, Math.min(frames.length, Math.ceil(index / Math.max(total, 1) * frames.length)));
+        frames.forEach((f, i) => { if (i < count) f.classList.add('photo-shown'); });
+      };
+      
+      function tick() {
+        if (epoch !== typingEpoch || !textEl.isConnected) return;
+        const chunk = chars.slice(index, index + 2).join('');
+        index = Math.min(index + 2, total);
+        caret.before(chunk);
+        revealPhotos();
+        if (index < total) {
+          const last = chars[index - 1] || '';
+          setTimeout(tick, /[.!?…]/.test(last) ? 310 : /[,;:]/.test(last) ? 135 : 34);
+        } else {
+          caret.remove();
+          frames.forEach(f => f.classList.add('photo-shown'));
+        }
+      }
+      setTimeout(tick, 250);
+    }
+
+    function animateHero() {
+      const title = $('heroTitle'), intro = $('heroWish');
+      const token = typingEpoch;
+      const name = 'Thân gửi anh Cẩm Anh.';
+      const body = data.intro || '';
+      
+      if (reducedMotion) {
+        title.innerHTML = '<span class="hero-headline-static">Thân gửi anh <em>Cẩm Anh.</em></span>';
+        intro.textContent = body;
+        return;
+      }
+      
+      title.innerHTML = '<span class="hero-headline-static is-typing"></span>';
+      intro.textContent = '';
+      const nameChars = Array.from(name), introChars = Array.from(body);
+      let step = 0;
+      
+      function headlineTick() {
+        if (token !== typingEpoch) return;
+        step = Math.min(step + 2, nameChars.length);
+        const first = nameChars.slice(0, step).join('');
+        const el = title.firstElementChild;
+        if (first.startsWith('Thân gửi anh ')) {
+          el.textContent = 'Thân gửi anh ';
+          const em = document.createElement('em');
+          em.textContent = first.slice('Thân gửi anh '.length);
+          el.appendChild(em);
+        } else {
+          el.textContent = first;
+        }
+        if (step < nameChars.length) setTimeout(headlineTick, 42);
+        else { el.classList.remove('is-typing'); setTimeout(introTick, 170); }
+      }
+      
+      let i = 0;
+      const node = document.createTextNode('');
+      intro.appendChild(node);
+      const caret = document.createElement('span');
+      caret.className = 'type-caret';
+      intro.appendChild(caret);
+      
+      function introTick() {
+        if (token !== typingEpoch) return;
+        const next = Math.min(i + 8, introChars.length);
+        node.appendData(introChars.slice(i, next).join(''));
+        i = next;
+        if (i < introChars.length) setTimeout(introTick, 23);
+        else caret.remove();
+      }
+      setTimeout(headlineTick, 310);
+    }
+
+    function render() {
+      typingEpoch++;
+      $('heroDate').textContent = data.date;
+      $('footerDate').textContent = data.date;
+      animateHero();
+      $('heroFrom').textContent = data.from;
+      $('heroPhoto').innerHTML = photo(data.heroPhoto, 'Ảnh cả nhóm · Gia tộc Lẩu');
+      
+      $('marquee').innerHTML = Array(8).fill('<span>NHỮNG NGÀY THẬT ĐẸP.</span><span class="spark">✳</span><span>ALWAYS IN OUR HEARTS.</span><span class="spark">✳</span>').join('');
+      
+      $('cards').innerHTML = data.cards.map((c, i) => `
+        <article class="memory reveal" id="${escape(c.id)}">
+          <div class="memory-photos">
+            ${c.photos.map((p, j) => `<div class="photo-frame">${photo(p, `${c.name} · Ảnh ${j + 1}`)}</div>`).join('')}
+          </div>
+          <div class="memory-copy">
+            <span class="memory-num">0${i + 1} / A MESSAGE FROM</span>
+            <h3>${escape(c.name)}</h3>
+            <div class="quote-mark">“</div>
+            <p class="memory-wish" data-full-wish="${escape(c.wish)}" aria-label="${escape(c.wish)}"></p>
+            ${c.tease ? `<a class="memory-next" href="#${data.cards[i + 1] ? escape(data.cards[i + 1].id) : 'gallerySection'}"><span>${escape(c.tease)}</span><span>↗</span></a>` : ''}
+          </div>
+        </article>
+      `).join('');
+      
+      $('gallery').innerHTML = [...data.gallery, ...data.gallery].map((g, i) => `
+        <figure class="gallery-item reveal">
+          <div class="gallery-photo">${photo(g.photo, `Ảnh cả nhóm ${i + 1}`)}</div>
+          <figcaption>${escape(g.caption)}</figcaption>
+        </figure>
+      `).join('');
+      
+      // XỬ LÝ VIDEO YOUTUBE VÀ MP4 BÌNH THƯỜNG
+      const video = data.video?.trim() || '';
+      let videoHTML = `<div style="text-align:center;padding:20px">${photoIcon}<strong>Một thước phim của chúng mình</strong><span>Video kỷ niệm sẽ xuất hiện ở đây</span></div>`;
+      
+      if (video) {
+        if (video.includes('youtube.com') || video.includes('youtu.be')) {
+          let ytId = '';
+          if (video.includes('youtu.be/')) ytId = video.split('youtu.be/')[1].split('?')[0];
+          else if (video.includes('v=')) ytId = video.split('v=')[1].split('&')[0];
+          
+          if (ytId) {
+            videoHTML = `<iframe src="https://www.youtube.com/embed/${ytId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+          } else {
+            videoHTML = `<video src="${escape(video)}" controls playsinline preload="metadata"></video>`;
+          }
+        } else {
+          // File video local (.mp4)
+          videoHTML = `<video src="${escape(video)}" controls playsinline preload="metadata"></video>`;
+        }
+      } else if (mediaURLs.video) {
+        // Đã up video qua Edit Studio nội bộ
+        videoHTML = `<video src="${mediaURLs.video}" controls playsinline preload="metadata"></video>`;
+      }
+      
+      $('videoSlot').innerHTML = videoHTML;
+      $('bgAudio').src = mediaURLs.music || data.music || '';
+      
+      if (observer) observer.disconnect();
+      if ('IntersectionObserver' in window) {
+        observer = new IntersectionObserver(es => es.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            if (e.target.classList.contains('memory')) animateMemory(e.target);
+            observer.unobserve(e.target);
+          }
+        }), { threshold: .10 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      } else {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      }
+    }
+
+    function save() {
+      try {
+        localStorage.setItem(storeKey, JSON.stringify(data));
+        return true;
+      } catch (e) {
+        notify('Không thể lưu trên trình duyệt (dung lượng ảnh quá lớn). Hãy giảm ảnh hoặc dùng ảnh nhẹ hơn.');
+        return false;
+      }
+    }
+
+    function notify(s) {
+      $('toast').textContent = s;
+      $('toast').classList.add('show');
+      clearTimeout(notify.t);
+      notify.t = setTimeout(() => $('toast').classList.remove('show'), 3200);
+    }
+
+    function input(key, label, multi = false) {
+      return `<label for="f_${key}">${label}</label>${multi ? `<textarea id="f_${key}" data-field="${key}">${escape(data[key])}</textarea>` : `<input id="f_${key}" data-field="${key}" value="${escape(data[key])}">`}`;
+    }
+
+    function fileInput(group, index, label, has) {
+      return `<div class="upload-row"><label style="margin:0;min-width:95px">${label}</label><input aria-label="${label}" type="file" accept="image/*" data-file="${group}" data-index="${index}">${has ? `<button class="tiny" data-remove="${group}" data-index="${index}" type="button">Xóa ảnh</button>` : ''}</div>`;
+    }
+
+    function editForm() {
+      let html = `<div class="edit-group"><h3>Thông tin mở đầu</h3>${input('date', 'Ngày')}${input('from', 'Dòng ký tên tập thể')}${input('intro', 'Lời nhắn chung', true)}${fileInput('hero', '0', 'Ảnh bìa', !!data.heroPhoto)}</div>`;
+      
+      data.cards.forEach((c, i) => {
+        html += `<div class="edit-group">
+          <h3>0${i + 1}. ${escape(c.name)}</h3>
+          <label>Tên người gửi</label><input data-card="${i}" data-prop="name" value="${escape(c.name)}">
+          <label>Nội dung lời chúc</label><textarea data-card="${i}" data-prop="wish">${escape(c.wish)}</textarea>
+          <label>Câu chuyển tiếp (có thể để trống)</label><input data-card="${i}" data-prop="tease" value="${escape(c.tease)}">
+          <label>Ảnh kỷ niệm (2 ảnh ngang/người, nén tự động)</label>
+          ${c.photos.map((p, j) => fileInput('card-' + i, j, 'Ảnh ' + (j + 1), !!p)).join('')}
+        </div>`;
+      });
+      
+      html += `<div class="edit-group"><h3>Album cả nhóm</h3>${data.gallery.map((g, i) => `<label>Chú thích ảnh ${i + 1}</label><input data-caption="${i}" value="${escape(g.caption)}">${fileInput('gallery', i, 'Ảnh ' + (i + 1), !!g.photo)}`).join('')}</div>`;
+      html += `<div class="edit-group"><h3>Video & âm nhạc</h3>${input('video', 'Link video (Dán Link YouTube HOẶC File .mp4)')}${input('music', 'Link trực tiếp đến file nhạc (.mp3)')}<p class="mini">Tải nhạc hoặc video từ máy sẽ được lưu riêng, không làm đầy dung lượng ảnh.</p><label>Hoặc chọn video từ máy</label><input type="file" accept="video/*" data-media="video"><label>Hoặc chọn nhạc từ máy</label><input type="file" accept="audio/*" data-media="music"></div>`;
+      
+      $('editFields').innerHTML = html;
+    }
+
+    function syncInputs() {
+      document.querySelectorAll('[data-field]').forEach(el => { data[el.dataset.field] = el.value; });
+      document.querySelectorAll('[data-card]').forEach(el => { data.cards[+el.dataset.card][el.dataset.prop] = el.value; });
+      document.querySelectorAll('[data-caption]').forEach(el => { data.gallery[+el.dataset.caption].caption = el.value; });
+    }
+
+    function setImage(group, index, value) {
+      if (group === 'hero') data.heroPhoto = value;
+      else if (group === 'gallery') data.gallery[+index].photo = value;
+      else if (group.startsWith('card-')) data.cards[+group.split('-')[1]].photos[+index] = value;
+    }
+
+    function readFile(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    async function readOptimizedImage(file) {
+      if (!file.type.startsWith('image/') || file.type === 'image/svg+xml') return readFile(file);
+      const url = URL.createObjectURL(file);
+      try {
+        const img = await new Promise((resolve, reject) => {
+          const image = new Image();
+          image.onload = () => resolve(image);
+          image.onerror = reject;
+          image.src = url;
+        });
+        const maxEdge = 900, ratio = Math.min(1, maxEdge / Math.max(img.naturalWidth, img.naturalHeight));
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.max(1, Math.round(img.naturalWidth * ratio));
+        canvas.height = Math.max(1, Math.round(img.naturalHeight * ratio));
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return readFile(file);
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        return canvas.toDataURL('image/jpeg', 0.58);
+      } catch (e) {
+        return readFile(file);
+      } finally {
+        URL.revokeObjectURL(url);
+      }
+    }
+
+    $('editFields').addEventListener('input', e => {
+      if (e.target.matches('[data-field],[data-card],[data-caption]')) {
+        syncInputs(); save(); render();
+      }
+    });
+
+    $('editFields').addEventListener('change', async e => {
+      const el = e.target;
+      if (el.dataset.file && el.files?.[0]) {
+        const value = await readOptimizedImage(el.files[0]);
+        syncInputs();
+        setImage(el.dataset.file, el.dataset.index, value);
+        const ok = save();
+        render(); editForm();
+        notify(ok ? 'Đã thêm ảnh (đã nén gọn)' : 'Ảnh hiện lên nhưng quá nặng chưa lưu được.');
+      }
+      if (el.dataset.media && el.files?.[0]) {
+        const kind = el.dataset.media, file = el.files[0];
+        if (kind === 'music') {
+          await handleMusicChosen(file);
+          editForm();
+          return;
+        }
+        if (file.size > 250 * 1024 * 1024) {
+          notify('File quá lớn (trên 250 MB); hãy dùng đường dẫn media.');
+          return;
+        }
+        try {
+          await storeMedia(kind, file);
+          syncInputs(); data[kind] = ''; save(); render();
+          updateMediaPreview(kind, file); editForm();
+          notify('✓ Đã lưu ' + (kind === 'music' ? 'nhạc nền' : 'video') + ' an toàn.');
+        } catch (err) {
+          notify('Lỗi trình duyệt khi lưu media lớn.');
+        }
+      }
+    });
+
+    $('editFields').addEventListener('click', e => {
+      const b = e.target.closest('[data-remove]');
+      if (!b) return;
+      syncInputs(); setImage(b.dataset.remove, b.dataset.index, ''); save(); render(); editForm();
+    });
+
+    function openEdit() { editForm(); $('editBackdrop').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeEdit() { syncInputs(); save(); render(); $('editBackdrop').classList.remove('open'); document.body.style.overflow = ''; }
+    
+    $('editOpen').addEventListener('click', openEdit);
+    $('editClose').addEventListener('click', closeEdit);
+    $('editBackdrop').addEventListener('click', e => { if (e.target === $('editBackdrop')) closeEdit(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('editBackdrop').classList.contains('open')) closeEdit(); });
+    
+    $('saveNow').addEventListener('click', () => { closeEdit(); notify('Đã lưu thay đổi'); });
+    $('resetContent').addEventListener('click', () => {
+      if (!confirm('Khôi phục toàn bộ lời chúc và ảnh về bản gốc?')) return;
+      data = structuredClone(original); save(); render(); editForm(); notify('Đã khôi phục bản gốc');
+    });
+
+    $('saveLatest').addEventListener('click', () => {
+      if ($('editBackdrop').classList.contains('open')) syncInputs();
+      if (save()) {
+        notify('✓ Đã lưu giao diện và nội dung');
+        const btn = $('saveLatest');
+        btn.textContent = '✓ Đã lưu';
+        clearTimeout(btn._restore);
+        btn._restore = setTimeout(() => btn.textContent = '✓ Lưu thay đổi', 2300);
+      }
+    });
+
+    async function safeBackup() {
+      if ($('editBackdrop').classList.contains('open')) syncInputs();
+      save();
+      const pack = { format: 'farewell-cam-anh-backup-v1', date: new Date().toISOString(), data: { ...data } };
+      const mediaNote = {};
+      for (const kind of ['music', 'video']) {
+        const val = pack.data[kind];
+        if (typeof val === 'string' && val.startsWith('data:')) {
+          mediaNote[kind] = 'Nhúng sẵn trong HTML gốc';
+          pack.data[kind] = '__KEEP_ORIGINAL_EMBEDDED_MEDIA__';
+        } else if (mediaCache[kind]) {
+          mediaNote[kind] = 'Tệp media nội bộ';
+          pack.data[kind] = '__MEDIA_IN_BROWSER__';
+        }
+      }
+      pack.mediaNote = mediaNote;
+      const json = JSON.stringify(pack);
+      const url = URL.createObjectURL(new Blob([json], { type: 'application/json;charset=utf-8' }));
+      const a = document.createElement('a'); a.href = url; a.download = 'SAO-LUU-5-LOI-CHUC.json';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 3000);
+      notify('✓ Đã sao lưu dữ liệu JSON.');
+    }
+    
+    $('backupData').addEventListener('click', safeBackup);
+    
+    $('exportHtml').addEventListener('click', async () => {
+      syncInputs();
+      if (!save()) notify('Không lưu được nội dung trên trình duyệt, vẫn xuất bản HTML.');
+      const exportData = structuredClone(data);
+      for (const kind of ['music', 'video']) {
+        let blob = mediaCache[kind];
+        if (!blob) try { blob = await getMedia(kind); } catch (e) {}
+        if (blob) {
+          try { exportData[kind] = await mediaToDataURL(blob); }
+          catch (e) { notify('Không đóng gói được ' + kind + ' vào file HTML'); return; }
+        }
+      }
+      const clone = document.documentElement.cloneNode(true);
+      clone.querySelector('#site-data').textContent = JSON.stringify(exportData).replace(/</g, '\\u003c');
+      clone.querySelector('#editBackdrop').classList.remove('open');
+      clone.querySelector('body').style.overflow = '';
+      
+      clone.querySelectorAll('script').forEach(sc => {
+        if (sc.id !== 'site-data' && !sc.textContent.includes("(() => { 'use strict';")) sc.remove();
+      });
+      const scriptCopy = [...clone.querySelectorAll('script')].find(el => el.id !== 'site-data');
+      if (scriptCopy) scriptCopy.textContent = scriptCopy.textContent.replace("farewell-cam-anh-blue-collage-v1", 'farewell-cam-anh-saved-' + Date.now());
+      
+      const file = '<!doctype html>\n' + clone.outerHTML;
+      const url = URL.createObjectURL(new Blob([file], { type: 'text/html;charset=utf-8' }));
+      const a = document.createElement('a'); a.href = url; a.download = 'farewell-cam-anh-5-loi-chuc-co-nhac.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 10000);
+      notify('Đã xuất HTML kèm hình ảnh & truyền thông.');
+    });
+
+    // Music logic
+    const audio = $('bgAudio'), musicButton = $('musicToggle');
+    let userWantsMusic = false;
+    
+    function videoSectionReached() {
+      return $('closing').getBoundingClientRect().top <= window.innerHeight * .60;
+    }
+    
+    function syncBackgroundMusic() {
+      if (videoSectionReached()) {
+        if (!audio.paused) audio.pause();
+        musicButton.innerHTML = '♫ <span class="mobilehide">Nhạc nền</span>';
+        musicButton.title = 'Nhạc nền tự dừng ở phần video';
+        return;
+      }
+      musicButton.title = 'Bật/tắt nhạc nền';
+      if (userWantsMusic && (mediaURLs.music || data.music)) {
+        if (audio.paused) audio.play().catch(() => { userWantsMusic = false; notify('Kiểm tra lại file nhạc.'); });
+        musicButton.innerHTML = '♫ <span class="mobilehide">Tắt nhạc</span>';
+      } else {
+        if (!audio.paused) audio.pause();
+        musicButton.innerHTML = '♫ <span class="mobilehide">Âm nhạc</span>';
+      }
+    }
+    
+    musicButton.addEventListener('click', () => {
+      if (!(mediaURLs.music || data.music)) { openEdit(); notify('Thêm nhạc nền trong mục Chỉnh sửa'); return; }
+      if (videoSectionReached()) { notify('Đang ở phần video, nhạc nền sẽ tắt tạm thời.'); return; }
+      userWantsMusic = !userWantsMusic;
+      syncBackgroundMusic();
+    });
+    
+    window.addEventListener('scroll', syncBackgroundMusic, { passive: true });
+    window.addEventListener('resize', syncBackgroundMusic);
+    
+    $('videoSlot').addEventListener('play', e => {
+      if (e.target.tagName === 'VIDEO') { audio.pause(); musicButton.innerHTML = '♫ <span class="mobilehide">Nhạc nền</span>'; }
+    }, true);
+
+    // Lightbox for Gallery
+    $('gallery').addEventListener('click', e => {
+      const item = e.target.closest('.gallery-item');
+      if (!item) return;
+      const image = item.querySelector('img');
+      if (!image) return;
+      $('lightboxImage').src = image.src;
+      $('lightboxImage').alt = image.alt;
+      $('lightboxCaption').textContent = item.querySelector('figcaption')?.textContent || '';
+      $('lightbox').hidden = false;
+      document.body.classList.add('lightbox-open');
+    });
+    
+    function closeLightbox() { $('lightbox').hidden = true; document.body.classList.remove('lightbox-open'); }
+    $('lightboxClose').addEventListener('click', closeLightbox);
+    $('lightbox').addEventListener('click', e => { if (e.target === $('lightbox')) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // Progress Bar
+    function progress() {
+      const h = document.documentElement;
+      const max = h.scrollHeight - innerHeight;
+      $('progress').style.width = `${max > 0 ? Math.min(100, scrollY / max * 100) : 0}%`;
+    }
+    
+    window.addEventListener('scroll', progress, { passive: true });
+    window.addEventListener('resize', progress);
+    
+    // Initial calls
+    render();
+    progress();
+    restoreSavedMedia();
+    syncBackgroundMusic();
+    
+  })();
+  </script>
+
+  <script id="viewer-only-script">
+  (function(){
+    const btn = document.getElementById('viewerMusic');
+    const audio = document.getElementById('bgAudio');
+    const original = document.getElementById('musicToggle');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      if (original) { original.click(); return; }
+      if (audio) { if (audio.paused) { audio.play().catch(()=>{}); } else { audio.pause(); } }
+    });
+    if (audio) {
+      audio.addEventListener('play', () => btn.textContent = '♫ Tắt nhạc');
+      audio.addEventListener('pause', () => btn.textContent = '♫ Bật nhạc');
+    }
+  })();
+  </script>
+</body>
+</html>
