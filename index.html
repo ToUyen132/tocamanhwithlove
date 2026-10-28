@@ -310,23 +310,13 @@
     @media (hover: none) {
       body.presentation-mode .presentation-control { opacity: .1; pointer-events: auto; }
     }
-    
-    /* GITHUB PAGES VIEWER STYLES */
-    #github-pages-viewer .top-actions,
-    #github-pages-viewer .presentation-control,
-    #github-pages-viewer .edit-backdrop,
-    #github-pages-viewer .edit-panel,
-    #github-pages-viewer .music-upload-label,
-    #github-pages-viewer .save-latest { display: none !important; }
-    #github-pages-viewer .topbar-inner { justify-content: center; }
-    #github-pages-viewer .topbar .brand { max-width: 100%; text-align: center; }
-    body.presentation-mode .topbar { transform: none !important; opacity: 1 !important; pointer-events: auto !important; }
   </style>
-  <style id="github-pages-viewer"></style>
 </head>
 <body>
-  <button id="viewerMusic" type="button" aria-label="Bật hoặc tắt nhạc nền" style="position:fixed;z-index:105;bottom:19px;right:19px;border:1px solid #e8faff99;border-radius:100px;background:#073994e8;color:white;padding:12px 19px;font:700 13px sans-serif;box-shadow:0 12px 28px #001d6566;cursor:pointer">♫ Bật nhạc</button>
-  <button id="presentationToggle" class="presentation-control" type="button" title="Ẩn các công cụ để trình chiếu">▶ Trình chiếu</button>
+  <button id="viewerMusic" type="button" aria-label="Bật hoặc tắt nhạc nền" style="position:fixed;z-index:105;bottom:19px;right:19px;border:1px solid #e8faff99;border-radius:100px;background:#073994e8;color:white;padding:12px 19px;font:700 13px sans-serif;box-shadow:0 12px 28px #001d6566;cursor:pointer">♫ Âm thanh</button>
+  
+  <button id="presentationToggle" class="presentation-control" type="button" title="Ẩn các công cụ để trình chiếu" style="display:none;">▶ Trình chiếu</button>
+  
   <div class="progress" id="progress" style="width: 0%;"></div>
   
   <header class="topbar">
@@ -340,15 +330,19 @@
         </span>
         NHỮNG ĐIỀU THẦM KÍN GỬI ĐẾN ANH <span style="font-size:10px;color:#9fbbe3;font-weight:500">/ 2026</span>
       </a>
+      
       <div class="top-actions">
-        <label class="pill music-upload-label" for="musicDirectFile" title="Nhạc đã chọn: Phép Màu (Đàn Cá Gỗ OST) - Mounter x MAYDAYs, Minh Tốc - Official MV.mp3">
+        <!-- NÚT DUY NHẤT ĐƯỢC GIỮ LẠI HIỂN THỊ -->
+        <button class="pill" id="musicToggle" type="button" title="Bật/tắt âm thanh">♫ <span class="mobilehide">Âm thanh</span></button>
+        
+        <!-- CÁC NÚT CHỈNH SỬA ĐÃ ĐƯỢC ẨN ĐỂ GIAO DIỆN GỌN GÀNG NHẤT -->
+        <label class="pill music-upload-label" for="musicDirectFile" style="display:none;">
           ＋ <span class="mobilehide">Đã chọn nhạc</span><span class="shortMusic">✓ MP3</span>
         </label>
-        <input id="musicDirectFile" class="direct-audio-picker" type="file" accept="audio/mpeg,audio/mp3,audio/wav,audio/ogg,audio/mp4,.mp3,.m4a,.wav,.ogg" aria-label="Chọn tệp nhạc nền trên máy tính">
-        <button class="pill" id="musicToggle" type="button" title="Bật/tắt nhạc nền">♫ <span class="mobilehide">Âm nhạc</span></button>
-        <button class="pill primary" id="editOpen" type="button">✎ Chỉnh sửa</button>
-        <button class="pill save-latest" id="backupData" type="button" title="Sao lưu những thay đổi vào tệp JSON nhỏ gọn">↓ Sao lưu nội dung</button>
-        <button class="pill save-latest" id="saveLatest" type="button" title="Lưu thay đổi ngay trên trình duyệt, không tải file">✓ Lưu thay đổi</button>
+        <input id="musicDirectFile" class="direct-audio-picker" type="file" accept="audio/mpeg,audio/mp3,audio/wav,audio/ogg,audio/mp4,.mp3,.m4a,.wav,.ogg" style="display:none;" aria-label="Chọn tệp nhạc nền trên máy tính">
+        <button class="pill primary" id="editOpen" type="button" style="display:none;">✎ Chỉnh sửa</button>
+        <button class="pill save-latest" id="backupData" type="button" style="display:none;" title="Sao lưu những thay đổi vào tệp JSON nhỏ gọn">↓ Sao lưu nội dung</button>
+        <button class="pill save-latest" id="saveLatest" type="button" style="display:none;" title="Lưu thay đổi ngay trên trình duyệt, không tải file">✓ Lưu thay đổi</button>
       </div>
     </div>
   </header>
@@ -684,10 +678,12 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
       }
     }
     
-    presentationToggle.addEventListener('click', () => { 
-      presentationMode = !presentationMode; 
-      updatePresentationMode(); 
-    });
+    if (presentationToggle) {
+      presentationToggle.addEventListener('click', () => { 
+        presentationMode = !presentationMode; 
+        updatePresentationMode(); 
+      });
+    }
     
     document.addEventListener('keydown', event => {
       if (event.ctrlKey && event.altKey && event.key.toLowerCase() === 'e') {
@@ -700,8 +696,7 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
 
     // Data handling
     const original = JSON.parse(document.getElementById('site-data').textContent);
-    // Đã đổi storeKey thành bản v4 để tự động clear cache cũ, tải toàn bộ dữ liệu mới (đặc biệt là fix lỗi font chữ và nhạc mới)
-    const storeKey = 'farewell-github-public-viewer-20261028-v4-fontfix';
+    const storeKey = 'farewell-github-public-viewer-20261028-v5-cleanUI';
     let data;
     
     try {
@@ -828,7 +823,7 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
         userWantsMusic = false;
         audio.pause();
         syncBackgroundMusic();
-        notify('✓ Đã lưu nhạc: ' + file.name + '. Bấm Âm nhạc để nghe.');
+        notify('✓ Đã lưu nhạc: ' + file.name + '. Bấm Âm thanh để nghe.');
       } catch (err) {
         updateMediaPreview('music', file);
         markMusicName(file.name);
@@ -836,11 +831,14 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
       }
     }
 
-    document.getElementById('musicDirectFile').addEventListener('change', async e => {
-      const file = e.target.files?.[0];
-      await handleMusicChosen(file);
-      e.target.value = '';
-    });
+    const fileInputElem = document.getElementById('musicDirectFile');
+    if (fileInputElem) {
+      fileInputElem.addEventListener('change', async e => {
+        const file = e.target.files?.[0];
+        await handleMusicChosen(file);
+        e.target.value = '';
+      });
+    }
 
     function mediaToDataURL(blob) {
       return new Promise((resolve, reject) => {
@@ -1141,77 +1139,97 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
       }
     }
 
-    $('editFields').addEventListener('input', e => {
-      if (e.target.matches('[data-field],[data-card],[data-caption]')) {
-        syncInputs(); save(); render();
-      }
-    });
+    const editFieldsElem = document.getElementById('editFields');
+    if (editFieldsElem) {
+      editFieldsElem.addEventListener('input', e => {
+        if (e.target.matches('[data-field],[data-card],[data-caption]')) {
+          syncInputs(); save(); render();
+        }
+      });
 
-    $('editFields').addEventListener('change', async e => {
-      const el = e.target;
-      if (el.dataset.file && el.files?.[0]) {
-        const value = await readOptimizedImage(el.files[0]);
-        syncInputs();
-        setImage(el.dataset.file, el.dataset.index, value);
-        const ok = save();
-        render(); editForm();
-        notify(ok ? 'Đã thêm ảnh (đã nén gọn)' : 'Ảnh hiện lên nhưng quá nặng chưa lưu được.');
-      }
-      if (el.dataset.media && el.files?.[0]) {
-        const kind = el.dataset.media, file = el.files[0];
-        if (kind === 'music') {
-          await handleMusicChosen(file);
-          editForm();
-          return;
+      editFieldsElem.addEventListener('change', async e => {
+        const el = e.target;
+        if (el.dataset.file && el.files?.[0]) {
+          const value = await readOptimizedImage(el.files[0]);
+          syncInputs();
+          setImage(el.dataset.file, el.dataset.index, value);
+          const ok = save();
+          render(); editForm();
+          notify(ok ? 'Đã thêm ảnh (đã nén gọn)' : 'Ảnh hiện lên nhưng quá nặng chưa lưu được.');
         }
-        if (file.size > 250 * 1024 * 1024) {
-          notify('File quá lớn (trên 250 MB); hãy dùng đường dẫn media.');
-          return;
+        if (el.dataset.media && el.files?.[0]) {
+          const kind = el.dataset.media, file = el.files[0];
+          if (kind === 'music') {
+            await handleMusicChosen(file);
+            editForm();
+            return;
+          }
+          if (file.size > 250 * 1024 * 1024) {
+            notify('File quá lớn (trên 250 MB); hãy dùng đường dẫn media.');
+            return;
+          }
+          try {
+            await storeMedia(kind, file);
+            syncInputs(); data[kind] = ''; save(); render();
+            updateMediaPreview(kind, file); editForm();
+            notify('✓ Đã lưu ' + (kind === 'music' ? 'nhạc nền' : 'video') + ' an toàn.');
+          } catch (err) {
+            notify('Lỗi trình duyệt khi lưu media lớn.');
+          }
         }
-        try {
-          await storeMedia(kind, file);
-          syncInputs(); data[kind] = ''; save(); render();
-          updateMediaPreview(kind, file); editForm();
-          notify('✓ Đã lưu ' + (kind === 'music' ? 'nhạc nền' : 'video') + ' an toàn.');
-        } catch (err) {
-          notify('Lỗi trình duyệt khi lưu media lớn.');
-        }
-      }
-    });
+      });
 
-    $('editFields').addEventListener('click', e => {
-      const b = e.target.closest('[data-remove]');
-      if (!b) return;
-      syncInputs(); setImage(b.dataset.remove, b.dataset.index, ''); save(); render(); editForm();
-    });
+      editFieldsElem.addEventListener('click', e => {
+        const b = e.target.closest('[data-remove]');
+        if (!b) return;
+        syncInputs(); setImage(b.dataset.remove, b.dataset.index, ''); save(); render(); editForm();
+      });
+    }
 
     function openEdit() { editForm(); $('editBackdrop').classList.add('open'); document.body.style.overflow = 'hidden'; }
     function closeEdit() { syncInputs(); save(); render(); $('editBackdrop').classList.remove('open'); document.body.style.overflow = ''; }
     
-    $('editOpen').addEventListener('click', openEdit);
-    $('editClose').addEventListener('click', closeEdit);
-    $('editBackdrop').addEventListener('click', e => { if (e.target === $('editBackdrop')) closeEdit(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('editBackdrop').classList.contains('open')) closeEdit(); });
+    const editOpenBtn = document.getElementById('editOpen');
+    if (editOpenBtn) editOpenBtn.addEventListener('click', openEdit);
     
-    $('saveNow').addEventListener('click', () => { closeEdit(); notify('Đã lưu thay đổi'); });
-    $('resetContent').addEventListener('click', () => {
-      if (!confirm('Khôi phục toàn bộ lời chúc và ảnh về bản gốc?')) return;
-      data = structuredClone(original); save(); render(); editForm(); notify('Đã khôi phục bản gốc');
-    });
+    const editCloseBtn = document.getElementById('editClose');
+    if (editCloseBtn) editCloseBtn.addEventListener('click', closeEdit);
+    
+    const editBackdropBtn = document.getElementById('editBackdrop');
+    if (editBackdropBtn) {
+      editBackdropBtn.addEventListener('click', e => { if (e.target === $('editBackdrop')) closeEdit(); });
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('editBackdrop') && $('editBackdrop').classList.contains('open')) closeEdit(); });
+    
+    const saveNowBtn = document.getElementById('saveNow');
+    if (saveNowBtn) {
+      saveNowBtn.addEventListener('click', () => { closeEdit(); notify('Đã lưu thay đổi'); });
+    }
 
-    $('saveLatest').addEventListener('click', () => {
-      if ($('editBackdrop').classList.contains('open')) syncInputs();
-      if (save()) {
-        notify('✓ Đã lưu giao diện và nội dung');
-        const btn = $('saveLatest');
-        btn.textContent = '✓ Đã lưu';
-        clearTimeout(btn._restore);
-        btn._restore = setTimeout(() => btn.textContent = '✓ Lưu thay đổi', 2300);
-      }
-    });
+    const resetContentBtn = document.getElementById('resetContent');
+    if (resetContentBtn) {
+      resetContentBtn.addEventListener('click', () => {
+        if (!confirm('Khôi phục toàn bộ lời chúc và ảnh về bản gốc?')) return;
+        data = structuredClone(original); save(); render(); editForm(); notify('Đã khôi phục bản gốc');
+      });
+    }
+
+    const saveLatestBtn = document.getElementById('saveLatest');
+    if (saveLatestBtn) {
+      saveLatestBtn.addEventListener('click', () => {
+        if ($('editBackdrop') && $('editBackdrop').classList.contains('open')) syncInputs();
+        if (save()) {
+          notify('✓ Đã lưu giao diện và nội dung');
+          const btn = $('saveLatest');
+          btn.textContent = '✓ Đã lưu';
+          clearTimeout(btn._restore);
+          btn._restore = setTimeout(() => btn.textContent = '✓ Lưu thay đổi', 2300);
+        }
+      });
+    }
 
     async function safeBackup() {
-      if ($('editBackdrop').classList.contains('open')) syncInputs();
+      if ($('editBackdrop') && $('editBackdrop').classList.contains('open')) syncInputs();
       save();
       const pack = { format: 'farewell-cam-anh-backup-v1', date: new Date().toISOString(), data: { ...data } };
       const mediaNote = {};
@@ -1234,101 +1252,135 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
       notify('✓ Đã sao lưu dữ liệu JSON.');
     }
     
-    $('backupData').addEventListener('click', safeBackup);
+    const backupDataBtn = document.getElementById('backupData');
+    if (backupDataBtn) backupDataBtn.addEventListener('click', safeBackup);
     
-    $('exportHtml').addEventListener('click', async () => {
-      syncInputs();
-      if (!save()) notify('Không lưu được nội dung trên trình duyệt, vẫn xuất bản HTML.');
-      const exportData = structuredClone(data);
-      for (const kind of ['music', 'video']) {
-        let blob = mediaCache[kind];
-        if (!blob) try { blob = await getMedia(kind); } catch (e) {}
-        if (blob) {
-          try { exportData[kind] = await mediaToDataURL(blob); }
-          catch (e) { notify('Không đóng gói được ' + kind + ' vào file HTML'); return; }
+    const exportHtmlBtn = document.getElementById('exportHtml');
+    if (exportHtmlBtn) {
+      exportHtmlBtn.addEventListener('click', async () => {
+        syncInputs();
+        if (!save()) notify('Không lưu được nội dung trên trình duyệt, vẫn xuất bản HTML.');
+        const exportData = structuredClone(data);
+        for (const kind of ['music', 'video']) {
+          let blob = mediaCache[kind];
+          if (!blob) try { blob = await getMedia(kind); } catch (e) {}
+          if (blob) {
+            try { exportData[kind] = await mediaToDataURL(blob); }
+            catch (e) { notify('Không đóng gói được ' + kind + ' vào file HTML'); return; }
+          }
         }
-      }
-      const clone = document.documentElement.cloneNode(true);
-      clone.querySelector('#site-data').textContent = JSON.stringify(exportData).replace(/</g, '\\u003c');
-      clone.querySelector('#editBackdrop').classList.remove('open');
-      clone.querySelector('body').style.overflow = '';
-      
-      clone.querySelectorAll('script').forEach(sc => {
-        if (sc.id !== 'site-data' && !sc.textContent.includes("(() => { 'use strict';")) sc.remove();
+        const clone = document.documentElement.cloneNode(true);
+        clone.querySelector('#site-data').textContent = JSON.stringify(exportData).replace(/</g, '\\u003c');
+        const backdrop = clone.querySelector('#editBackdrop');
+        if (backdrop) backdrop.classList.remove('open');
+        clone.querySelector('body').style.overflow = '';
+        
+        clone.querySelectorAll('script').forEach(sc => {
+          if (sc.id !== 'site-data' && !sc.textContent.includes("(() => { 'use strict';")) sc.remove();
+        });
+        const scriptCopy = [...clone.querySelectorAll('script')].find(el => el.id !== 'site-data');
+        if (scriptCopy) scriptCopy.textContent = scriptCopy.textContent.replace("farewell-cam-anh-blue-collage-v1", 'farewell-cam-anh-saved-' + Date.now());
+        
+        const file = '<!doctype html>\n' + clone.outerHTML;
+        const url = URL.createObjectURL(new Blob([file], { type: 'text/html;charset=utf-8' }));
+        const a = document.createElement('a'); a.href = url; a.download = 'farewell-cam-anh-5-loi-chuc-co-nhac.html';
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 10000);
+        notify('Đã xuất HTML kèm hình ảnh & truyền thông.');
       });
-      const scriptCopy = [...clone.querySelectorAll('script')].find(el => el.id !== 'site-data');
-      if (scriptCopy) scriptCopy.textContent = scriptCopy.textContent.replace("farewell-cam-anh-blue-collage-v1", 'farewell-cam-anh-saved-' + Date.now());
-      
-      const file = '<!doctype html>\n' + clone.outerHTML;
-      const url = URL.createObjectURL(new Blob([file], { type: 'text/html;charset=utf-8' }));
-      const a = document.createElement('a'); a.href = url; a.download = 'farewell-cam-anh-5-loi-chuc-co-nhac.html';
-      document.body.appendChild(a); a.click(); a.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 10000);
-      notify('Đã xuất HTML kèm hình ảnh & truyền thông.');
-    });
+    }
 
     // Music logic
     const audio = $('bgAudio'), musicButton = $('musicToggle');
     let userWantsMusic = false;
     
     function videoSectionReached() {
-      return $('closing').getBoundingClientRect().top <= window.innerHeight * .60;
+      const closing = $('closing');
+      if (!closing) return false;
+      return closing.getBoundingClientRect().top <= window.innerHeight * .60;
     }
     
     function syncBackgroundMusic() {
+      if (!musicButton) return;
       if (videoSectionReached()) {
-        if (!audio.paused) audio.pause();
-        musicButton.innerHTML = '♫ <span class="mobilehide">Nhạc nền</span>';
+        if (audio && !audio.paused) audio.pause();
+        musicButton.innerHTML = '♫ <span class="mobilehide">Âm thanh</span>';
         musicButton.title = 'Nhạc nền tự dừng ở phần video';
         return;
       }
-      musicButton.title = 'Bật/tắt nhạc nền';
+      musicButton.title = 'Bật/tắt âm thanh';
       if (userWantsMusic && (mediaURLs.music || data.music)) {
-        if (audio.paused) audio.play().catch(() => { userWantsMusic = false; notify('Kiểm tra lại file nhạc.'); });
-        musicButton.innerHTML = '♫ <span class="mobilehide">Tắt nhạc</span>';
+        if (audio && audio.paused) audio.play().catch(() => { userWantsMusic = false; notify('Kiểm tra lại file nhạc.'); });
+        musicButton.innerHTML = '♫ <span class="mobilehide">Tắt âm</span>';
       } else {
-        if (!audio.paused) audio.pause();
-        musicButton.innerHTML = '♫ <span class="mobilehide">Âm nhạc</span>';
+        if (audio && !audio.paused) audio.pause();
+        musicButton.innerHTML = '♫ <span class="mobilehide">Âm thanh</span>';
       }
     }
     
-    musicButton.addEventListener('click', () => {
-      if (!(mediaURLs.music || data.music)) { openEdit(); notify('Thêm nhạc nền trong mục Chỉnh sửa'); return; }
-      if (videoSectionReached()) { notify('Đang ở phần video, nhạc nền sẽ tắt tạm thời.'); return; }
-      userWantsMusic = !userWantsMusic;
-      syncBackgroundMusic();
-    });
+    if (musicButton) {
+      musicButton.addEventListener('click', () => {
+        if (!(mediaURLs.music || data.music)) { openEdit(); notify('Thêm nhạc nền trong mục Chỉnh sửa'); return; }
+        if (videoSectionReached()) { notify('Đang ở phần video, nhạc nền sẽ tắt tạm thời.'); return; }
+        userWantsMusic = !userWantsMusic;
+        syncBackgroundMusic();
+      });
+    }
     
     window.addEventListener('scroll', syncBackgroundMusic, { passive: true });
     window.addEventListener('resize', syncBackgroundMusic);
     
-    $('videoSlot').addEventListener('play', e => {
-      if (e.target.tagName === 'VIDEO') { audio.pause(); musicButton.innerHTML = '♫ <span class="mobilehide">Nhạc nền</span>'; }
-    }, true);
+    const videoSlotElem = document.getElementById('videoSlot');
+    if (videoSlotElem) {
+      videoSlotElem.addEventListener('play', e => {
+        if (e.target.tagName === 'VIDEO') { 
+          if (audio) audio.pause(); 
+          if (musicButton) musicButton.innerHTML = '♫ <span class="mobilehide">Âm thanh</span>'; 
+        }
+      }, true);
+    }
 
     // Lightbox for Gallery
-    $('gallery').addEventListener('click', e => {
-      const item = e.target.closest('.gallery-item');
-      if (!item) return;
-      const image = item.querySelector('img');
-      if (!image) return;
-      $('lightboxImage').src = image.src;
-      $('lightboxImage').alt = image.alt;
-      $('lightboxCaption').textContent = item.querySelector('figcaption')?.textContent || '';
-      $('lightbox').hidden = false;
-      document.body.classList.add('lightbox-open');
-    });
+    const galleryElem = document.getElementById('gallery');
+    if (galleryElem) {
+      galleryElem.addEventListener('click', e => {
+        const item = e.target.closest('.gallery-item');
+        if (!item) return;
+        const image = item.querySelector('img');
+        if (!image) return;
+        const lbImage = $('lightboxImage');
+        if (lbImage) {
+          lbImage.src = image.src;
+          lbImage.alt = image.alt;
+        }
+        const lbCaption = $('lightboxCaption');
+        if (lbCaption) lbCaption.textContent = item.querySelector('figcaption')?.textContent || '';
+        const lightbox = $('lightbox');
+        if (lightbox) lightbox.hidden = false;
+        document.body.classList.add('lightbox-open');
+      });
+    }
     
-    function closeLightbox() { $('lightbox').hidden = true; document.body.classList.remove('lightbox-open'); }
-    $('lightboxClose').addEventListener('click', closeLightbox);
-    $('lightbox').addEventListener('click', e => { if (e.target === $('lightbox')) closeLightbox(); });
+    function closeLightbox() { 
+      const lightbox = $('lightbox');
+      if (lightbox) lightbox.hidden = true; 
+      document.body.classList.remove('lightbox-open'); 
+    }
+    const lightboxCloseBtn = document.getElementById('lightboxClose');
+    if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', closeLightbox);
+    
+    const lightboxElem = document.getElementById('lightbox');
+    if (lightboxElem) {
+      lightboxElem.addEventListener('click', e => { if (e.target === $('lightbox')) closeLightbox(); });
+    }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
     // Progress Bar
     function progress() {
       const h = document.documentElement;
       const max = h.scrollHeight - innerHeight;
-      $('progress').style.width = `${max > 0 ? Math.min(100, scrollY / max * 100) : 0}%`;
+      const progressElem = $('progress');
+      if (progressElem) progressElem.style.width = `${max > 0 ? Math.min(100, scrollY / max * 100) : 0}%`;
     }
     
     window.addEventListener('scroll', progress, { passive: true });
@@ -1354,8 +1406,8 @@ Chúc anh thật nhiều sức khỏe, thuận lợi và thành công trên hàn
       if (audio) { if (audio.paused) { audio.play().catch(()=>{}); } else { audio.pause(); } }
     });
     if (audio) {
-      audio.addEventListener('play', () => btn.textContent = '♫ Tắt nhạc');
-      audio.addEventListener('pause', () => btn.textContent = '♫ Bật nhạc');
+      audio.addEventListener('play', () => btn.textContent = '♫ Tắt âm');
+      audio.addEventListener('pause', () => btn.textContent = '♫ Âm thanh');
     }
   })();
   </script>
